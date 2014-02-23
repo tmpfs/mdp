@@ -59,6 +59,16 @@ This document was generated with the following configuration:
       "type": "pre",
       "format": "```\n%s\n```"
     },
+    "## Manual",
+    {
+      "env": {
+        "cli_toolkit_help_style": "markdown",
+        "cli_toolkit_help_markdown_title": true,
+        "cli_toolkit_help_markdown_header": "###"
+      },
+      "script": "rdm --help",
+      "pedantic": false
+    },
     {
       "include": "links.md"
     }
@@ -73,7 +83,7 @@ Generate markdown documents from partials.
 
 Designed for readme documents but may be used for any markdown document.
 
-Usage: rdm [-f] [--force]
+Usage: rdm [-fp] [--force] [--print]
 
 Options:
  -f, --force        Force overwrite.
@@ -86,4 +96,29 @@ Options:
 Report bugs to muji <noop@xpm.io>.
 
 ```
+
+## Manual
+
+Generate markdown documents from partials.
+
+Designed for readme documents but may be used for any markdown document.
+
+### Usage
+
+```
+rdm [-fp] [--force] [--print]
+```
+
+### Options
+
+* `-f, --force`: Force overwrite.
+* `-p, --print`: Print to stdout.
+* `    --color`: Control terminal color.
+* `    --debug`: Enable debugging.
+* `    --help`: Display this help and exit.
+* `    --version`: Output version information and exit.
+
+### Bugs
+
+Report bugs to muji <noop@xpm.io>.
 
