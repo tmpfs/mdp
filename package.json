@@ -79,6 +79,9 @@
       },
       {
         "include": "license.md"
+      },
+      {
+        "include": "../LICENSE"
       }
     ]
   }
