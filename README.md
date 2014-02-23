@@ -55,7 +55,7 @@ This document was generated with the following configuration:
     },
     "## Usage",
     {
-      "script": "./bin/rdm --help",
+      "script": "rdm --help",
       "type": "pre",
       "format": "```\n%s\n```"
     },

@@ -35,6 +35,9 @@
     "prepublish": "./bin/rdm --force",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
+  "files": {
+    "bin": "./bin"
+  },
   "readme" : {
     "title": "rdm(1)",
     "pedantic": true,
@@ -61,7 +64,7 @@
       },
       "## Usage",
       {
-        "script": "./bin/rdm --help",
+        "script": "rdm --help",
         "type": "pre"
       }
     ]
