@@ -91,7 +91,8 @@ Usage: rdm [-fp] [--force] [--print] [-o=FILE]
 Options:
  -f, --force        Force overwrite.
  -p, --print        Print to stdout.
- -o, --output       Output file, default is README.md in the working directory.
+ -o, --output=[file]
+                    Output file, default is README.md in the working directory.
      --color        Control terminal color.
      --debug        Enable debugging.
      --help         Display this help and exit.
@@ -117,7 +118,7 @@ rdm [-fp] [--force] [--print] [-o=FILE]
 
 * `-f, --force`: Force overwrite.
 * `-p, --print`: Print to stdout.
-* `-o, --output`: Output file, default is README.md in the working directory.
+* `-o, --output=[file]`: Output file, default is README.md in the working directory.
 * `    --color`: Control terminal color.
 * `    --debug`: Enable debugging.
 * `    --help`: Display this help and exit.
