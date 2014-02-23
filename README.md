@@ -35,10 +35,13 @@ This document was generated with the following configuration:
       "stringify": true,
       "format": "```json\n%s\n```"
     },
+    "## Usage",
     {
       "script": "./bin/rdm --help"
     }
   ]
 }
 ```
+
+## Usage
 
