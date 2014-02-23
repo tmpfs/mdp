@@ -21,6 +21,7 @@
     "partial"
   ],
   "dependencies": {
+    "async": "~0.2.10",
     "cli-interface": "~1.0.5",
     "cli-util": "~1.1.11"
   },
@@ -31,7 +32,7 @@
   },
   "engine": [ "node >= 0.10.21" ],
   "scripts": {
-    "prepublish": "./bin/rdm",
+    "prepublish": "./bin/rdm --force",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "readme" : {
@@ -45,6 +46,9 @@
       },
       {
         "include": "introduction.md"
+      },
+      {
+        "script": "./bin/rdm --help"
       }
     ]
   }

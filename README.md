@@ -3,7 +3,7 @@ rdm(1)
 
 Markdown partial generator (readme).
 
-Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json`.
+,Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json`.
 
 A partial may be one of:
 
