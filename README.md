@@ -55,7 +55,9 @@ This document was generated with the following configuration:
     },
     "## Usage",
     {
-      "script": "./bin/rdm --help"
+      "script": "./bin/rdm --help",
+      "type": "pre",
+      "format": "```\n%s\n```"
     },
     {
       "include": "links.md"
@@ -66,6 +68,7 @@ This document was generated with the following configuration:
 
 ## Usage
 
+```
 Generate markdown documents from partials.
 
 Designed for readme documents but may be used for any markdown document.
@@ -81,5 +84,6 @@ Options:
      --version      Output version information and exit.
 
 Report bugs to muji <noop@xpm.io>.
-.
+
+```
 

@@ -61,7 +61,8 @@
       },
       "## Usage",
       {
-        "script": "./bin/rdm --help"
+        "script": "./bin/rdm --help",
+        "type": "pre"
       }
     ]
   }
