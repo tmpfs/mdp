@@ -1,0 +1,50 @@
+{
+  "name": "rdm",
+  "version": "0.0.1",
+  "description": "Markdown partial generator (readme)",
+  "author": "muji <noop@xpm.io>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freeformsystems/rdm"
+  },
+  "bugs": {
+    "url": "https://github.com/freeformsystems/rdm/issues",
+    "email": "muji <noop@xpm.io>"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "https://github.com/freeformsystems/rdm/blob/master/LICENSE"
+  }],
+  "keywords": [
+    "cli",
+    "readme",
+    "partial"
+  ],
+  "dependencies": {
+    "cli-interface": "~1.0.5",
+    "cli-util": "~1.1.11"
+  },
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "chai": "~1.9.0",
+    "istanbul": "~0.2.4"
+  },
+  "engine": [ "node >= 0.10.21" ],
+  "scripts": {
+    "prepublish": "./bin/rdm",
+    "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
+  },
+  "readme" : {
+    "title": "rdm(1)",
+    "pedantic": true,
+    "includes": "readme",
+    "partial": [
+      {
+        "property": "description"
+      },
+      {
+        "include": "001-introduction.md"
+      }
+    ]
+  }
+}
