@@ -38,12 +38,13 @@
     "title": "rdm(1)",
     "pedantic": true,
     "includes": "readme",
+    "links": "links.md",
     "partial": [
       {
         "property": "description"
       },
       {
-        "include": "001-introduction.md"
+        "include": "introduction.md"
       }
     ]
   }
