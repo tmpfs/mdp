@@ -86,11 +86,12 @@ Generate markdown documents from partials.
 
 Designed for readme documents but may be used for any markdown document.
 
-Usage: rdm [-fp] [--force] [--print]
+Usage: rdm [-fp] [--force] [--print] [-o=FILE]
 
 Options:
  -f, --force        Force overwrite.
  -p, --print        Print to stdout.
+ -o, --output       Output file, default is README.md in the working directory.
      --color        Control terminal color.
      --debug        Enable debugging.
      --help         Display this help and exit.
@@ -109,13 +110,14 @@ Designed for readme documents but may be used for any markdown document.
 ### Usage
 
 ```
-rdm [-fp] [--force] [--print]
+rdm [-fp] [--force] [--print] [-o=FILE]
 ```
 
 ### Options
 
 * `-f, --force`: Force overwrite.
 * `-p, --print`: Print to stdout.
+* `-o, --output`: Output file, default is README.md in the working directory.
 * `    --color`: Control terminal color.
 * `    --debug`: Enable debugging.
 * `    --help`: Display this help and exit.
