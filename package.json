@@ -48,6 +48,11 @@
         "include": "introduction.md"
       },
       {
+        "property": "readme",
+        "stringify": true,
+        "format": "```json\n%s\n```"
+      },
+      {
         "script": "./bin/rdm --help"
       }
     ]
