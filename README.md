@@ -12,6 +12,18 @@ A partial may be one of:
 * `include`: Include a markdown file.
 * `script`: Script execution.
 
+## Install
+
+```
+npm install rdm
+```
+
+## Test
+
+```
+npm test
+```
+
 ## Configuration
 
 This document was generated with the following configuration:
@@ -28,6 +40,12 @@ This document was generated with the following configuration:
     },
     {
       "include": "introduction.md"
+    },
+    {
+      "include": "install.md"
+    },
+    {
+      "include": "test.md"
     },
     "## Configuration\n\nThis document was generated with the following configuration:",
     {
