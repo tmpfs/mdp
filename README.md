@@ -56,10 +56,30 @@ This document was generated with the following configuration:
     "## Usage",
     {
       "script": "./bin/rdm --help"
+    },
+    {
+      "include": "links.md"
     }
   ]
 }
 ```
 
 ## Usage
+
+Generate markdown documents from partials.
+
+Designed for readme documents but may be used for any markdown document.
+
+Usage: rdm [-f] [--force]
+
+Options:
+ -f, --force        Force overwrite.
+ -p, --print        Print to stdout.
+     --color        Control terminal color.
+     --debug        Enable debugging.
+     --help         Display this help and exit.
+     --version      Output version information and exit.
+
+Report bugs to muji <noop@xpm.io>.
+.
 
