@@ -70,6 +70,9 @@ This document was generated with the following configuration:
       "pedantic": false
     },
     {
+      "include": "license.md"
+    },
+    {
       "include": "links.md"
     }
   ]
@@ -121,4 +124,8 @@ rdm [-fp] [--force] [--print]
 ### Bugs
 
 Report bugs to muji <noop@xpm.io>.
+
+## License
+
+Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](/LICENSE) if you feel inclined.
 

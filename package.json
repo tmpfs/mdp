@@ -76,6 +76,9 @@
         },
         "script": "rdm --help",
         "pedantic": false
+      },
+      {
+        "include": "license.md"
       }
     ]
   }
