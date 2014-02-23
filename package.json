@@ -47,6 +47,7 @@
       {
         "include": "introduction.md"
       },
+      "## Configuration\n\nThis document was generated with the following configuration:",
       {
         "property": "readme",
         "stringify": true,
