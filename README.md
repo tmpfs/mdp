@@ -74,6 +74,7 @@ This document was generated with the following configuration:
       "include": "license.md"
     },
     {
+      "comment": "Includes path is set to *readme* so drop down a directory",
       "include": "../LICENSE"
     },
     {
