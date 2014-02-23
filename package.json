@@ -1,6 +1,6 @@
 {
   "name": "rdm",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Markdown partial generator (readme)",
   "author": "muji <noop@xpm.io>",
   "repository": {
@@ -36,7 +36,7 @@
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "files": {
-    "bin": "./bin/rdm"
+    "bin": "./bin"
   },
   "readme" : {
     "title": "rdm(1)",
