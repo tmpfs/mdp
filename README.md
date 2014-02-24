@@ -24,13 +24,13 @@ Designed to generate markdown documents from a series of partials.
 
 Read [partials](https://github.com/freeformsystems/rdm#partials) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/rdm#configuration) that created this document, see [usage](https://github.com/freeformsystems/rdm#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section is the result of generating program help for `rdm(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
 
-Use this program if you:
+Use this program to:
 
-1. Wish to concatenate multiple markdown documents into a single file.
-2. Would like to generate a table of contents for markdown document(s).
+1. Concatenate multiple markdown documents into a single file.
+2. Generate a table of contents for markdown document(s).
 3. Include the output of a shell program, great for examples or program usage.
 4. Keep your readme in sync with your code and prevent redundant effort with code samples.
-5. Are annoyed that relative links in your readme documents are broken when displayed on the [npm](http://npmjs.org) website.
+5. Convert relative links to absolute links so your readme documents work when displayed on the [npm](http://npmjs.org) website.
 
 This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
 
@@ -161,7 +161,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#111;](&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#x6f;&#111;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#111;).
 
 ## License
 
