@@ -48,7 +48,7 @@
   "rdm" : {
     "title": "rdm(1)",
     "pedantic": true,
-    "includes": "readme",
+    "includes": "doc/readme",
     "gfm": true,
     "branch": "master",
     "links": "links.md",
@@ -90,8 +90,7 @@
         "include": "license.md"
       },
       {
-        "comment": "Includes path is set to *readme* so drop down a directory",
-        "include": "../LICENSE"
+        "include": "../../LICENSE"
       }
     ]
   }

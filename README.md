@@ -46,7 +46,7 @@ This document was generated with the following configuration (see [package.json]
 {
   "title": "rdm(1)",
   "pedantic": true,
-  "includes": "readme",
+  "includes": "doc/readme",
   "gfm": true,
   "branch": "master",
   "links": "links.md",
@@ -88,8 +88,7 @@ This document was generated with the following configuration (see [package.json]
       "include": "license.md"
     },
     {
-      "comment": "Includes path is set to *readme* so drop down a directory",
-      "include": "../LICENSE"
+      "include": "../../LICENSE"
     },
     {
       "include": "links.md"
@@ -160,7 +159,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;](&#x6d;&#97;&#105;&#x6c;&#x74;&#x6f;&#58;&#110;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#97;&#x69;&#108;&#116;&#x6f;&#x3a;&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#x69;&#x6f;).
 
 ## License
 
