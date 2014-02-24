@@ -52,6 +52,8 @@ This document was generated with the following configuration:
   "title": "rdm(1)",
   "pedantic": true,
   "includes": "readme",
+  "gfm": true,
+  "branch": "master",
   "links": "links.md",
   "toc": "Table of Contents",
   "base": "https://github.com/freeformsystems/rdm",
