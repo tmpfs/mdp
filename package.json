@@ -1,6 +1,6 @@
 {
   "name": "rdm",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Markdown partial processor",
   "author": "muji <noop@xpm.io>",
   "repository": {
@@ -22,7 +22,9 @@
   ],
   "dependencies": {
     "async": "~0.2.10",
+    "ttycolor": "~0.8.4",
     "cli-interface": "~1.0.5",
+    "cli-command": "~0.8.10",
     "cli-util": "~1.1.11",
     "marked": "~0.3.1"
   },
@@ -36,7 +38,7 @@
     "prepublish": "./bin/rdm --force",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
-  "files": {
+  "directories": {
     "bin": "./bin"
   },
   "readme" : {
