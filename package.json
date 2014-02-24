@@ -1,7 +1,7 @@
 {
   "name": "rdm",
-  "version": "0.0.3",
-  "description": "Markdown partial generator (readme)",
+  "version": "0.0.4",
+  "description": "Markdown partial generator",
   "author": "muji <noop@xpm.io>",
   "repository": {
     "type": "git",

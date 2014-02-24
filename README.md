@@ -111,7 +111,7 @@ Generate markdown documents from partials.
 
 Designed for readme documents but may be used for any markdown document.
 
-Usage: rdm [-fp] [--force] [--print] [-o=file] file ...
+Usage: rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
  -f, --force        Force overwrite.
@@ -119,7 +119,8 @@ Options:
  -t, --title=[title]
                     Document title.
  -o, --output=[file]
-                    Output file, default is README.md in the working directory.
+                    Markdown output file, default is README.md in the working
+                    directory.
  -h, --html=[file]  Write html to file.
      --color        Control terminal color.
      --debug        Enable debugging.
@@ -138,7 +139,7 @@ Designed for readme documents but may be used for any markdown document.
 ### Usage
 
 ```
-rdm [-fp] [--force] [--print] [-o=file] file ...
+rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 ```
 
 ### Options
@@ -146,7 +147,7 @@ rdm [-fp] [--force] [--print] [-o=file] file ...
 * `-f, --force`: Force overwrite.
 * `-p, --print`: Print to stdout.
 * `-t, --title=[title]`: Document title.
-* `-o, --output=[file]`: Output file, default is README.md in the working directory.
+* `-o, --output=[file]`: Markdown output file, default is README.md in the working directory.
 * `-h, --html=[file]`: Write html to file.
 * `    --color`: Control terminal color.
 * `    --debug`: Enable debugging.
