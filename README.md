@@ -109,7 +109,7 @@ This document was generated with the following configuration:
 ## Usage
 
 ```
-Generate markdown documents from partials.
+Markdown partial processor.
 
 Designed for readme documents but may be used for any markdown document.
 
@@ -134,7 +134,7 @@ Report bugs to muji <noop@xpm.io>.
 
 ## Manual
 
-Generate markdown documents from partials.
+Markdown partial processor.
 
 Designed for readme documents but may be used for any markdown document.
 
