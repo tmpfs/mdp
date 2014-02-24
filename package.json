@@ -81,7 +81,11 @@
       {
         "include": "meta.md"
       },
-      "## Middleware\n\nThe `inspect` middleware is shown below:",
+      "## Middleware",
+      {
+        "include": "middleware.md"
+      },
+      "The `inspect` middleware is shown below:",
       {
         "require": "middleware/inspect.js",
         "type": "code",
@@ -91,9 +95,6 @@
         "property": {"middleware": ["inspect"]},
         "type": "code",
         "language": "json"
-      },
-      {
-        "include": "middleware.md"
       },
       "## Usage",
       {

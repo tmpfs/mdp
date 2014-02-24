@@ -94,7 +94,11 @@ This document was generated with the following configuration (see [package.json]
     {
       "include": "meta.md"
     },
-    "## Middleware\n\nThe `inspect` middleware is shown below:",
+    "## Middleware",
+    {
+      "include": "middleware.md"
+    },
+    "The `inspect` middleware is shown below:",
     {
       "require": "middleware/inspect.js",
       "type": "code",
@@ -108,9 +112,6 @@ This document was generated with the following configuration (see [package.json]
       },
       "type": "code",
       "language": "json"
-    },
-    {
-      "include": "middleware.md"
     },
     "## Usage",
     {
@@ -159,6 +160,8 @@ By default `rdm(1)` will append a *generator* message to the end of the document
 
 ## Middleware
 
+Middleware functions are executed asynchronously once for each token encountered in the markdown document.
+
 The `inspect` middleware is shown below:
 
 ```javascript
@@ -177,8 +180,6 @@ function inspect(meta) {
   ]
 }
 ```
-
-Middleware functions are executed asynchronously once for each token encountered in the markdown document.
 
 ## Usage
 
@@ -235,7 +236,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#x69;&#111;](&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x6e;&#111;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#x69;&#111;).
+Report bugs to muji [&#110;&#111;&#111;&#112;&#64;&#120;&#x70;&#109;&#46;&#x69;&#x6f;](&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#110;&#111;&#111;&#112;&#64;&#120;&#x70;&#109;&#46;&#x69;&#x6f;).
 
 ## License
 
