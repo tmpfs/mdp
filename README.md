@@ -42,63 +42,6 @@ If you care for excellent documentation and write command line interfaces you sh
 
 This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
 
-```json
-{
-  "title": "rdm(1)",
-  "pedantic": true,
-  "includes": "readme",
-  "gfm": true,
-  "branch": "master",
-  "links": "links.md",
-  "toc": "Table of Contents",
-  "order": false,
-  "base": "https://github.com/freeformsystems/rdm",
-  "partial": [
-    {
-      "property": "description"
-    },
-    {
-      "include": "introduction.md"
-    },
-    "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
-    {
-      "property": "readme",
-      "stringify": true,
-      "format": "```json\n%s\n```"
-    },
-    {
-      "include": "partial.md"
-    },
-    "## Usage",
-    {
-      "script": "rdm --help",
-      "type": "code",
-      "format": "```\n%s\n```"
-    },
-    "## Manual",
-    {
-      "env": {
-        "cli_toolkit_help_style": "markdown",
-        "cli_toolkit_help_markdown_title": true,
-        "cli_toolkit_help_markdown_header": "###"
-      },
-      "script": "rdm --help",
-      "pedantic": false
-    },
-    {
-      "include": "license.md"
-    },
-    {
-      "comment": "Includes path is set to *readme* so drop down a directory",
-      "include": "../LICENSE"
-    },
-    {
-      "include": "links.md"
-    }
-  ]
-}
-```
-
 ## Partial
 
 A partial may be one of:
@@ -161,7 +104,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#x6f;](&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#x6f;).
+Report bugs to muji [&#110;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#46;&#x69;&#111;](&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#46;&#x69;&#111;).
 
 ## License
 

@@ -45,7 +45,7 @@
   "directories": {
     "bin": "./bin"
   },
-  "readme" : {
+  "rdm" : {
     "title": "rdm(1)",
     "pedantic": true,
     "includes": "readme",
