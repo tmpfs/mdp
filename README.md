@@ -2,8 +2,6 @@ Table of Contents
 =================
 
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
-  * [Install](https://github.com/freeformsystems/rdm#install)
-  * [Test](https://github.com/freeformsystems/rdm#test)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
@@ -17,6 +15,10 @@ rdm(1)
 ======
 
 Markdown partial processor.
+
+```
+npm i -g rdm
+```
 
 Designed to generate markdown documents from a series of partials. 
 
@@ -32,18 +34,6 @@ This program was built using the [command](https://github.com/freeformsystems/cl
 > Command execution for command line interfaces, a component of the toolkit.
 
 If you care for excellent documentation and write command line interfaces you should check it out.
-
-## Install
-
-```
-npm i -g rdm
-```
-
-## Test
-
-```
-npm test
-```
 
 ## Configuration
 
@@ -66,12 +56,6 @@ This document was generated with the following configuration (see [package.json]
     },
     {
       "include": "introduction.md"
-    },
-    {
-      "include": "install.md"
-    },
-    {
-      "include": "test.md"
     },
     "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
     {
@@ -174,7 +158,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#112;&#64;&#120;&#x70;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#110;&#x6f;&#111;&#112;&#64;&#120;&#x70;&#x6d;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#111;&#111;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;](&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#110;&#111;&#111;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;).
 
 ## License
 
