@@ -1,13 +1,13 @@
-* rdm(1)
-  * Install
-  * Test
-  * Configuration
-  * Usage
-  * Manual
-    * Usage
-    * Options
-    * Bugs
-  * License
+* [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
+  * [Install](https://github.com/freeformsystems/rdm#install)
+  * [Test](https://github.com/freeformsystems/rdm#test)
+  * [Configuration](https://github.com/freeformsystems/rdm#configuration)
+  * [Usage](https://github.com/freeformsystems/rdm#usage)
+  * [Manual](https://github.com/freeformsystems/rdm#manual)
+    * [Usage](https://github.com/freeformsystems/rdm#usage)
+    * [Options](https://github.com/freeformsystems/rdm#options)
+    * [Bugs](https://github.com/freeformsystems/rdm#bugs)
+  * [License](https://github.com/freeformsystems/rdm#license)
 
 rdm(1)
 ======
