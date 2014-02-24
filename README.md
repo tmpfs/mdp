@@ -1,3 +1,16 @@
+* rdm(1)
+
+* Install
+* Test
+* Configuration
+* Usage
+* Manual
+
+* Usage
+* Options
+* Bugs
+
+* License
 rdm(1)
 ======
 
