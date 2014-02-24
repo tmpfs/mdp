@@ -44,6 +44,7 @@
     "pedantic": true,
     "includes": "readme",
     "links": "links.md",
+    "base": "https://github.com/freeformsystems/rdm",
     "partial": [
       {
         "property": "description"
