@@ -15,8 +15,6 @@ Table of Contents
 rdm(1)
 ======
 
-Markdown partial processor.
-
 Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json` or may be loaded from any `json` or [node][node] `js` file.
 
 A partial may be one of:
@@ -46,65 +44,6 @@ npm test
 ## Configuration
 
 This document was generated with the following configuration:
-
-```json
-{
-  "title": "rdm(1)",
-  "pedantic": true,
-  "includes": "readme",
-  "gfm": true,
-  "branch": "master",
-  "links": "links.md",
-  "toc": "Table of Contents",
-  "base": "https://github.com/freeformsystems/rdm",
-  "partial": [
-    {
-      "property": "description"
-    },
-    {
-      "include": "introduction.md"
-    },
-    {
-      "include": "install.md"
-    },
-    {
-      "include": "test.md"
-    },
-    "## Configuration\n\nThis document was generated with the following configuration:",
-    {
-      "property": "readme",
-      "stringify": true,
-      "format": "```json\n%s\n```"
-    },
-    "## Usage",
-    {
-      "script": "rdm --help",
-      "type": "pre",
-      "format": "```\n%s\n```"
-    },
-    "## Manual",
-    {
-      "env": {
-        "cli_toolkit_help_style": "markdown",
-        "cli_toolkit_help_markdown_title": true,
-        "cli_toolkit_help_markdown_header": "###"
-      },
-      "script": "rdm --help",
-      "pedantic": false
-    },
-    {
-      "include": "license.md"
-    },
-    {
-      "comment": "Includes path is set to *readme* so drop down a directory",
-      "include": "../LICENSE"
-    },
-    {
-      "include": "links.md"
-    }
-  ]
-}
-```
 
 ## Usage
 
