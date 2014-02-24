@@ -49,6 +49,7 @@
     "title": "rdm(1)",
     "pedantic": true,
     "includes": "doc/readme",
+    "require": "lib",
     "gfm": true,
     "branch": "master",
     "links": "links.md",
@@ -67,6 +68,12 @@
         "property": "rdm",
         "stringify": true,
         "format": "```json\n%s\n```"
+      },
+      "## Defaults\n\n",
+      {
+        "require": "defaults.js",
+        "type": "code",
+        "language": "javascript"
       },
       {
         "include": "partial.md"
