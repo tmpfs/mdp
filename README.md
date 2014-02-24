@@ -2,18 +2,15 @@ Table of Contents
 =================
 
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
-
   * [Install](https://github.com/freeformsystems/rdm#install)
   * [Test](https://github.com/freeformsystems/rdm#test)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
   * [Manual](https://github.com/freeformsystems/rdm#manual)
-
     * [Usage](https://github.com/freeformsystems/rdm#usage)
     * [Options](https://github.com/freeformsystems/rdm#options)
     * [Bugs](https://github.com/freeformsystems/rdm#bugs)
-
   * [License](https://github.com/freeformsystems/rdm#license)
 
 rdm(1)
@@ -177,7 +174,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#111;&#112;&#64;&#x78;&#x70;&#x6d;&#46;&#105;&#x6f;](&#109;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#110;&#x6f;&#111;&#112;&#64;&#x78;&#x70;&#x6d;&#46;&#105;&#x6f;).
 
 ## License
 
