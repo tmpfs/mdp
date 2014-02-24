@@ -63,7 +63,7 @@
       {
         "include": "test.md"
       },
-      "## Configuration\n\nThis document was generated with the following configuration:",
+      "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
       {
         "property": "readme",
         "stringify": true,

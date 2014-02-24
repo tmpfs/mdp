@@ -45,7 +45,7 @@ npm test
 
 ## Configuration
 
-This document was generated with the following configuration:
+This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
 
 ```json
 {
@@ -70,7 +70,7 @@ This document was generated with the following configuration:
     {
       "include": "test.md"
     },
-    "## Configuration\n\nThis document was generated with the following configuration:",
+    "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
     {
       "property": "readme",
       "stringify": true,
