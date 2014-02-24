@@ -1,17 +1,17 @@
 Table of Contents
 =================
 
-1. [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
-  1. [Install](https://github.com/freeformsystems/rdm#install)
-  2. [Test](https://github.com/freeformsystems/rdm#test)
-  3. [Configuration](https://github.com/freeformsystems/rdm#configuration)
-  4. [Partial](https://github.com/freeformsystems/rdm#partial)
-  5. [Usage](https://github.com/freeformsystems/rdm#usage)
-  6. [Manual](https://github.com/freeformsystems/rdm#manual)
-    1. [Usage](https://github.com/freeformsystems/rdm#usage)
-    2. [Options](https://github.com/freeformsystems/rdm#options)
-    3. [Bugs](https://github.com/freeformsystems/rdm#bugs)
-  7. [License](https://github.com/freeformsystems/rdm#license)
+* [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
+  * [Install](https://github.com/freeformsystems/rdm#install)
+  * [Test](https://github.com/freeformsystems/rdm#test)
+  * [Configuration](https://github.com/freeformsystems/rdm#configuration)
+  * [Partial](https://github.com/freeformsystems/rdm#partial)
+  * [Usage](https://github.com/freeformsystems/rdm#usage)
+  * [Manual](https://github.com/freeformsystems/rdm#manual)
+    * [Usage](https://github.com/freeformsystems/rdm#usage)
+    * [Options](https://github.com/freeformsystems/rdm#options)
+    * [Bugs](https://github.com/freeformsystems/rdm#bugs)
+  * [License](https://github.com/freeformsystems/rdm#license)
 
 rdm(1)
 ======
@@ -58,7 +58,7 @@ This document was generated with the following configuration (see [package.json]
   "branch": "master",
   "links": "links.md",
   "toc": "Table of Contents",
-  "order": true,
+  "order": false,
   "base": "https://github.com/freeformsystems/rdm",
   "partial": [
     {
@@ -174,7 +174,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#x69;&#111;](&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#x69;&#111;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#x6d;&#x2e;&#105;&#111;](&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#x6d;&#x2e;&#105;&#111;).
 
 ## License
 
