@@ -64,7 +64,7 @@
       },
       "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
       {
-        "property": "readme",
+        "property": "rdm",
         "stringify": true,
         "format": "```json\n%s\n```"
       },
