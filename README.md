@@ -4,6 +4,7 @@ Table of Contents
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Defaults](https://github.com/freeformsystems/rdm#defaults)
+    * [Middleware](https://github.com/freeformsystems/rdm#middleware)
   * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
   * [Manual](https://github.com/freeformsystems/rdm#manual)
@@ -75,6 +76,12 @@ This document was generated with the following configuration (see [package.json]
       "type": "code",
       "language": "javascript"
     },
+    "### Middleware\n\nThe `inspect` middleware is shown below:",
+    {
+      "require": "middleware/inspect.js",
+      "type": "code",
+      "language": "javascript"
+    },
     {
       "include": "partial.md"
     },
@@ -113,6 +120,19 @@ This document was generated with the following configuration (see [package.json]
   title: 'README',
   gfm: true,
   period: '.' }
+```
+
+### Middleware
+
+The `inspect` middleware is shown below:
+
+```javascript
+function inspect(meta) {
+  return function(token, tokens, meta, next) {
+    console.dir(token);
+    next();
+  }
+}
 ```
 
 ## Partial
@@ -180,7 +200,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;](&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;).
+Report bugs to muji [&#x6e;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#105;&#111;](&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6e;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#105;&#111;).
 
 ## License
 

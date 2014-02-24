@@ -75,6 +75,12 @@
         "type": "code",
         "language": "javascript"
       },
+      "### Middleware\n\nThe `inspect` middleware is shown below:",
+      {
+        "require": "middleware/inspect.js",
+        "type": "code",
+        "language": "javascript"
+      },
       {
         "include": "partial.md"
       },
