@@ -24,7 +24,8 @@ Read [partials](https://github.com/freeformsystems/rdm#partials) to learn how to
 
 Use this program if you:
 
-1. Are annoyed that relative links in your readme documents are broken when displayed onthe [npm][npm] website.
+1. Wish to concatenate multiple markdown documents into a single file.
+2. Are annoyed that relative links in your readme documents are broken when displayed on the [npm][npm] website.
 
 This program was built using the [command][command] module:
 
