@@ -144,8 +144,8 @@ Options:
      --debug          Enable debugging.
  -h, --html=[file]    Write html to file.
  -v, --verbose        Print more information.
- -w, --middleware=[module ...]
-                      Require middleware module.
+ -w, --middleware=[file ...]
+                      Require custom middleware.
      --help           Display this help and exit.
      --version        Output version information and exit.
 
@@ -174,13 +174,13 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 * `--debug`: Enable debugging.
 * `-h, --html=[file]`: Write html to file.
 * `-v, --verbose`: Print more information.
-* `-w, --middleware=[module ...]`: Require middleware module.
+* `-w, --middleware=[file ...]`: Require custom middleware.
 * `--help`: Display this help and exit.
 * `--version`: Output version information and exit.
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#112;&#64;&#120;&#x70;&#109;&#46;&#105;&#111;](&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#110;&#111;&#x6f;&#112;&#64;&#120;&#x70;&#109;&#46;&#105;&#111;).
+Report bugs to muji [&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;](&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;).
 
 ## License
 
