@@ -117,8 +117,8 @@ Designed for readme documents but may be used for any markdown document.
 Usage: rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -f, --force        Force overwrite.
- -p, --print        Print to stdout.
+ -f, --force        Force file overwrite.
+ -m, --md           Print markdown to stdout.
  -t, --title=[title]
                     Document title.
  -o, --output=[file]
@@ -147,8 +147,8 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Options
 
-* `-f, --force`: Force overwrite.
-* `-p, --print`: Print to stdout.
+* `-f, --force`: Force file overwrite.
+* `-m, --md`: Print markdown to stdout.
 * `-t, --title=[title]`: Document title.
 * `-o, --output=[file]`: Markdown output file, default is README.md in the working directory.
 * `-h, --html=[file]`: Write html to file.
@@ -159,7 +159,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#111;&#x70;&#x40;&#120;&#112;&#109;&#x2e;&#105;&#x6f;](&#x6d;&#x61;&#x69;&#108;&#116;&#111;&#58;&#x6e;&#111;&#111;&#x70;&#x40;&#120;&#112;&#109;&#x2e;&#105;&#x6f;).
+Report bugs to muji [&#x6e;&#111;&#111;&#112;&#64;&#x78;&#112;&#x6d;&#x2e;&#x69;&#111;](&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#x6e;&#111;&#111;&#112;&#64;&#x78;&#112;&#x6d;&#x2e;&#x69;&#111;).
 
 ## License
 
