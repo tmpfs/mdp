@@ -27,7 +27,8 @@ Read [partials](https://github.com/freeformsystems/rdm#partials) to learn how to
 Use this program if you:
 
 1. Wish to concatenate multiple markdown documents into a single file.
-2. Are annoyed that relative links in your readme documents are broken when displayed on the [npm](http://npmjs.org) website.
+2. Would like to generate a table of contents for markdown document(s).
+3. Are annoyed that relative links in your readme documents are broken when displayed on the [npm](http://npmjs.org) website.
 
 This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
 
@@ -158,7 +159,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#111;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;](&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#110;&#111;&#111;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#46;&#x69;&#x6f;](&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#110;&#x6f;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#46;&#x69;&#x6f;).
 
 ## License
 
