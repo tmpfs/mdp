@@ -38,6 +38,7 @@
   "engine": [ "node >= 0.10.21" ],
   "scripts": {
     "prepublish": "./bin/rdm --force",
+    "build": "./bin/rdm --force --debug",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "directories": {
