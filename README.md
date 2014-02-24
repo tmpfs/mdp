@@ -1,16 +1,94 @@
 * rdm(1)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * Install
-* Test
-* Configuration
-* Usage
-* Manual
+
+
+null Test
+
+
+null Configuration
+
+
+
+null Usage
+
+
+null Manual
+
+
+
 
 * Usage
-* Options
-* Bugs
+
+
+null Options
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+null Bugs
+
+
 
 * License
+
+
+
+
+
+
+
 rdm(1)
 ======
 
@@ -119,6 +197,7 @@ Options:
                     Document title.
  -o, --output=[file]
                     Output file, default is README.md in the working directory.
+ -h, --html=[file]  Write html to file.
      --color        Control terminal color.
      --debug        Enable debugging.
      --help         Display this help and exit.
@@ -145,6 +224,7 @@ rdm [-fp] [--force] [--print] [-o=file] file ...
 * `-p, --print`: Print to stdout.
 * `-t, --title=[title]`: Document title.
 * `-o, --output=[file]`: Output file, default is README.md in the working directory.
+* `-h, --html=[file]`: Write html to file.
 * `    --color`: Control terminal color.
 * `    --debug`: Enable debugging.
 * `    --help`: Display this help and exit.
