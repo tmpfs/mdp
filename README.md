@@ -5,6 +5,7 @@ Table of Contents
   * [Install](https://github.com/freeformsystems/rdm#install)
   * [Test](https://github.com/freeformsystems/rdm#test)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
+  * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
   * [Manual](https://github.com/freeformsystems/rdm#manual)
     * [Usage](https://github.com/freeformsystems/rdm#usage)
@@ -17,17 +18,9 @@ rdm(1)
 
 Markdown partial processor.
 
-Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json` or may be loaded from any `json` or [node][node] `js` file.
+Designed to generate markdown documents from a series of partials. 
 
-A partial may be one of:
-
-* `string`: A string literal.
-* `property`: A property reference.
-* `include`: Include a file, normally a markdown document but not necessarily.
-* `script`: Execute a command and use `stdout` as the content.
-* `require`: Require a `.js` module or a `.json` file.
-
-See [usage](https://github.com/freeformsystems/rdm#usage) for command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section illustrates the result of running an executable with a specific environment configuration, see [configuration](https://github.com/freeformsystems/rdm#configuration).
+See [usage](https://github.com/freeformsystems/rdm#usage) for command line options, read [partials](https://github.com/freeformsystems/rdm#partials) to learn how to define partials. The [manual](https://github.com/freeformsystems/rdm#manual) section illustrates the result of running an executable with a specific environment configuration, see [configuration](https://github.com/freeformsystems/rdm#configuration).
 
 This program was built using the [command][command] module, if you care for excellent documentation and write command line interfaces you should check it out.
 
@@ -76,6 +69,9 @@ This document was generated with the following configuration (see [package.json]
       "stringify": true,
       "format": "```json\n%s\n```"
     },
+    {
+      "include": "partial.md"
+    },
     "## Usage",
     {
       "script": "rdm --help",
@@ -105,6 +101,16 @@ This document was generated with the following configuration (see [package.json]
   ]
 }
 ```
+
+## Partial
+
+A partial may be one of:
+
+* `string`: A string literal.
+* `property`: A property reference.
+* `include`: Include a file, normally a markdown document but not necessarily.
+* `script`: Execute a command and use `stdout` as the content.
+* `require`: Require a `.js` module or a `.json` file.
 
 ## Usage
 

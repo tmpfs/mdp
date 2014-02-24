@@ -71,6 +71,9 @@
         "stringify": true,
         "format": "```json\n%s\n```"
       },
+      {
+        "include": "partial.md"
+      },
       "## Usage",
       {
         "script": "rdm --help",
