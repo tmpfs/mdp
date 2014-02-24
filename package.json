@@ -72,7 +72,7 @@
       "## Usage",
       {
         "script": "rdm --help",
-        "type": "pre"
+        "type": "code"
       },
       "## Manual",
       {

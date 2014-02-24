@@ -79,7 +79,7 @@ This document was generated with the following configuration (see [package.json]
     "## Usage",
     {
       "script": "rdm --help",
-      "type": "pre",
+      "type": "code",
       "format": "```\n%s\n```"
     },
     "## Manual",
