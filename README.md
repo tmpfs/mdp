@@ -1,3 +1,6 @@
+Table of Contents
+=================
+
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
   * [Install](https://github.com/freeformsystems/rdm#install)
   * [Test](https://github.com/freeformsystems/rdm#test)
@@ -50,7 +53,7 @@ This document was generated with the following configuration:
   "pedantic": true,
   "includes": "readme",
   "links": "links.md",
-  "toc": true,
+  "toc": "Table of Contents",
   "base": "https://github.com/freeformsystems/rdm",
   "partial": [
     {

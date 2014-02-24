@@ -44,7 +44,7 @@
     "pedantic": true,
     "includes": "readme",
     "links": "links.md",
-    "toc": true,
+    "toc": "Table of Contents",
     "base": "https://github.com/freeformsystems/rdm",
     "partial": [
       {
