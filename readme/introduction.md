@@ -1,4 +1,4 @@
-Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json`.
+Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json` or may be loaded from any `json` or [node][node] `js` file.
 
 A partial may be one of:
 

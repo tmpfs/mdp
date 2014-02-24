@@ -3,7 +3,7 @@ rdm(1)
 
 Markdown partial generator (readme).
 
-Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json`.
+Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json` or may be loaded from any `json` or [node][node] `js` file.
 
 A partial may be one of:
 
@@ -166,5 +166,6 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+[node]: http://nodejs.org
 [command]: https://github.com/freeformsystems/cli-command
 [usage]: https://github.com/freeformsystems/rdm#usage.
