@@ -5,6 +5,8 @@ Table of Contents
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
+  * [Manual](https://github.com/freeformsystems/rdm#manual)
+    * [Usage](https://github.com/freeformsystems/rdm#usage)
     * [Options](https://github.com/freeformsystems/rdm#options)
     * [Bugs](https://github.com/freeformsystems/rdm#bugs)
   * [License](https://github.com/freeformsystems/rdm#license)
@@ -130,8 +132,7 @@ Options:
      --version      Output version information and exit.
 
 Report bugs to muji <noop@xpm.io>.
-
-```.
+```
 
 ## Manual
 
@@ -140,8 +141,8 @@ Markdown partial processor.
 Designed for readme documents but may be used for any markdown document.
 
 ### Usage
-```
 
+```
 rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 ```
 
@@ -159,7 +160,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#x70;&#x40;&#x78;&#112;&#x6d;&#46;&#105;&#111;](&#109;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#110;&#111;&#x6f;&#x70;&#x40;&#x78;&#112;&#x6d;&#46;&#105;&#111;).
+Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#46;&#x69;&#x6f;](&#x6d;&#97;&#105;&#x6c;&#116;&#111;&#x3a;&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#46;&#x69;&#x6f;).
 
 ## License
 
