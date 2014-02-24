@@ -13,7 +13,7 @@ A partial may be one of:
 * `script`: Execute a command and use `stdout` as the content.
 * `require`: Require a `.js` module or a `.json` file.
 
-See [usage](#usage) for command line options.
+See [usage](#usage) for command line options, the [manual](#manual) section illustrates the result of running an executable with a specific environment configuration, see [configuration](#configuration).
 
 ## Install
 
