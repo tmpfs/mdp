@@ -15,7 +15,7 @@ Table of Contents
 rdm(1)
 ======
 
-Markdown partial generator (readme).
+Markdown partial processor.
 
 Designed to generate markdown documents from a series of partials. Partials are defined within a `readme` section of `package.json` or may be loaded from any `json` or [node][node] `js` file.
 
