@@ -103,7 +103,7 @@ This document was generated with the following configuration (see [package.json]
 
 A partial may be one of:
 
-* `string`: A string literal.
+* `string`: A markdown string literal.
 * `property`: A property reference.
 * `include`: Include a file, normally a markdown document but not necessarily.
 * `script`: Execute a command and use `stdout` as the content.
@@ -161,7 +161,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#111;](&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#x6f;&#111;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#111;).
+Report bugs to muji [&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#x6f;](&#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#x6f;).
 
 ## License
 
