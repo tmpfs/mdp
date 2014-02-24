@@ -174,7 +174,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#x6f;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#105;&#111;](&#109;&#x61;&#x69;&#108;&#116;&#111;&#x3a;&#x6e;&#111;&#x6f;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#105;&#111;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#x78;&#112;&#109;&#x2e;&#105;&#x6f;](&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#110;&#x6f;&#x6f;&#x70;&#x40;&#x78;&#112;&#109;&#x2e;&#105;&#x6f;).
 
 ## License
 
@@ -201,3 +201,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+[node]: http://nodejs.org
+[npm]: http://npmjs.org
+[command]: https://github.com/freeformsystems/cli-command
+[usage]: https://github.com/freeformsystems/rdm#usage.
