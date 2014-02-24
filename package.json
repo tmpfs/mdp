@@ -23,7 +23,8 @@
   "dependencies": {
     "async": "~0.2.10",
     "cli-interface": "~1.0.5",
-    "cli-util": "~1.1.11"
+    "cli-util": "~1.1.11",
+    "marked": "~0.3.1"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
