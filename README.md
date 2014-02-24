@@ -31,6 +31,7 @@ npm test
   "pedantic": true,
   "includes": "readme",
   "links": "links.md",
+  "toc": true,
   "base": "https://github.com/freeformsystems/rdm",
   "partial": [
     {
