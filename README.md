@@ -20,7 +20,7 @@ This program was built using the [command][command] module, if you care for exce
 ## Install
 
 ```
-npm install rdm
+npm i -g rdm
 ```
 
 ## Test

@@ -1,5 +1,5 @@
 ## Install
 
 ```
-npm install rdm
+npm i -g rdm
 ```
