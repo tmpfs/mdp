@@ -29,7 +29,8 @@ Use this program if you:
 1. Wish to concatenate multiple markdown documents into a single file.
 2. Would like to generate a table of contents for markdown document(s).
 3. Include the output of a shell program, great for examples or program usage.
-4. Are annoyed that relative links in your readme documents are broken when displayed on the [npm](http://npmjs.org) website.
+4. Keep your readme in sync with your code and prevent redundant effort with code samples.
+5. Are annoyed that relative links in your readme documents are broken when displayed on the [npm](http://npmjs.org) website.
 
 This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
 
@@ -160,7 +161,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#x69;&#111;](&#109;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#110;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#x69;&#111;).
+Report bugs to muji [&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
 
 ## License
 

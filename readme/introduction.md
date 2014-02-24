@@ -11,7 +11,8 @@ Use this program if you:
 1. Wish to concatenate multiple markdown documents into a single file.
 2. Would like to generate a table of contents for markdown document(s).
 3. Include the output of a shell program, great for examples or program usage.
-4. Are annoyed that relative links in your readme documents are broken when displayed on the [npm][npm] website.
+4. Keep your readme in sync with your code and prevent redundant effort with code samples.
+5. Are annoyed that relative links in your readme documents are broken when displayed on the [npm][npm] website.
 
 This program was built using the [command][command] module:
 
