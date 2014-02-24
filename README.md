@@ -1,4 +1,5 @@
-# rdm(1)
+rdm(1)
+======
 
 Markdown partial generator (readme).
 
@@ -14,21 +15,15 @@ A partial may be one of:
 
 See [usage](#usage) for command line options.
 
-## Install
-
-```
+## Install```
 npm install rdm
 ```
 
-## Test
-
-```
+## Test```
 npm test
 ```
 
-## Configuration
-
-This document was generated with the following configuration:
+## ConfigurationThis document was generated with the following configuration:
 
 ```json
 {
@@ -86,9 +81,7 @@ This document was generated with the following configuration:
 }
 ```
 
-## Usage
-
-```
+## Usage```
 Generate markdown documents from partials.
 
 Designed for readme documents but may be used for any markdown document.
@@ -110,21 +103,15 @@ Options:
 Report bugs to muji <noop@xpm.io>.
 ```
 
-## Manual
-
-Generate markdown documents from partials.
+## ManualGenerate markdown documents from partials.
 
 Designed for readme documents but may be used for any markdown document.
 
-### Usage
-
-```
+### Usage```
 rdm [-fp] [--force] [--print] [-o=file] file ...
 ```
 
-### Options
-
-* `-f, --force`: Force overwrite.
+### Options* `-f, --force`: Force overwrite.
 * `-p, --print`: Print to stdout.
 * `-t, --title=[title]`: Document title.
 * `-o, --output=[file]`: Output file, default is README.md in the working directory.
@@ -133,13 +120,9 @@ rdm [-fp] [--force] [--print] [-o=file] file ...
 * `    --help`: Display this help and exit.
 * `    --version`: Output version information and exit.
 
-### Bugs
+### BugsReport bugs to muji <noop@xpm.io>.
 
-Report bugs to muji <noop@xpm.io>.
-
-## License
-
-Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](/LICENSE) if you feel inclined.
+## LicenseEverything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](/LICENSE) if you feel inclined.
 
 The MIT License (MIT)
 
