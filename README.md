@@ -15,6 +15,8 @@ A partial may be one of:
 
 See [usage](#usage) for command line options, the [manual](#manual) section illustrates the result of running an executable with a specific environment configuration, see [configuration](#configuration).
 
+This program was built using the [command][command] module, if you care for excellent documentation and write command line interfaces you should check it out.
+
 ## Install
 
 ```
