@@ -13,6 +13,7 @@ Use this program to:
 3. Include the output of a shell program, great for examples or program usage.
 4. Keep your readme in sync with your code and prevent redundant effort with code samples.
 5. Convert relative links to absolute links so your readme documents work when displayed on the [npm][npm] website.
+6. Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 
 This program was built using the [command][command] module:
 

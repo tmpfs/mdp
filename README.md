@@ -32,6 +32,7 @@ Use this program to:
 3. Include the output of a shell program, great for examples or program usage.
 4. Keep your readme in sync with your code and prevent redundant effort with code samples.
 5. Convert relative links to absolute links so your readme documents work when displayed on the [npm](http://npmjs.org) website.
+6. Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 
 This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
 
@@ -176,7 +177,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#111;&#x70;&#x40;&#120;&#112;&#109;&#x2e;&#x69;&#111;](&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6e;&#x6f;&#111;&#x70;&#x40;&#120;&#112;&#109;&#x2e;&#x69;&#111;).
+Report bugs to muji [&#x6e;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#x6e;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#x69;&#x6f;).
 
 ## License
 
