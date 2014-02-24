@@ -51,6 +51,7 @@
     "branch": "master",
     "links": "links.md",
     "toc": "Table of Contents",
+    "order": true,
     "base": "https://github.com/freeformsystems/rdm",
     "partial": [
       {
