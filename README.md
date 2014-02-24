@@ -101,6 +101,15 @@ This document was generated with the following configuration (see [package.json]
       "language": "javascript"
     },
     {
+      "property": {
+        "middleware": [
+          "inspect"
+        ]
+      },
+      "type": "code",
+      "language": "json"
+    },
+    {
       "include": "middleware.md"
     },
     "## Usage",
@@ -157,6 +166,10 @@ function inspect(meta) {
     next();
   }
 }
+```
+
+```json
+"{\n  \"middleware\": [\n    \"inspect\"\n  ]\n}"
 ```
 
 Middleware functions are executed asynchronously once for each token encountered in the markdown document.
@@ -216,7 +229,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x6e;&#x6f;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#109;&#46;&#105;&#x6f;](&#109;&#97;&#x69;&#x6c;&#116;&#111;&#x3a;&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#109;&#46;&#105;&#x6f;).
 
 ## License
 

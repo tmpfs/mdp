@@ -88,6 +88,11 @@
         "language": "javascript"
       },
       {
+        "property": {"middleware": ["inspect"]},
+        "type": "code",
+        "language": "json"
+      },
+      {
         "include": "middleware.md"
       },
       "## Usage",
