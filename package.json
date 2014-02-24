@@ -54,49 +54,11 @@
     "order": true,
     "base": "https://github.com/freeformsystems/rdm",
     "partial": [
-      {
-        "property": "description"
-      },
-      {
-        "include": "introduction.md"
-      },
-      {
-        "include": "install.md"
-      },
-      {
-        "include": "test.md"
-      },
-      "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
-      {
-        "property": "readme",
-        "stringify": true,
-        "format": "```json\n%s\n```"
-      },
-      {
-        "include": "partial.md"
-      },
-      "## Usage",
-      {
-        "script": "rdm --help",
-        "type": "code"
-      },
-      "## Manual",
-      {
-        "env": {
-          "cli_toolkit_help_style": "markdown",
-          "cli_toolkit_help_markdown_title": true,
-          "cli_toolkit_help_markdown_header": "###"
-        },
-        "script": "rdm --help",
-        "pedantic": false
-      },
-      {
-        "include": "license.md"
-      },
-      {
-        "comment": "Includes path is set to *readme* so drop down a directory",
-        "include": "../LICENSE"
-      }
+      "# first",
+      "## child1",
+      "## child2",
+      "# last",
+      "* item1\n* item2\n* item3"
     ]
   }
 }
