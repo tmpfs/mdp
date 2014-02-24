@@ -1,5 +1,4 @@
-rdm(1)
-======
+# rdm(1)
 
 Markdown partial generator (readme).
 
@@ -12,6 +11,8 @@ A partial may be one of:
 * `include`: Include a file, normally a markdown document but not necessarily.
 * `script`: Execute a command and use `stdout` as the content.
 * `require`: Require a `.js` module or a `.json` file.
+
+See [usage](#usage) for command line options.
 
 ## Install
 
@@ -35,6 +36,7 @@ This document was generated with the following configuration:
   "pedantic": true,
   "includes": "readme",
   "links": "links.md",
+  "base": "https://github.com/freeformsystems/rdm",
   "partial": [
     {
       "property": "description"
@@ -106,7 +108,6 @@ Options:
      --version      Output version information and exit.
 
 Report bugs to muji <noop@xpm.io>.
-
 ```
 
 ## Manual
@@ -161,5 +162,5 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-[command]: https://github.com/freeformsystems/cli-command.
-
+[command]: https://github.com/freeformsystems/cli-command
+[usage]: https://github.com/freeformsystems/rdm#usage.
