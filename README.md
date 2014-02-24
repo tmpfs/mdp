@@ -3,18 +3,18 @@ Table of Contents
 
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
 
-* [Install](https://github.com/freeformsystems/rdm#install)
-* [Test](https://github.com/freeformsystems/rdm#test)
-* [Configuration](https://github.com/freeformsystems/rdm#configuration)
-* [Partial](https://github.com/freeformsystems/rdm#partial)
-* [Usage](https://github.com/freeformsystems/rdm#usage)
-* [Manual](https://github.com/freeformsystems/rdm#manual)
+  * [Install](https://github.com/freeformsystems/rdm#install)
+  * [Test](https://github.com/freeformsystems/rdm#test)
+  * [Configuration](https://github.com/freeformsystems/rdm#configuration)
+  * [Partial](https://github.com/freeformsystems/rdm#partial)
+  * [Usage](https://github.com/freeformsystems/rdm#usage)
+  * [Manual](https://github.com/freeformsystems/rdm#manual)
 
-* [Usage](https://github.com/freeformsystems/rdm#usage)
-* [Options](https://github.com/freeformsystems/rdm#options)
-* [Bugs](https://github.com/freeformsystems/rdm#bugs)
+    * [Usage](https://github.com/freeformsystems/rdm#usage)
+    * [Options](https://github.com/freeformsystems/rdm#options)
+    * [Bugs](https://github.com/freeformsystems/rdm#bugs)
 
-* [License](https://github.com/freeformsystems/rdm#license)
+  * [License](https://github.com/freeformsystems/rdm#license)
 
 rdm(1)
 ======
@@ -177,7 +177,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#109;&#x2e;&#x69;&#x6f;](&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#x3a;&#110;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#109;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#105;&#x6f;).
 
 ## License
 
