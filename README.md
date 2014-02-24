@@ -135,15 +135,17 @@ Designed for readme documents but may be used for any markdown document.
 Usage: rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -f, --force          Force file overwrite.
- -v, --verbose        Print more information.
- -m, --md             Print markdown to stdout.
- -t, --title=[title]  Document title.
  -o, --output=[file]  Markdown output file, default is README.md in the working
                       directory.
- -h, --html=[file]    Write html to file.
      --color          Control terminal color.
+ -f, --force          Force file overwrite.
+ -m, --md             Print markdown to stdout.
+ -t, --title=[title]  Document title.
      --debug          Enable debugging.
+ -h, --html=[file]    Write html to file.
+ -v, --verbose        Print more information.
+ -w, --middleware=[module ...]
+                      Require middleware module.
      --help           Display this help and exit.
      --version        Output version information and exit.
 
@@ -164,20 +166,21 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Options
 
+* `-o, --output=[file]`: Markdown output file, default is README.md in the working directory.
+* `--color`: Control terminal color.
 * `-f, --force`: Force file overwrite.
-* `-v, --verbose`: Print more information.
 * `-m, --md`: Print markdown to stdout.
 * `-t, --title=[title]`: Document title.
-* `-o, --output=[file]`: Markdown output file, default is README.md in the working directory.
-* `-h, --html=[file]`: Write html to file.
-* `--color`: Control terminal color.
 * `--debug`: Enable debugging.
+* `-h, --html=[file]`: Write html to file.
+* `-v, --verbose`: Print more information.
+* `-w, --middleware=[module ...]`: Require middleware module.
 * `--help`: Display this help and exit.
 * `--version`: Output version information and exit.
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#109;&#x2e;&#x69;&#x6f;](&#x6d;&#x61;&#105;&#108;&#x74;&#111;&#x3a;&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#109;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#64;&#120;&#x70;&#109;&#46;&#105;&#111;](&#x6d;&#97;&#105;&#108;&#116;&#x6f;&#58;&#110;&#111;&#x6f;&#112;&#64;&#120;&#x70;&#109;&#46;&#105;&#111;).
 
 ## License
 
