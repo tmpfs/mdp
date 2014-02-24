@@ -27,7 +27,7 @@ A partial may be one of:
 * `script`: Execute a command and use `stdout` as the content.
 * `require`: Require a `.js` module or a `.json` file.
 
-See [usage](#usage) for command line options, the [manual](#manual) section illustrates the result of running an executable with a specific environment configuration, see [configuration](#configuration).
+See [usage](https://github.com/freeformsystems/rdm#usage) for command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section illustrates the result of running an executable with a specific environment configuration, see [configuration](https://github.com/freeformsystems/rdm#configuration).
 
 This program was built using the [command][command] module, if you care for excellent documentation and write command line interfaces you should check it out.
 
@@ -162,7 +162,7 @@ Report bugs to muji <noop@xpm.io>.
 
 ## License
 
-Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](/LICENSE) if you feel inclined.
+Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](https://github.com/freeformsystems/rdm/blob/master/LICENSE) if you feel inclined.
 
 The MIT License (MIT)
 
