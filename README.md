@@ -1,93 +1,13 @@
 * rdm(1)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* Install
-
-
-null Test
-
-
-null Configuration
-
-
-
-null Usage
-
-
-null Manual
-
-
-
-
-* Usage
-
-
-null Options
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-null Bugs
-
-
-
-* License
-
-
-
-
-
-
+  * Install
+  * Test
+  * Configuration
+  * Usage
+  * Manual
+    * Usage
+    * Options
+    * Bugs
+  * License
 
 rdm(1)
 ======
