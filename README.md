@@ -2,10 +2,12 @@ Table of Contents
 =================
 
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
+  * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Defaults](https://github.com/freeformsystems/rdm#defaults)
-    * [Middleware](https://github.com/freeformsystems/rdm#middleware)
-  * [Partial](https://github.com/freeformsystems/rdm#partial)
+  * [Meta](https://github.com/freeformsystems/rdm#meta)
+    * [Generator](https://github.com/freeformsystems/rdm#generator)
+  * [Middleware](https://github.com/freeformsystems/rdm#middleware)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
   * [Manual](https://github.com/freeformsystems/rdm#manual)
     * [Usage](https://github.com/freeformsystems/rdm#usage)
@@ -22,7 +24,7 @@ Markdown partial processor.
 npm i -g rdm
 ```
 
-Designed to generate markdown documents from a series of partials. .
+Designed to generate markdown documents from a series of partials. 
 
 Read [partials](https://github.com/freeformsystems/rdm#partials) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/rdm#configuration) that created this document, see [usage](https://github.com/freeformsystems/rdm#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section is the result of generating program help for `rdm(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
 
@@ -40,6 +42,16 @@ This program was built using the [command](https://github.com/freeformsystems/cl
 > Command execution for command line interfaces, a component of the toolkit.
 
 If you care for excellent documentation and write command line interfaces you should check it out.
+
+## Partial
+
+A partial may be one of:
+
+* `string`: A markdown string literal.
+* `property`: A property reference.
+* `include`: Include a file, normally a markdown document but not necessarily.
+* `script`: Execute a command and use `stdout` as the content.
+* `require`: Require a `.js` module or a `.json` file.
 
 ## Configuration
 
@@ -64,6 +76,9 @@ This document was generated with the following configuration (see [package.json]
     {
       "include": "introduction.md"
     },
+    {
+      "include": "partial.md"
+    },
     "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
     {
       "property": "rdm",
@@ -76,14 +91,17 @@ This document was generated with the following configuration (see [package.json]
       "type": "code",
       "language": "javascript"
     },
-    "### Middleware\n\nThe `inspect` middleware is shown below:",
+    {
+      "include": "meta.md"
+    },
+    "## Middleware\n\nThe `inspect` middleware is shown below:",
     {
       "require": "middleware/inspect.js",
       "type": "code",
       "language": "javascript"
     },
     {
-      "include": "partial.md"
+      "include": "middleware.md"
     },
     "## Usage",
     {
@@ -122,7 +140,13 @@ This document was generated with the following configuration (see [package.json]
   period: '.' }
 ```
 
-### Middleware
+## Meta
+
+### Generator
+
+By default `rdm(1)` will append a *generator* message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the `generator` property to `false`.
+
+## Middleware
 
 The `inspect` middleware is shown below:
 
@@ -135,15 +159,7 @@ function inspect(meta) {
 }
 ```
 
-## Partial
-
-A partial may be one of:
-
-* `string`: A markdown string literal.
-* `property`: A property reference.
-* `include`: Include a file, normally a markdown document but not necessarily.
-* `script`: Execute a command and use `stdout` as the content.
-* `require`: Require a `.js` module or a `.json` file.
+Middleware functions are executed asynchronously once for each token encountered in the markdown document.
 
 ## Usage
 
@@ -200,7 +216,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#105;&#111;](&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#x6e;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#105;&#111;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x6e;&#x6f;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
 
 ## License
 

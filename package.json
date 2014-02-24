@@ -63,6 +63,9 @@
       {
         "include": "introduction.md"
       },
+      {
+        "include": "partial.md"
+      },
       "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
       {
         "property": "rdm",
@@ -75,14 +78,17 @@
         "type": "code",
         "language": "javascript"
       },
-      "### Middleware\n\nThe `inspect` middleware is shown below:",
+      {
+        "include": "meta.md"
+      },
+      "## Middleware\n\nThe `inspect` middleware is shown below:",
       {
         "require": "middleware/inspect.js",
         "type": "code",
         "language": "javascript"
       },
       {
-        "include": "partial.md"
+        "include": "middleware.md"
       },
       "## Usage",
       {
