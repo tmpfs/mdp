@@ -1,0 +1,20 @@
+{
+  "readme" : {
+    "title": "ol",
+    "toc": "Table of Contents",
+    "order": true,
+    "partial": [
+      "# first",
+      "## child1",
+      "## child2",
+      "## child3",
+      "## child4",
+      "### deep1",
+      "### deep2",
+      "## child5",
+      "# last",
+      "# final",
+      "* item1\n* item2\n* item3"
+    ]
+  }
+}
