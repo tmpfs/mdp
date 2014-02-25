@@ -29,7 +29,8 @@
     "cli-interface": "~1.0.5",
     "cli-command": "~0.8.10",
     "cli-util": "~1.1.11",
-    "marked": "~0.3.1"
+    "marked": "~0.3.1",
+    "moment": "~2.5.1"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
@@ -46,6 +47,10 @@
     "bin": "./bin"
   },
   "mdp" : {
+    "title": {
+      "ref": "name",
+      "format": "%s(1)"
+    },
     "pedantic": true,
     "include": "doc/readme",
     "require": "lib",
@@ -56,10 +61,6 @@
     "order": false,
     "base": "https://github.com/freeformsystems/mdp",
     "partial": [
-      {
-        "ref": "name",
-        "format": "# %s(1)"
-      },
       {
         "ref": "description"
       },

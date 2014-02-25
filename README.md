@@ -1,3 +1,6 @@
+% mdp(1)
+% muji <noop@xpm.io>
+% Tuesday, 25th February 2014
 Table of Contents
 =================
 
@@ -60,6 +63,10 @@ This document was generated with the following configuration (see [package.json]
 
 ```json
 {
+  "title": {
+    "ref": "name",
+    "format": "%s(1)"
+  },
   "pedantic": true,
   "include": "doc/readme",
   "require": "lib",
@@ -70,10 +77,6 @@ This document was generated with the following configuration (see [package.json]
   "order": false,
   "base": "https://github.com/freeformsystems/mdp",
   "partial": [
-    {
-      "ref": "name",
-      "format": "# %s(1)"
-    },
     {
       "ref": "description"
     },
@@ -243,6 +246,7 @@ Options:
  -t, --title=[title]  Document title.
      --color          Control terminal color.
  -f, --force          Force file overwrite.
+     --pandoc         Include pandoc meta data.
      --inspect        Enable inspect middleware.
  -m, --md             Print markdown to stdout.
      --text           Use a plain text renderer, default output is README.txt.
@@ -275,6 +279,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 * `-t, --title=[title]`: Document title.
 * `--color`: Control terminal color.
 * `-f, --force`: Force file overwrite.
+* `--pandoc`: Include pandoc meta data.
 * `--inspect`: Enable inspect middleware.
 * `-m, --md`: Print markdown to stdout.
 * `--text`: Use a plain text renderer, default output is README.txt.
@@ -288,7 +293,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#111;&#112;&#64;&#120;&#112;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x6e;&#x6f;&#111;&#112;&#64;&#120;&#112;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#112;&#x40;&#120;&#x70;&#109;&#x2e;&#105;&#111;](&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#110;&#x6f;&#x6f;&#112;&#x40;&#120;&#x70;&#109;&#x2e;&#105;&#111;).
 
 ## Library
 
