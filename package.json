@@ -106,16 +106,6 @@
         "type": "code"
       },
       {
-        "title": "Manual",
-        "env": {
-          "cli_toolkit_help_style": "markdown",
-          "cli_toolkit_help_markdown_title": true,
-          "cli_toolkit_help_markdown_header": "###"
-        },
-        "bin": "mdp --help",
-        "pedantic": false
-      },
-      {
         "inc": ["library.md"]
       },
       {

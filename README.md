@@ -11,10 +11,6 @@ Table of Contents
     * [Generator](#generator)
   * [Middleware](#middleware)
   * [Usage](#usage)
-  * [Manual](#manual)
-    * [Usage](#usage)
-    * [Options](#options)
-    * [Bugs](#bugs)
   * [Library](#library)
   * [Hook](#hook)
   * [License](#license)
@@ -125,16 +121,6 @@ This document was generated with the following configuration (see [package.json]
       "title": "Usage",
       "bin": "mdp --help",
       "type": "code"
-    },
-    {
-      "title": "Manual",
-      "env": {
-        "cli_toolkit_help_style": "markdown",
-        "cli_toolkit_help_markdown_title": true,
-        "cli_toolkit_help_markdown_header": "###"
-      },
-      "bin": "mdp --help",
-      "pedantic": false
     },
     {
       "inc": [
@@ -280,39 +266,6 @@ Options:
 
 Report bugs to muji <noop@xpm.io>.
 ```
-
-## Manual
-
-Markdown partial processor.
-
-### Usage
-
-```
-mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
-```
-
-### Options
-
-* `-t, --title=[title]`: Document title.
-* `--color`: Control terminal color.
-* `-f, --force`: Force file overwrite.
-* `--pandoc`: Include pandoc meta data.
-* `--inspect`: Enable inspect middleware.
-* `-m, --md`: Print markdown to stdout.
-* `--text`: Use a text renderer, default output is README.txt.
-* `--man`: Use a man renderer, default output is README.1.
-* `--debug`: Enable debugging.
-* `-d, --metadata=[file...]`: Meta definition file(s).
-* `-o, --output=[file]`: Output file, default is README.md.
-* `-h, --html=[file]`: Write html to file.
-* `-v, --verbose`: Print more information.
-* `-w, --middleware=[file ...]`: Require custom middleware.
-* `--help`: Display this help and exit.
-* `--version`: Output version information and exit.
-
-### Bugs
-
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#112;&#109;&#46;&#105;&#x6f;](&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#112;&#109;&#46;&#105;&#x6f;).
 
 ## Library
 
