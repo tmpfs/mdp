@@ -123,13 +123,13 @@
       {
         "inc": "../../.git/hooks/pre-commit",
         "type": "code",
-        "language": "shell"
+        "language": "bash"
       },
       "You are more likely to have `mdp` in your path so you could use something like:",
       {
         "inc": "git-hook.sh",
         "type": "code",
-        "language": "shell"
+        "language": "bash"
       },
       {
         "inc": ["license.md", "../../LICENSE"]

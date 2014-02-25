@@ -146,13 +146,13 @@ This document was generated with the following configuration (see [package.json]
     {
       "inc": "../../.git/hooks/pre-commit",
       "type": "code",
-      "language": "shell"
+      "language": "bash"
     },
     "You are more likely to have `mdp` in your path so you could use something like:",
     {
       "inc": "git-hook.sh",
       "type": "code",
-      "language": "shell"
+      "language": "bash"
     },
     {
       "inc": [
@@ -304,7 +304,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#x2e;&#x69;&#111;](&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#110;&#111;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#x2e;&#x69;&#111;).
+Report bugs to muji [&#x6e;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#109;&#x2e;&#105;&#111;](&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x6e;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#109;&#x2e;&#105;&#111;).
 
 ## Library
 
@@ -316,7 +316,7 @@ These are exposed via the `MarkdownParser` and `MarkdownRenderer` properties of 
 
 Using a git hook is a good idea to ensure your README is up to date, here is the hook from this repository:
 
-```shell
+```bash
 #!/usr/bin/env bash
 abspath=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
 abspath=$(dirname $(dirname ${abspath}));
@@ -325,7 +325,7 @@ ${abspath}/bin/mdp --force --debug && git add README.md
 
 You are more likely to have `mdp` in your path so you could use something like:
 
-```shell
+```bash
 #/bin/sh
 mdp --force && git add README.md
 ```
