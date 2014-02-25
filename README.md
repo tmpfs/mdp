@@ -253,8 +253,6 @@ You can enable it by declaring it in the meta data (or by using `--inspect`):
 ```
 Markdown partial processor.
 
-Designed for readme documents but may be used for any markdown document.
-
 Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
@@ -282,8 +280,6 @@ Report bugs to muji <noop@xpm.io>.
 
 Markdown partial processor.
 
-Designed for readme documents but may be used for any markdown document.
-
 ### Usage
 
 ```
@@ -310,7 +306,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#111;&#112;&#64;&#120;&#x70;&#109;&#46;&#x69;&#x6f;](&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#110;&#111;&#111;&#112;&#64;&#120;&#x70;&#109;&#46;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#109;&#x2e;&#x69;&#x6f;](&#x6d;&#x61;&#x69;&#108;&#x74;&#111;&#58;&#110;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#109;&#x2e;&#x69;&#x6f;).
 
 ## Library
 
