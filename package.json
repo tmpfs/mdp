@@ -63,6 +63,9 @@
     "partial": [
       {
         "ref": "description"
+      },
+      {
+        "inc": ["introduction.md", "features.md"]
       }
     ]
   }
