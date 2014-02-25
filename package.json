@@ -118,6 +118,19 @@
       {
         "inc": ["library.md"]
       },
+      "## Hook",
+      "Using a git hook is a good idea to ensure your README is up to date, here is the hook from this repository:",
+      {
+        "inc": "../../.git/hooks/pre-commit",
+        "type": "code",
+        "language": "shell"
+      },
+      "You are more likely to have `mdp` in your path so you could use something like:",
+      {
+        "inc": "git-hook.sh",
+        "type": "code",
+        "language": "shell"
+      },
       {
         "inc": ["license.md", "../../LICENSE"]
       }

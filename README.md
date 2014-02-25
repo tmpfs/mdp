@@ -16,6 +16,7 @@ Table of Contents
     * [Options](#options)
     * [Bugs](#bugs)
   * [Library](#library)
+  * [Hook](#hook)
   * [License](#license)
 
 mdp(1)
@@ -139,6 +140,19 @@ This document was generated with the following configuration (see [package.json]
       "inc": [
         "library.md"
       ]
+    },
+    "## Hook",
+    "Using a git hook is a good idea to ensure your README is up to date, here is the hook from this repository:",
+    {
+      "inc": "../../.git/hooks/pre-commit",
+      "type": "code",
+      "language": "shell"
+    },
+    "You are more likely to have `mdp` in your path so you could use something like:",
+    {
+      "inc": "git-hook.sh",
+      "type": "code",
+      "language": "shell"
     },
     {
       "inc": [
@@ -290,13 +304,31 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#x6d;&#x2e;&#105;&#111;](&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#x6d;&#x2e;&#105;&#111;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#x2e;&#x69;&#111;](&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#110;&#111;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#x2e;&#x69;&#111;).
 
 ## Library
 
 Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the [marked](https://github.com/chjj/marked) tokens back to markdown it was necessary to extend the `Parser` and `Renderer` classes.
 
 These are exposed via the `MarkdownParser` and `MarkdownRenderer` properties of the module.
+
+## Hook
+
+Using a git hook is a good idea to ensure your README is up to date, here is the hook from this repository:
+
+```shell
+#!/usr/bin/env bash
+abspath=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
+abspath=$(dirname $(dirname ${abspath}));
+${abspath}/bin/mdp --force --debug && git add README.md
+```
+
+You are more likely to have `mdp` in your path so you could use something like:
+
+```shell
+#/bin/sh
+mdp --force && git add README.md
+```
 
 ## License
 
