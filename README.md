@@ -81,16 +81,12 @@ This document was generated with the following configuration (see [package.json]
     {
       "ref": "description"
     },
-    [
-      {
-        "inc": "introduction.md"
-      },
-      {
-        "inc": "features.md"
-      }
-    ],
     {
-      "inc": "partial.md"
+      "inc": [
+        "introduction.md",
+        "features.md",
+        "partial.md"
+      ]
     },
     "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
     {
@@ -142,10 +138,10 @@ This document was generated with the following configuration (see [package.json]
       "pedantic": false
     },
     {
-      "inc": "license.md"
-    },
-    {
-      "inc": "../../LICENSE"
+      "inc": [
+        "license.md",
+        "../../LICENSE"
+      ]
     }
   ]
 }
@@ -255,7 +251,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#x6e;&#111;&#111;&#112;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#111;](&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x6e;&#111;&#111;&#112;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#111;).
 
 ## License
 

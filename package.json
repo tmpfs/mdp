@@ -63,16 +63,8 @@
       {
         "ref": "description"
       },
-      [
-        {
-          "inc": "introduction.md"
-        },
-        {
-          "inc": "features.md"
-        }
-      ],
       {
-        "inc": "partial.md"
+        "inc": ["introduction.md", "features.md", "partial.md"]
       },
       "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
       {
@@ -120,10 +112,7 @@
         "pedantic": false
       },
       {
-        "inc": "license.md"
-      },
-      {
-        "inc": "../../LICENSE"
+        "inc": ["license.md", "../../LICENSE"]
       }
     ]
   }
