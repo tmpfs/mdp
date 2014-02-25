@@ -66,6 +66,15 @@
       },
       {
         "inc": ["introduction.md", "features.md"]
+      },
+      "## Configuration",
+      {
+        "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
+      },
+      {
+        "ref": "mdp",
+        "stringify": true,
+        "format": "```json\n%s\n```"
       }
     ]
   }
