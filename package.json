@@ -95,8 +95,9 @@
         "type": "code",
         "language": "javascript"
       },
+      "You can enable it by declaring it in the meta data (or by using `--inspect`):",
       {
-        "ref": {"middleware": ["inspect"]},
+        "obj": {"middleware": ["inspect"]},
         "type": "code",
         "language": "json"
       },

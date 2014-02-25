@@ -112,8 +112,9 @@ This document was generated with the following configuration (see [package.json]
       "type": "code",
       "language": "javascript"
     },
+    "You can enable it by declaring it in the meta data (or by using `--inspect`):",
     {
-      "ref": {
+      "obj": {
         "middleware": [
           "inspect"
         ]
@@ -237,6 +238,8 @@ function inspect(meta) {
 }
 ```
 
+You can enable it by declaring it in the meta data (or by using `--inspect`):
+
 ```json
 {
   "middleware": [
@@ -305,7 +308,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;](&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#109;&#46;&#105;&#x6f;).
 
 ## Library
 
