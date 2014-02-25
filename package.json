@@ -69,12 +69,11 @@
       },
       {
         "title": "Configuration",
-        "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
-      },
-      {
+        "text": "This document was generated with the following configuration (see [package.json](/package.json)):",
         "ref": "mdp",
         "stringify": true,
-        "format": "```json\n%s\n```"
+        "format": "```json\n%s\n```",
+        "footer": "***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***"
       },
       {
         "title": "Defaults",
@@ -93,10 +92,10 @@
         "text": "The `inspect` middleware is shown below:",
         "req": "middleware/inspect.js",
         "type": "code",
-        "language": "javascript",
-        "footer": "You can enable it by declaring it in the meta data (or by using `--inspect`):"
+        "language": "javascript"
       },
       {
+        "text": "You can enable it by declaring it in the meta data (or by using `--inspect`):",
         "obj": {"middleware": ["inspect"]},
         "type": "code",
         "language": "json"

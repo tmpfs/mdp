@@ -53,7 +53,7 @@ If you care for excellent documentation and write command line interfaces you sh
 
 * Synchronize your `README` with your code.
 * Generate `markdown`, `html` and `txt` documents from partials.
-* Flexible middlware design, see [middleware](#middleware).
+* Flexible middlware design, see [middleware](#middleware)
 
 ## Configuration
 
@@ -86,12 +86,11 @@ This document was generated with the following configuration (see [package.json]
     },
     {
       "title": "Configuration",
-      "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
-    },
-    {
+      "text": "This document was generated with the following configuration (see [package.json](/package.json)):",
       "ref": "mdp",
       "stringify": true,
-      "format": "```json\n%s\n```"
+      "format": "```json\n%s\n```",
+      "footer": "***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***"
     },
     {
       "title": "Defaults",
@@ -110,10 +109,10 @@ This document was generated with the following configuration (see [package.json]
       "text": "The `inspect` middleware is shown below:",
       "req": "middleware/inspect.js",
       "type": "code",
-      "language": "javascript",
-      "footer": "You can enable it by declaring it in the meta data (or by using `--inspect`):"
+      "language": "javascript"
     },
     {
+      "text": "You can enable it by declaring it in the meta data (or by using `--inspect`):",
       "obj": {
         "middleware": [
           "inspect"
@@ -164,6 +163,8 @@ This document was generated with the following configuration (see [package.json]
   ]
 }
 ```
+
+***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***
 
 ## Defaults
 
@@ -308,7 +309,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#111;](&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#111;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;](&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;).
 
 ## Library
 
@@ -338,7 +339,7 @@ mdp --force && git add README.md
 
 Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](https://github.com/freeformsystems/mdp/blob/master/LICENSE) if you feel inclined.
 
-The MIT License (MIT).
+The MIT License (MIT)
 
 Copyright (c) 2014 Freeform Systems.
 
