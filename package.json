@@ -47,7 +47,7 @@
   },
   "rdm" : {
     "pedantic": true,
-    "includes": "doc/readme",
+    "include": "doc/readme",
     "require": "lib",
     "gfm": true,
     "branch": "master",

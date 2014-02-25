@@ -3,10 +3,11 @@ Table of Contents
 
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
   * [Features](https://github.com/freeformsystems/rdm#features)
-  * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Defaults](https://github.com/freeformsystems/rdm#defaults)
   * [Meta](https://github.com/freeformsystems/rdm#meta)
+    * [Options](https://github.com/freeformsystems/rdm#options)
+    * [Partial](https://github.com/freeformsystems/rdm#partial)
     * [Generator](https://github.com/freeformsystems/rdm#generator)
   * [Middleware](https://github.com/freeformsystems/rdm#middleware)
   * [Usage](https://github.com/freeformsystems/rdm#usage)
@@ -48,16 +49,6 @@ If you care for excellent documentation and write command line interfaces you sh
 
 * Synchronize your readme with your code.
 
-## Partial
-
-A partial may be one of:
-
-* `string`: A markdown string literal.
-* `property`: A property reference.
-* `include`: Include a file, normally a markdown document but not necessarily.
-* `script`: Execute a command and use `stdout` as the content.
-* `require`: Require a `.js` module or a `.json` file.
-
 ## Configuration
 
 This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
@@ -65,7 +56,7 @@ This document was generated with the following configuration (see [package.json]
 ```json
 {
   "pedantic": true,
-  "includes": "doc/readme",
+  "include": "doc/readme",
   "require": "lib",
   "gfm": true,
   "branch": "master",
@@ -159,7 +150,7 @@ This document was generated with the following configuration (see [package.json]
   "gfm": true,
   "period": ".",
   "pedantic": false,
-  "includes": null,
+  "include": null,
   "require": null,
   "branch": "master",
   "links": null,
@@ -171,6 +162,29 @@ This document was generated with the following configuration (see [package.json]
 ```
 
 ## Meta
+
+Meta data describes processing options and how you want to collate the partials.
+
+### Options
+
+* `generator`: A boolean that disables inclusion of the generator text.
+* `title`: A string that sets the document title, will become a `h1`.
+* `gfm`: A boolean that indicates that [github][github] flavoured markdown is in use.
+* `period`: The character used by the [pedantic middleware](https://github.com/freeformsystems/rdm#pedantic-middleware).
+* `include`: A directory that is the base path for [include partials](https://github.com/freeformsystems/rdm#include-partial).
+* `require`: A directory that is the base path for [require partials](https://github.com/freeformsystems/rdm#require-partial).
+
+### Partial
+
+A partial may be one of:
+
+* `literal`: A string literal.
+* `reference`: A property reference.
+* `include`: Include a file, normally a markdown document but not necessarily.
+* `binary`: Execute a command and use `stdout` as the content.
+* `require`: Require a `.js` module or a `.json` file.
+
+All keys are available using a three character abbreviation, specifiying `bin` is equivalent to `binary`.
 
 ### Generator
 
@@ -254,7 +268,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#x6d;&#46;&#105;&#111;](&#109;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#x6d;&#46;&#105;&#111;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;](&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#110;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;).
 
 ## License
 
