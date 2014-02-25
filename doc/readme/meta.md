@@ -15,6 +15,7 @@ Meta data describes processing options and how you want to collate the partials.
 * `toc`: Enable the table of contents middleware with `true` or set to a string to include a title above the table of contents.
 * `order`: A boolean that indicates the `toc` middleware should use ordered lists.
 * `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
+* `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
 * `partial`: Array of partial definitions, see [partial](#partial).
 
 ### Partial 

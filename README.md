@@ -1,22 +1,22 @@
 Table of Contents
 =================
 
-* [mdp(1)](https://github.com/freeformsystems/mdp#mdp1)
-  * [Features](https://github.com/freeformsystems/mdp#features)
-  * [Configuration](https://github.com/freeformsystems/mdp#configuration)
-  * [Defaults](https://github.com/freeformsystems/mdp#defaults)
-  * [Meta](https://github.com/freeformsystems/mdp#meta)
-    * [Options](https://github.com/freeformsystems/mdp#options)
-    * [Partial](https://github.com/freeformsystems/mdp#partial)
-    * [Generator](https://github.com/freeformsystems/mdp#generator)
-  * [Middleware](https://github.com/freeformsystems/mdp#middleware)
-  * [Usage](https://github.com/freeformsystems/mdp#usage)
-  * [Manual](https://github.com/freeformsystems/mdp#manual)
-    * [Usage](https://github.com/freeformsystems/mdp#usage)
-    * [Options](https://github.com/freeformsystems/mdp#options)
-    * [Bugs](https://github.com/freeformsystems/mdp#bugs)
-  * [Library](https://github.com/freeformsystems/mdp#library)
-  * [License](https://github.com/freeformsystems/mdp#license)
+* [mdp(1)](#mdp1)
+  * [Features](#features)
+  * [Configuration](#configuration)
+  * [Defaults](#defaults)
+  * [Meta](#meta)
+    * [Options](#options)
+    * [Partial](#partial)
+    * [Generator](#generator)
+  * [Middleware](#middleware)
+  * [Usage](#usage)
+  * [Manual](#manual)
+    * [Usage](#usage)
+    * [Options](#options)
+    * [Bugs](#bugs)
+  * [Library](#library)
+  * [License](#license)
 
 mdp(1)
 ======
@@ -29,7 +29,7 @@ npm i -g mdp
 
 Designed to generate markdown documents from a series of partials. 
 
-Read [partial](https://github.com/freeformsystems/mdp#partial) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/mdp#configuration) that created this document, see [usage](https://github.com/freeformsystems/mdp#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/mdp#manual) section is the result of generating program help for `mdp(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
+Read [partial](#partial) to learn how to define partials or get a quick feel by checking the [configuration](#configuration) that created this document, see [usage](#usage) for an abbreviated look at the command line options, the [manual](#manual) section is the result of generating program help for `mdp(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
 
 Use this program to:
 
@@ -40,7 +40,7 @@ Use this program to:
 5. Convert relative links to absolute links so your readme documents work when displayed on the [npm](http://npmjs.org) website.
 6. Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 7. Convert markdown document(s) to plain text.
-8. Create arbitrary processing rules with custom middleware, see [middleware](https://github.com/freeformsystems/mdp#middleware).
+8. Create arbitrary processing rules with custom middleware, see [middleware](#middleware).
 
 This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
 
@@ -52,7 +52,7 @@ If you care for excellent documentation and write command line interfaces you sh
 
 * Synchronize your `README` with your code.
 * Generate `markdown`, `html` and `txt` documents from partials.
-* Flexible middlware design, see [middleware](https://github.com/freeformsystems/mdp#middleware).
+* Flexible middlware design, see [middleware](#middleware).
 
 ## Configuration
 
@@ -166,6 +166,7 @@ This document was generated with the following configuration (see [package.json]
   "toc": false,
   "order": false,
   "base": null,
+  "hash": false,
   "partial": null
 }
 ```
@@ -179,15 +180,16 @@ Meta data describes processing options and how you want to collate the partials.
 * `generator`: A boolean that disables inclusion of the generator text.
 * `title`: A string that sets the document title.
 * `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
-* `period`: The character used by the [pedantic middleware](https://github.com/freeformsystems/mdp#pedantic-middleware).
-* `include`: A directory that is the base path for [include partials](https://github.com/freeformsystems/mdp#include-partial).
-* `require`: A directory that is the base path for [require partials](https://github.com/freeformsystems/mdp#require-partial).
+* `period`: The character used by the [pedantic middleware](#pedantic-middleware).
+* `include`: A directory that is the base path for [include partials](#include-partial).
+* `require`: A directory that is the base path for [require partials](#require-partial).
 * `branch`: A branch name to use when resolving links that begin with `/` for [github](http://github.com), only applicable if `gfm` is set.
 * `links`: The name of a links include file, resolved relative to `include`.
 * `toc`: Enable the table of contents middleware with `true` or set to a string to include a title above the table of contents.
 * `order`: A boolean that indicates the `toc` middleware should use ordered lists.
 * `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
-* `partial`: Array of partial definitions, see [partial](https://github.com/freeformsystems/mdp#partial).
+* `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
+* `partial`: Array of partial definitions, see [partial](#partial).
 
 ### Partial
 
@@ -286,7 +288,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#x70;&#x40;&#x78;&#x70;&#109;&#x2e;&#x69;&#x6f;](&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#110;&#111;&#x6f;&#x70;&#x40;&#x78;&#x70;&#109;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#109;&#97;&#105;&#x6c;&#x74;&#111;&#x3a;&#110;&#111;&#x6f;&#112;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
 
 ## Library
 
