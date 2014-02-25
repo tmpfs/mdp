@@ -1,15 +1,11 @@
 {
-  "title": "mdp(1)",
   "pedantic": true,
   "toc": "Table of Contents",
   "base": "https://github.com/freeformsystems/mdp",
   "partial": [
     {
-      "title": "Manual",
       "env": {
-        "cli_toolkit_help_style": "markdown",
-        "cli_toolkit_help_markdown_title": true,
-        "cli_toolkit_help_markdown_header": "##"
+        "cli_toolkit_help_style": "markdown"
       },
       "bin": "mdp --help"
     }
