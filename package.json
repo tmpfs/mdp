@@ -115,6 +115,9 @@
         "pedantic": false
       },
       {
+        "inc": ["library.md"]
+      },
+      {
         "inc": ["license.md", "../../LICENSE"]
       }
     ]
