@@ -4,39 +4,35 @@
 mdp \- Markdown partial processor
 .SH "MDP(1)"
 .PP
-Markdown partial processor.
+Markdown partial processor
 .PP
 Designed to generate markdown documents from a series of partials. 
 .PP
-Read \fBPARTIAL\fR to learn how to define partials or get a quick feel by checking the \fBCONFIGURATION\fR that created this document, see \fBUSAGE\fR for an abbreviated look at the command line options.
-.PP
-Use this program to:
+Read \fBPARTIAL\fR to learn how to define partials or get a quick feel by checking the \fBCONFIGURATION\fR that created this document, see \fBUSAGE\fR for an abbreviated look at the command line options..
+.SH "FEATURES"
 .BL
+.IP "\[ci]" 4
+Synchronize your \fBREADME\fR with your code..
+.IP "\[ci]" 4
+Generate \fBmarkdown\fR, \fBhtml\fR, \fBman\fR and \fBtxt\fR documents from partials..
+.IP "\[ci]" 4
+Flexible middlware design, see \fBMIDDLEWARE\fR.
 .IP "\[ci]" 4
 Concatenate multiple markdown documents into a single file.
 .IP "\[ci]" 4
-Generate a table of contents for markdown document(s).
+Generate a table of contents for markdown document(s)..
 .IP "\[ci]" 4
 Include the output of a shell program, great for examples or program usage.
 .IP "\[ci]" 4
 Keep your readme in sync with your code and prevent redundant effort with code samples.
 .IP "\[ci]" 4
-Convert relative links to absolute links so your readme documents work when displayed on the npm[3] website.
+Convert relative links to absolute links so your readme documents work when displayed on the npm[3] website..
 .IP "\[ci]" 4
 Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 .IP "\[ci]" 4
-Convert markdown document(s) to plain text.
+Convert markdown document(s) to plain text..
 .IP "\[ci]" 4
-Create arbitrary processing rules with custom middleware, see \fBMIDDLEWARE\fR.
-.EL
-.SH "FEATURES"
-.BL
-.IP "\[ci]" 4
-Synchronize your \fBREADME\fR with your code.
-.IP "\[ci]" 4
-Generate \fBmarkdown\fR, \fBhtml\fR and \fBtxt\fR documents from partials.
-.IP "\[ci]" 4
-Flexible middlware design, see \fBMIDDLEWARE\fR
+Create arbitrary processing rules with custom middleware, see \fBMIDDLEWARE\fR..
 .EL
 .SH "INSTALL"
 
@@ -69,7 +65,7 @@ Options:
 Report bugs to muji <noop@xpm.io>.
 .SH "CONFIGURATION"
 .PP
-This document was generated with the following configuration (see package.json[6]):
+This document was generated with the following configuration (see package.json[6]):.
 
 .LT
 {
@@ -171,40 +167,40 @@ This document was generated with the following configuration (see package.json[6
   ]
 }
 .PP
-\fBNote this is not necessarily the optimal configuration it is designed to showcase the partial functionality.\fR
+\fBNote this is not necessarily the optimal configuration it is designed to showcase the partial functionality.\fR.
 .SH "META"
 .PP
 Meta data describes processing options and how you want to collate the partials.
 .SS "Options"
 .BL
 .IP "\[ci]" 4
-\fBgenerator\fR: A boolean that disables inclusion of the generator text.
+\fBgenerator\fR: A boolean that disables inclusion of the generator text..
 .IP "\[ci]" 4
-\fBtitle\fR: A string that sets the document title or a partial definition.
+\fBtitle\fR: A string that sets the document title or a partial definition..
 .IP "\[ci]" 4
-\fBgfm\fR: A boolean that indicates that github[1] flavoured markdown is in use.
+\fBgfm\fR: A boolean that indicates that github[1] flavoured markdown is in use..
 .IP "\[ci]" 4
-\fBperiod\fR: The character used by the \fBPEDANTIC MIDDLEWARE\fR.
+\fBperiod\fR: The character used by the \fBPEDANTIC MIDDLEWARE\fR..
 .IP "\[ci]" 4
-\fBinclude\fR: A directory that is the base path for \fBINCLUDE PARTIALS\fR.
+\fBinclude\fR: A directory that is the base path for \fBINCLUDE PARTIALS\fR..
 .IP "\[ci]" 4
-\fBrequire\fR: A directory that is the base path for \fBREQUIRE PARTIALS\fR.
+\fBrequire\fR: A directory that is the base path for \fBREQUIRE PARTIALS\fR..
 .IP "\[ci]" 4
-\fBbranch\fR: A branch name to use when resolving links that begin with \fB/\fR for github[1], only applicable if \fBgfm\fR is set.
+\fBbranch\fR: A branch name to use when resolving links that begin with \fB/\fR for github[1], only applicable if \fBgfm\fR is set..
 .IP "\[ci]" 4
-\fBlinks\fR: The name of a links include file, resolved relative to \fBinclude\fR.
+\fBlinks\fR: The name of a links include file, resolved relative to \fBinclude\fR..
 .IP "\[ci]" 4
-\fBtoc\fR: Enable the table of contents middleware with \fBtrue\fR or set to a string to include a title above the table of contents.
+\fBtoc\fR: Enable the table of contents middleware with \fBtrue\fR or set to a string to include a title above the table of contents..
 .IP "\[ci]" 4
-\fBorder\fR: A boolean that indicates the \fBtoc\fR middleware should use ordered lists.
+\fBorder\fR: A boolean that indicates the \fBtoc\fR middleware should use ordered lists..
 .IP "\[ci]" 4
-\fBbase\fR: Enable the absolute link middleware, specifies the base URL for absolute links.
+\fBbase\fR: Enable the absolute link middleware, specifies the base URL for absolute links..
 .IP "\[ci]" 4
-\fBhash\fR: A boolean that controls whether the absolute middleware operates on URLs that begin with \fB#\fR.
+\fBhash\fR: A boolean that controls whether the absolute middleware operates on URLs that begin with \fB#\fR..
 .IP "\[ci]" 4
-\fBlevel\fR: An integer indicating the header level for \fBtitle\fR properties in partial definitions.
+\fBlevel\fR: An integer indicating the header level for \fBtitle\fR properties in partial definitions..
 .IP "\[ci]" 4
-\fBpartial\fR: Array of partial definitions, see \fBPARTIAL\fR.
+\fBpartial\fR: Array of partial definitions, see \fBPARTIAL\fR..
 .EL
 
 .LT
@@ -230,26 +226,26 @@ Meta data describes processing options and how you want to collate the partials.
 A partial may be one of:
 .BL
 .IP "\[ci]" 4
-\fBliteral|lit\fR: A string literal.
+\fBliteral|lit\fR: A string literal..
 .IP "\[ci]" 4
-\fBreference|ref\fR: A property reference.
+\fBreference|ref\fR: A property reference..
 .IP "\[ci]" 4
-\fBobject|obj\fR: A json or javascript object reference.
+\fBobject|obj\fR: A json or javascript object reference..
 .IP "\[ci]" 4
-\fBinclude|inc\fR: Include a file, normally a markdown document but not necessarily.
+\fBinclude|inc\fR: Include a file, normally a markdown document but not necessarily..
 .IP "\[ci]" 4
-\fBbinary|bin\fR: Execute a command and use \fBstdout\fR as the content.
+\fBbinary|bin\fR: Execute a command and use \fBstdout\fR as the content..
 .IP "\[ci]" 4
-\fBrequire|req\fR: Require a \fB.js\fR module or a \fB.json\fR file.
+\fBrequire|req\fR: Require a \fB.js\fR module or a \fB.json\fR file..
 .EL
 .SS "Generator"
 .PP
-By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the \fBgenerator\fR property to \fBfalse\fR.
+By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the \fBgenerator\fR property to \fBfalse\fR..
 .SH "MIDDLEWARE"
 .PP
 Middleware functions are executed asynchronously once for each token encountered in the markdown document.
 .PP
-The \fBinspect\fR middleware is shown below:
+The \fBinspect\fR middleware is shown below:.
 
 .LT
 function inspect(meta) {
@@ -259,7 +255,7 @@ function inspect(meta) {
   }
 }
 .PP
-You can enable it by declaring it in the meta data (or by using \fB\-\-inspect\fR):
+You can enable it by declaring it in the meta data (or by using \fB\-\-inspect\fR):.
 
 .LT
 {
@@ -269,9 +265,9 @@ You can enable it by declaring it in the meta data (or by using \fB\-\-inspect\f
 }
 .SH "LIBRARY"
 .PP
-Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the marked[4] tokens back to markdown it was necessary to extend the \fBParser\fR and \fBRenderer\fR classes.
+Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the marked[4] tokens back to markdown it was necessary to extend the \fBParser\fR and \fBRenderer\fR classes..
 .PP
-These are exposed via the \fBMarkdownParser\fR and \fBMarkdownRenderer\fR properties of the module.
+These are exposed via the \fBMarkdownParser\fR and \fBMarkdownRenderer\fR properties of the module..
 .SH "HOOK"
 .PP
 Keep your README up to date with a git hook, this is the hook from this repository:
@@ -283,16 +279,16 @@ path=$(dirname $(dirname ${path}));
 cd ${path} && npm run build \
   && git add README.md doc/README.html doc/README.txt doc/README.1
 .PP
-If you have \fBmdp\fR in your path you could use:
+If you have \fBmdp\fR in your path you could use:.
 
 .LT
 #/bin/sh
 mdp \-\-force && git add README.md
 .SH "LICENSE"
 .PP
-Everything is MIT[7]. Read the license[8] if you feel inclined.
+Everything is MIT[7]. Read the license[8] if you feel inclined..
 .PP
-This program was built using the command[5] module, if you care for excellent documentation and write command line interfaces you should check it out.
+This program was built using the command[5] module, if you care for excellent documentation and write command line interfaces you should check it out..
 .SH "LINKS"
 .BL
 .IP "\[ci]" 4
