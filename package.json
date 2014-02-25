@@ -68,6 +68,11 @@
         "inc": ["introduction.md", "features.md"]
       },
       {
+        "title": "Usage",
+        "bin": "mdp --help",
+        "type": "code"
+      },
+      {
         "title": "Configuration",
         "text": "This document was generated with the following configuration (see [package.json](/package.json)):",
         "ref": "mdp",
@@ -99,11 +104,6 @@
         "obj": {"middleware": ["inspect"]},
         "type": "code",
         "language": "json"
-      },
-      {
-        "title": "Usage",
-        "bin": "mdp --help",
-        "type": "code"
       },
       {
         "inc": ["library.md"]

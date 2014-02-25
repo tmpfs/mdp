@@ -3,6 +3,7 @@ Table of Contents
 
 * [mdp(1)](#mdp1)
   * [Features](#features)
+  * [Usage](#usage)
   * [Configuration](#configuration)
   * [Defaults](#defaults)
   * [Meta](#meta)
@@ -10,7 +11,6 @@ Table of Contents
     * [Partial](#partial)
     * [Generator](#generator)
   * [Middleware](#middleware)
-  * [Usage](#usage)
   * [Library](#library)
   * [Hook](#hook)
   * [License](#license)
@@ -51,6 +51,36 @@ If you care for excellent documentation and write command line interfaces you sh
 * Generate `markdown`, `html` and `txt` documents from partials.
 * Flexible middlware design, see [middleware](#middleware)
 
+## Usage
+
+```
+Markdown partial processor.
+
+Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
+
+Options:
+ -t, --title=[title]  Document title.
+     --color          Control terminal color.
+ -f, --force          Force file overwrite.
+     --pandoc         Include pandoc meta data.
+     --inspect        Enable inspect middleware.
+ -m, --md             Print markdown to stdout.
+     --text           Use a text renderer, default output is README.txt.
+     --man            Use a man renderer, default output is README.1.
+     --debug          Enable debugging.
+ -d, --metadata=[file...]
+                      Meta definition file(s).
+ -o, --output=[file]  Output file, default is README.md.
+ -h, --html=[file]    Write html to file.
+ -v, --verbose        Print more information.
+ -w, --middleware=[file ...]
+                      Require custom middleware.
+     --help           Display this help and exit.
+     --version        Output version information and exit.
+
+Report bugs to muji <noop@xpm.io>.
+```
+
 ## Configuration
 
 This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/mdp/blob/master/package.json)):
@@ -79,6 +109,11 @@ This document was generated with the following configuration (see [package.json]
         "introduction.md",
         "features.md"
       ]
+    },
+    {
+      "title": "Usage",
+      "bin": "mdp --help",
+      "type": "code"
     },
     {
       "title": "Configuration",
@@ -116,11 +151,6 @@ This document was generated with the following configuration (see [package.json]
       },
       "type": "code",
       "language": "json"
-    },
-    {
-      "title": "Usage",
-      "bin": "mdp --help",
-      "type": "code"
     },
     {
       "inc": [
@@ -235,36 +265,6 @@ You can enable it by declaring it in the meta data (or by using `--inspect`):
     "inspect"
   ]
 }
-```
-
-## Usage
-
-```
-Markdown partial processor.
-
-Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
-
-Options:
- -t, --title=[title]  Document title.
-     --color          Control terminal color.
- -f, --force          Force file overwrite.
-     --pandoc         Include pandoc meta data.
-     --inspect        Enable inspect middleware.
- -m, --md             Print markdown to stdout.
-     --text           Use a text renderer, default output is README.txt.
-     --man            Use a man renderer, default output is README.1.
-     --debug          Enable debugging.
- -d, --metadata=[file...]
-                      Meta definition file(s).
- -o, --output=[file]  Output file, default is README.md.
- -h, --html=[file]    Write html to file.
- -v, --verbose        Print more information.
- -w, --middleware=[file ...]
-                      Require custom middleware.
-     --help           Display this help and exit.
-     --version        Output version information and exit.
-
-Report bugs to muji <noop@xpm.io>.
 ```
 
 ## Library
