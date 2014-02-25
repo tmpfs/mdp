@@ -58,47 +58,47 @@
     "base": "https://github.com/freeformsystems/rdm",
     "partial": [
       {
-        "property": "description"
+        "ref": "description"
       },
       {
-        "include": "introduction.md"
+        "inc": "introduction.md"
       },
       {
-        "include": "partial.md"
+        "inc": "partial.md"
       },
       "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
       {
-        "property": "rdm",
+        "ref": "rdm",
         "stringify": true,
         "format": "```json\n%s\n```"
       },
       "## Defaults\n\n",
       {
-        "require": "defaults.js",
+        "req": "defaults.js",
         "type": "code",
         "language": "javascript"
       },
       {
-        "include": "meta.md"
+        "inc": "meta.md"
       },
       "## Middleware",
       {
-        "include": "middleware.md"
+        "inc": "middleware.md"
       },
       "The `inspect` middleware is shown below:",
       {
-        "require": "middleware/inspect.js",
+        "req": "middleware/inspect.js",
         "type": "code",
         "language": "javascript"
       },
       {
-        "property": {"middleware": ["inspect"]},
+        "ref": {"middleware": ["inspect"]},
         "type": "code",
         "language": "json"
       },
       "## Usage",
       {
-        "script": "rdm --help",
+        "bin": "rdm --help",
         "type": "code"
       },
       "## Manual",
@@ -108,14 +108,14 @@
           "cli_toolkit_help_markdown_title": true,
           "cli_toolkit_help_markdown_header": "###"
         },
-        "script": "rdm --help",
+        "bin": "rdm --help",
         "pedantic": false
       },
       {
-        "include": "license.md"
+        "inc": "license.md"
       },
       {
-        "include": "../../LICENSE"
+        "inc": "../../LICENSE"
       }
     ]
   }

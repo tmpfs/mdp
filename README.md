@@ -71,41 +71,41 @@ This document was generated with the following configuration (see [package.json]
   "base": "https://github.com/freeformsystems/rdm",
   "partial": [
     {
-      "property": "description"
+      "ref": "description"
     },
     {
-      "include": "introduction.md"
+      "inc": "introduction.md"
     },
     {
-      "include": "partial.md"
+      "inc": "partial.md"
     },
     "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
     {
-      "property": "rdm",
+      "ref": "rdm",
       "stringify": true,
       "format": "```json\n%s\n```"
     },
     "## Defaults\n\n",
     {
-      "require": "defaults.js",
+      "req": "defaults.js",
       "type": "code",
       "language": "javascript"
     },
     {
-      "include": "meta.md"
+      "inc": "meta.md"
     },
     "## Middleware",
     {
-      "include": "middleware.md"
+      "inc": "middleware.md"
     },
     "The `inspect` middleware is shown below:",
     {
-      "require": "middleware/inspect.js",
+      "req": "middleware/inspect.js",
       "type": "code",
       "language": "javascript"
     },
     {
-      "property": {
+      "ref": {
         "middleware": [
           "inspect"
         ]
@@ -115,7 +115,7 @@ This document was generated with the following configuration (see [package.json]
     },
     "## Usage",
     {
-      "script": "rdm --help",
+      "bin": "rdm --help",
       "type": "code"
     },
     "## Manual",
@@ -125,17 +125,14 @@ This document was generated with the following configuration (see [package.json]
         "cli_toolkit_help_markdown_title": true,
         "cli_toolkit_help_markdown_header": "###"
       },
-      "script": "rdm --help",
+      "bin": "rdm --help",
       "pedantic": false
     },
     {
-      "include": "license.md"
+      "inc": "license.md"
     },
     {
-      "include": "../../LICENSE"
-    },
-    {
-      "include": "links.md"
+      "inc": "../../LICENSE"
     }
   ]
 }
@@ -245,7 +242,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#x6d;&#46;&#x69;&#x6f;](&#109;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x6e;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#x6d;&#46;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#111;&#x6f;&#112;&#64;&#120;&#112;&#x6d;&#46;&#x69;&#111;](&#109;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#111;&#x6f;&#112;&#64;&#120;&#112;&#x6d;&#46;&#x69;&#111;).
 
 ## License
 
