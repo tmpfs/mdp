@@ -265,9 +265,10 @@ These are exposed via the MarkdownParser and MarkdownRenderer properties of the 
 Keep your README up to date with a git hook, this is the hook from this repository:
 
 #!/usr/bin/env bash
-abspath=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
-abspath=$(dirname $(dirname ${abspath}));
-cd ${abspath} && npm run build && git add README.md doc/README.html doc/README.txt doc/README.1
+path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
+path=$(dirname $(dirname ${path}));
+cd ${path} && npm run build \
+  && git add README.md doc/README.html doc/README.txt doc/README.1
 
 If you have mdp in your path you could use:
 

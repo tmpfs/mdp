@@ -282,9 +282,10 @@ Keep your README up to date with a git hook, this is the hook from this reposito
 
 .LT
 #!/usr/bin/env bash
-abspath=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
-abspath=$(dirname $(dirname ${abspath}));
-cd ${abspath} && npm run build && git add README.md doc/README.html doc/README.txt doc/README.1
+path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
+path=$(dirname $(dirname ${path}));
+cd ${path} && npm run build \
+  && git add README.md doc/README.html doc/README.txt doc/README.1
 .PP
 If you have \fBmdp\fR in your path you could use:
 
