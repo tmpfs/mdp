@@ -84,8 +84,8 @@ This document was generated with the following configuration (see [package.json]
         "features.md"
       ]
     },
-    "## Configuration",
     {
+      "title": "Configuration",
       "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
     },
     {
@@ -93,8 +93,8 @@ This document was generated with the following configuration (see [package.json]
       "stringify": true,
       "format": "```json\n%s\n```"
     },
-    "## Defaults",
     {
+      "title": "Defaults",
       "req": "defaults.js",
       "type": "code",
       "language": "javascript"
@@ -102,12 +102,12 @@ This document was generated with the following configuration (see [package.json]
     {
       "inc": "meta.md"
     },
-    "## Middleware",
     {
+      "title": "Middleware",
       "inc": "middleware.md"
     },
-    "The `inspect` middleware is shown below:",
     {
+      "text": "The `inspect` middleware is shown below:",
       "req": "middleware/inspect.js",
       "type": "code",
       "language": "javascript"
@@ -122,13 +122,13 @@ This document was generated with the following configuration (see [package.json]
       "type": "code",
       "language": "json"
     },
-    "## Usage",
     {
+      "title": "Usage",
       "bin": "mdp --help",
       "type": "code"
     },
-    "## Manual",
     {
+      "title": "Manual",
       "env": {
         "cli_toolkit_help_style": "markdown",
         "cli_toolkit_help_markdown_title": true,
@@ -142,15 +142,15 @@ This document was generated with the following configuration (see [package.json]
         "library.md"
       ]
     },
-    "## Hook",
-    "Using a git hook is a good idea to ensure your README is up to date, here is the hook from this repository:",
     {
+      "title": "Hook",
+      "text": "Keep your README up to date with a git hook, this is the hook from this repository:",
       "inc": "../../.git/hooks/pre-commit",
       "type": "code",
       "language": "bash"
     },
-    "You are more likely to have `mdp` in your path so you could use something like:",
     {
+      "text": "If you have `mdp` in your path you could use:",
       "inc": "git-hook.sh",
       "type": "code",
       "language": "bash"
@@ -182,6 +182,7 @@ This document was generated with the following configuration (see [package.json]
   "order": false,
   "base": null,
   "hash": false,
+  "level": 2,
   "partial": null
 }
 ```
@@ -306,7 +307,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#110;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#64;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x6e;&#x6f;&#x6f;&#x70;&#64;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;).
 
 ## Library
 
@@ -316,7 +317,7 @@ These are exposed via the `MarkdownParser` and `MarkdownRenderer` properties of 
 
 ## Hook
 
-Using a git hook is a good idea to ensure your README is up to date, here is the hook from this repository:
+Keep your README up to date with a git hook, this is the hook from this repository:
 
 ```bash
 #!/usr/bin/env bash
@@ -325,7 +326,7 @@ abspath=$(dirname $(dirname ${abspath}));
 ${abspath}/bin/mdp --force --debug && git add README.md
 ```
 
-You are more likely to have `mdp` in your path so you could use something like:
+If you have `mdp` in your path you could use:
 
 ```bash
 #/bin/sh
