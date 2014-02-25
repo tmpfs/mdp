@@ -167,7 +167,7 @@ Meta data describes processing options and how you want to collate the partials.
 ### Options
 
 * `generator`: A boolean that disables inclusion of the generator text.
-* `title`: A string that sets the document title, will become a `h1`.
+* `title`: A string that sets the document title.
 * `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
 * `period`: The character used by the [pedantic middleware](https://github.com/freeformsystems/rdm#pedantic-middleware).
 * `include`: A directory that is the base path for [include partials](https://github.com/freeformsystems/rdm#include-partial).
@@ -273,7 +273,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;](&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#x6d;&#46;&#x69;&#111;](&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#x70;&#x6d;&#46;&#x69;&#111;).
 
 ## License
 
