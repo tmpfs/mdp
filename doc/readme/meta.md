@@ -5,7 +5,7 @@ Meta data describes processing options and how you want to collate the partials.
 ### Options
 
 * `generator`: A boolean that disables inclusion of the generator text.
-* `title`: A string that sets the document title.
+* `title`: A string that sets the document title or a partial definition.
 * `gfm`: A boolean that indicates that [github][github] flavoured markdown is in use.
 * `period`: The character used by the [pedantic middleware](#pedantic-middleware).
 * `include`: A directory that is the base path for [include partials](#include-partial).

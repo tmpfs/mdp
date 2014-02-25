@@ -192,7 +192,7 @@ Meta data describes processing options and how you want to collate the partials.
 ### Options
 
 * `generator`: A boolean that disables inclusion of the generator text.
-* `title`: A string that sets the document title.
+* `title`: A string that sets the document title or a partial definition.
 * `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
 * `period`: The character used by the [pedantic middleware](#pedantic-middleware).
 * `include`: A directory that is the base path for [include partials](#include-partial).
@@ -304,7 +304,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#109;&#x2e;&#105;&#111;](&#109;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x6e;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#109;&#x2e;&#105;&#111;).
+Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;](&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;).
 
 ## Library
 
