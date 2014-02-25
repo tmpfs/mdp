@@ -50,7 +50,9 @@ If you care for excellent documentation and write command line interfaces you sh
 
 ## Features
 
-* Synchronize your readme with your code.
+* Synchronize your `README` with your code.
+* Generate `markdown`, `html` and `txt` documents from partials.
+* Flexible middlware design, see [middleware](https://github.com/freeformsystems/rdm#middleware).
 
 ## Configuration
 
@@ -284,7 +286,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#x6f;](&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#x6f;).
+Report bugs to muji [&#x6e;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#109;&#46;&#105;&#111;](&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x6e;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#109;&#46;&#105;&#111;).
 
 ## Library
 
