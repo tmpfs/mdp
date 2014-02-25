@@ -110,9 +110,9 @@ This document was generated with the following configuration (see [package.json]
       "text": "The `inspect` middleware is shown below:",
       "req": "middleware/inspect.js",
       "type": "code",
-      "language": "javascript"
+      "language": "javascript",
+      "footer": "You can enable it by declaring it in the meta data (or by using `--inspect`):"
     },
-    "You can enable it by declaring it in the meta data (or by using `--inspect`):",
     {
       "obj": {
         "middleware": [
@@ -205,6 +205,7 @@ Meta data describes processing options and how you want to collate the partials.
 * `order`: A boolean that indicates the `toc` middleware should use ordered lists.
 * `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
 * `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
+* `level`: An integer indicating the header level for `title` properties in partial definitions, default is `2`.
 * `partial`: Array of partial definitions, see [partial](#partial).
 
 ### Partial
@@ -307,7 +308,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#64;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#x6e;&#x6f;&#x6f;&#x70;&#64;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#111;](&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#111;).
 
 ## Library
 

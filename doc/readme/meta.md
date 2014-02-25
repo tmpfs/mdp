@@ -16,6 +16,7 @@ Meta data describes processing options and how you want to collate the partials.
 * `order`: A boolean that indicates the `toc` middleware should use ordered lists.
 * `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
 * `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
+* `level`: An integer indicating the header level for `title` properties in partial definitions, default is `2`.
 * `partial`: Array of partial definitions, see [partial](#partial).
 
 ### Partial 

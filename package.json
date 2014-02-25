@@ -93,9 +93,9 @@
         "text": "The `inspect` middleware is shown below:",
         "req": "middleware/inspect.js",
         "type": "code",
-        "language": "javascript"
+        "language": "javascript",
+        "footer": "You can enable it by declaring it in the meta data (or by using `--inspect`):"
       },
-      "You can enable it by declaring it in the meta data (or by using `--inspect`):",
       {
         "obj": {"middleware": ["inspect"]},
         "type": "code",
