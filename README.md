@@ -75,8 +75,7 @@ This document was generated with the following configuration (see [package.json]
     {
       "inc": [
         "introduction.md",
-        "features.md",
-        "partial.md"
+        "features.md"
       ]
     },
     "## Configuration",
@@ -268,7 +267,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;](&#x6d;&#x61;&#x69;&#108;&#116;&#x6f;&#x3a;&#110;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#x2e;&#x69;&#x6f;).
+Report bugs to muji [&#x6e;&#111;&#111;&#112;&#x40;&#120;&#112;&#109;&#46;&#105;&#x6f;](&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#x6e;&#111;&#111;&#112;&#x40;&#120;&#112;&#109;&#46;&#105;&#x6f;).
 
 ## License
 
