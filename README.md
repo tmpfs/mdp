@@ -239,6 +239,7 @@ Options:
      --color          Control terminal color.
  -f, --force          Force file overwrite.
  -m, --md             Print markdown to stdout.
+     --text           Use a plain text renderer.
  -t, --title=[title]  Document title.
      --debug          Enable debugging.
  -h, --html=[file]    Write html to file.
@@ -269,6 +270,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 * `--color`: Control terminal color.
 * `-f, --force`: Force file overwrite.
 * `-m, --md`: Print markdown to stdout.
+* `--text`: Use a plain text renderer.
 * `-t, --title=[title]`: Document title.
 * `--debug`: Enable debugging.
 * `-h, --html=[file]`: Write html to file.
@@ -279,7 +281,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#x3a;&#110;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#x6e;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#105;&#x6f;](&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x6e;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#105;&#x6f;).
 
 ## Library
 
