@@ -282,7 +282,7 @@ Keep your README up to date with a git hook, this is the hook from this reposito
 #!/usr/bin/env bash
 abspath=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
 abspath=$(dirname $(dirname ${abspath}));
-${abspath}/bin/mdp --force --debug && git add README.md
+cd ${abspath} && npm run build && git add README.md doc/README.html doc/README.txt doc/README.1
 ```
 
 If you have `mdp` in your path you could use:

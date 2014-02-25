@@ -1,0 +1,256 @@
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#mdp1">mdp(1)</a></li>
+</ul>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#install">Install</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#defaults">Defaults</a></li>
+<li><a href="#meta">Meta</a></li>
+</ul>
+<ul>
+<li><a href="#options">Options</a></li>
+<li><a href="#partial">Partial</a></li>
+<li><a href="#generator">Generator</a></li>
+</ul>
+<ul>
+<li><a href="#middleware">Middleware</a></li>
+<li><a href="#library">Library</a></li>
+<li><a href="#hook">Hook</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h1 id="mdp-1-">mdp(1)</h1>
+<p>Markdown partial processor.</p>
+<p>Designed to generate markdown documents from a series of partials. </p>
+<p>Read <a href="#partial">partial</a> to learn how to define partials or get a quick feel by checking the <a href="#configuration">configuration</a> that created this document, see <a href="#usage">usage</a> for an abbreviated look at the command line options.</p>
+<p>Use this program to:</p>
+<ol>
+<li>Concatenate multiple markdown documents into a single file.</li>
+<li>Generate a table of contents for markdown document(s).</li>
+<li>Include the output of a shell program, great for examples or program usage.</li>
+<li>Keep your readme in sync with your code and prevent redundant effort with code samples.</li>
+<li>Convert relative links to absolute links so your readme documents work when displayed on the <a href="http://npmjs.org">npm</a> website.</li>
+<li>Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.</li>
+<li>Convert markdown document(s) to plain text.</li>
+<li>Create arbitrary processing rules with custom middleware, see <a href="#middleware">middleware</a>.</li>
+</ol>
+<p>This program was built using the <a href="https://github.com/freeformsystems/cli-command">command</a> module:</p>
+<blockquote>
+<p>Command execution for command line interfaces, a component of the toolkit.</p>
+</blockquote>
+<p>If you care for excellent documentation and write command line interfaces you should check it out.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Synchronize your <code>README</code> with your code.</li>
+<li>Generate <code>markdown</code>, <code>html</code> and <code>txt</code> documents from partials.</li>
+<li>Flexible middlware design, see <a href="#middleware">middleware</a></li>
+</ul>
+<h2 id="install">Install</h2>
+<pre><code>npm i -g mdp
+</code></pre><h2 id="usage">Usage</h2>
+<pre><code>Markdown partial processor.
+
+Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
+
+Options:
+ -t, --title=[title]  Document title.
+     --color          Control terminal color.
+ -f, --force          Force file overwrite.
+     --pandoc         Include pandoc meta data.
+     --inspect        Enable inspect middleware.
+ -p, --print=[format] Print document to stdout.
+     --debug          Enable debugging.
+ -i, --input=[file...]
+                      Meta definition file(s).
+ -o, --output=[file...]
+                      Output file(s), default is README.md.
+ -v, --verbose        Print more information.
+ -w, --middleware=[file ...]
+                      Require custom middleware.
+     --help           Display this help and exit.
+     --version        Output version information and exit.
+
+Report bugs to muji &lt;noop@xpm.io&gt;.
+</code></pre><h2 id="configuration">Configuration</h2>
+<p>This document was generated with the following configuration (see <a href="https://github.com/freeformsystems/mdp/blob/master/package.json">package.json</a>):</p>
+<pre><code class="lang-json">{
+  &quot;title&quot;: {
+    &quot;ref&quot;: &quot;name&quot;,
+    &quot;format&quot;: &quot;%s(1)&quot;
+  },
+  &quot;pedantic&quot;: true,
+  &quot;include&quot;: &quot;doc/readme&quot;,
+  &quot;require&quot;: &quot;lib&quot;,
+  &quot;gfm&quot;: true,
+  &quot;branch&quot;: &quot;master&quot;,
+  &quot;links&quot;: &quot;links.md&quot;,
+  &quot;toc&quot;: &quot;Table of Contents&quot;,
+  &quot;order&quot;: false,
+  &quot;base&quot;: &quot;https://github.com/freeformsystems/mdp&quot;,
+  &quot;partial&quot;: [
+    {
+      &quot;ref&quot;: &quot;description&quot;
+    },
+    {
+      &quot;inc&quot;: [
+        &quot;introduction.md&quot;,
+        &quot;features.md&quot;,
+        &quot;install.md&quot;
+      ]
+    },
+    {
+      &quot;title&quot;: &quot;Usage&quot;,
+      &quot;bin&quot;: &quot;mdp --help&quot;,
+      &quot;type&quot;: &quot;code&quot;
+    },
+    {
+      &quot;title&quot;: &quot;Configuration&quot;,
+      &quot;text&quot;: &quot;This document was generated with the following configuration (see [package.json](/package.json)):&quot;,
+      &quot;ref&quot;: &quot;mdp&quot;,
+      &quot;stringify&quot;: true,
+      &quot;format&quot;: &quot;```json\n%s\n```&quot;,
+      &quot;footer&quot;: &quot;***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***&quot;
+    },
+    {
+      &quot;title&quot;: &quot;Defaults&quot;,
+      &quot;req&quot;: &quot;defaults.js&quot;,
+      &quot;type&quot;: &quot;code&quot;,
+      &quot;language&quot;: &quot;javascript&quot;
+    },
+    {
+      &quot;inc&quot;: &quot;meta.md&quot;
+    },
+    {
+      &quot;title&quot;: &quot;Middleware&quot;,
+      &quot;inc&quot;: &quot;middleware.md&quot;
+    },
+    {
+      &quot;text&quot;: &quot;The `inspect` middleware is shown below:&quot;,
+      &quot;req&quot;: &quot;middleware/inspect.js&quot;,
+      &quot;type&quot;: &quot;code&quot;,
+      &quot;language&quot;: &quot;javascript&quot;
+    },
+    {
+      &quot;text&quot;: &quot;You can enable it by declaring it in the meta data (or by using `--inspect`):&quot;,
+      &quot;obj&quot;: {
+        &quot;middleware&quot;: [
+          &quot;inspect&quot;
+        ]
+      },
+      &quot;type&quot;: &quot;code&quot;,
+      &quot;language&quot;: &quot;json&quot;
+    },
+    {
+      &quot;inc&quot;: [
+        &quot;library.md&quot;
+      ]
+    },
+    {
+      &quot;title&quot;: &quot;Hook&quot;,
+      &quot;text&quot;: &quot;Keep your README up to date with a git hook, this is the hook from this repository:&quot;,
+      &quot;inc&quot;: &quot;../../.git/hooks/pre-commit&quot;,
+      &quot;type&quot;: &quot;code&quot;,
+      &quot;language&quot;: &quot;bash&quot;
+    },
+    {
+      &quot;text&quot;: &quot;If you have `mdp` in your path you could use:&quot;,
+      &quot;inc&quot;: &quot;git-hook.sh&quot;,
+      &quot;type&quot;: &quot;code&quot;,
+      &quot;language&quot;: &quot;bash&quot;
+    },
+    {
+      &quot;inc&quot;: [
+        &quot;license.md&quot;
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><strong><em>Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.</em></strong></p>
+<h2 id="defaults">Defaults</h2>
+<pre><code class="lang-javascript">{
+  &quot;generator&quot;: &quot;Generated by [mdp(1)](https://github.com/freeformsystems/mdp).&quot;,
+  &quot;title&quot;: null,
+  &quot;gfm&quot;: true,
+  &quot;period&quot;: &quot;.&quot;,
+  &quot;pedantic&quot;: false,
+  &quot;include&quot;: null,
+  &quot;require&quot;: null,
+  &quot;branch&quot;: &quot;master&quot;,
+  &quot;links&quot;: null,
+  &quot;toc&quot;: false,
+  &quot;order&quot;: false,
+  &quot;base&quot;: null,
+  &quot;hash&quot;: false,
+  &quot;level&quot;: 2,
+  &quot;partial&quot;: null
+}
+</code></pre>
+<h2 id="meta">Meta</h2>
+<p>Meta data describes processing options and how you want to collate the partials.</p>
+<h3 id="options">Options</h3>
+<ul>
+<li><code>generator</code>: A boolean that disables inclusion of the generator text.</li>
+<li><code>title</code>: A string that sets the document title or a partial definition.</li>
+<li><code>gfm</code>: A boolean that indicates that <a href="http://github.com">github</a> flavoured markdown is in use.</li>
+<li><code>period</code>: The character used by the <a href="#pedantic-middleware">pedantic middleware</a>.</li>
+<li><code>include</code>: A directory that is the base path for <a href="#include-partial">include partials</a>.</li>
+<li><code>require</code>: A directory that is the base path for <a href="#require-partial">require partials</a>.</li>
+<li><code>branch</code>: A branch name to use when resolving links that begin with <code>/</code> for <a href="http://github.com">github</a>, only applicable if <code>gfm</code> is set.</li>
+<li><code>links</code>: The name of a links include file, resolved relative to <code>include</code>.</li>
+<li><code>toc</code>: Enable the table of contents middleware with <code>true</code> or set to a string to include a title above the table of contents.</li>
+<li><code>order</code>: A boolean that indicates the <code>toc</code> middleware should use ordered lists.</li>
+<li><code>base</code>: Enable the absolute link middleware, specifies the base URL for absolute links.</li>
+<li><code>hash</code>: A boolean that controls whether the absolute middleware operates on URLs that begin with <code>#</code>.</li>
+<li><code>level</code>: An integer indicating the header level for <code>title</code> properties in partial definitions, default is <code>2</code>.</li>
+<li><code>partial</code>: Array of partial definitions, see <a href="#partial">partial</a>.</li>
+</ul>
+<h3 id="partial">Partial</h3>
+<p>A partial may be one of:</p>
+<ul>
+<li><code>literal</code>: A string literal.</li>
+<li><code>reference</code>: A property reference.</li>
+<li><code>object</code>: A json or javascript object reference.</li>
+<li><code>include</code>: Include a file, normally a markdown document but not necessarily.</li>
+<li><code>binary</code>: Execute a command and use <code>stdout</code> as the content.</li>
+<li><code>require</code>: Require a <code>.js</code> module or a <code>.json</code> file.</li>
+</ul>
+<p>All keys are available using a three character abbreviation, specifiying <code>bin</code> is equivalent to <code>binary</code>.</p>
+<h3 id="generator">Generator</h3>
+<p>By default <code>mdp(1)</code> will append a <em>generator</em> message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the <code>generator</code> property to <code>false</code>.</p>
+<h2 id="middleware">Middleware</h2>
+<p>Middleware functions are executed asynchronously once for each token encountered in the markdown document.</p>
+<p>The <code>inspect</code> middleware is shown below:</p>
+<pre><code class="lang-javascript">function inspect(meta) {
+  return function(token, tokens, meta, next) {
+    console.dir(token);
+    next();
+  }
+}
+</code></pre>
+<p>You can enable it by declaring it in the meta data (or by using <code>--inspect</code>):</p>
+<pre><code class="lang-json">{
+  &quot;middleware&quot;: [
+    &quot;inspect&quot;
+  ]
+}
+</code></pre>
+<h2 id="library">Library</h2>
+<p>Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the <a href="https://github.com/chjj/marked">marked</a> tokens back to markdown it was necessary to extend the <code>Parser</code> and <code>Renderer</code> classes.</p>
+<p>These are exposed via the <code>MarkdownParser</code> and <code>MarkdownRenderer</code> properties of the module.</p>
+<h2 id="hook">Hook</h2>
+<p>Keep your README up to date with a git hook, this is the hook from this repository:</p>
+<pre><code class="lang-bash">#!/usr/bin/env bash
+abspath=$(cd ${BASH_SOURCE[0]%/*} &amp;&amp; echo $PWD);
+abspath=$(dirname $(dirname ${abspath}));
+cd ${abspath} &amp;&amp; npm run build &amp;&amp; git add README.md doc/README.html doc/README.txt doc/README.1
+</code></pre>
+<p>If you have <code>mdp</code> in your path you could use:</p>
+<pre><code class="lang-bash">#/bin/sh
+mdp --force &amp;&amp; git add README.md
+</code></pre>
+<h2 id="license">License</h2>
+<p>Everything is <a href="http://en.wikipedia.org/wiki/MIT_License">MIT</a>. Read the <a href="https://github.com/freeformsystems/mdp/blob/master/LICENSE">license</a> if you feel inclined.</p>
+<p>Generated by <a href="https://github.com/freeformsystems/mdp">mdp(1)</a>.</p>

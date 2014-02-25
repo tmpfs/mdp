@@ -39,8 +39,9 @@
   },
   "engine": [ "node >= 0.10.21" ],
   "scripts": {
-    "prepublish": "./bin/mdp --force",
-    "build": "./bin/mdp --force --debug",
+    "prepublish": "npm run build",
+    "md": "./bin/mdp --force --debug",
+    "build": "./bin/mdp --force --debug -o README.md -o doc/README.html -o doc/README.txt -o doc/README.1",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "directories": {
