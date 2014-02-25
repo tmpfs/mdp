@@ -67,14 +67,12 @@ Options:
  -f, --force          Force file overwrite.
      --pandoc         Include pandoc meta data.
      --inspect        Enable inspect middleware.
- -m, --md             Print markdown to stdout.
-     --text           Use a text renderer, default output is README.txt.
-     --man            Use a man renderer, default output is README.1.
+ -p, --print=[format] Print document to stdout.
      --debug          Enable debugging.
- -d, --metadata=[file...]
+ -i, --input=[file...]
                       Meta definition file(s).
- -o, --output=[file]  Output file, default is README.md.
- -h, --html=[file]    Write html to file.
+ -o, --output=[file...]
+                      Output file(s), default is README.md.
  -v, --verbose        Print more information.
  -w, --middleware=[file ...]
                       Require custom middleware.
