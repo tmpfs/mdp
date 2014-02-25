@@ -2,6 +2,7 @@ Table of Contents
 =================
 
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
+  * [Features](https://github.com/freeformsystems/rdm#features)
   * [Partial](https://github.com/freeformsystems/rdm#partial)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Defaults](https://github.com/freeformsystems/rdm#defaults)
@@ -43,6 +44,10 @@ This program was built using the [command](https://github.com/freeformsystems/cl
 
 If you care for excellent documentation and write command line interfaces you should check it out.
 
+## Features
+
+* Synchronize your readme with your code.
+
 ## Partial
 
 A partial may be one of:
@@ -76,9 +81,14 @@ This document was generated with the following configuration (see [package.json]
     {
       "ref": "description"
     },
-    {
-      "inc": "introduction.md"
-    },
+    [
+      {
+        "inc": "introduction.md"
+      },
+      {
+        "inc": "features.md"
+      }
+    ],
     {
       "inc": "partial.md"
     },
@@ -245,7 +255,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#111;&#112;&#64;&#x78;&#112;&#109;&#46;&#x69;&#x6f;](&#x6d;&#97;&#105;&#108;&#x74;&#x6f;&#58;&#110;&#111;&#111;&#112;&#64;&#x78;&#112;&#109;&#46;&#x69;&#x6f;).
+Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#x69;&#x6f;](&#109;&#x61;&#105;&#108;&#x74;&#x6f;&#58;&#110;&#x6f;&#111;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#x69;&#x6f;).
 
 ## License
 

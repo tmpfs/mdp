@@ -63,9 +63,14 @@
       {
         "ref": "description"
       },
-      {
-        "inc": "introduction.md"
-      },
+      [
+        {
+          "inc": "introduction.md"
+        },
+        {
+          "inc": "features.md"
+        }
+      ],
       {
         "inc": "partial.md"
       },
