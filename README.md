@@ -3,6 +3,7 @@ Table of Contents
 
 * [mdp(1)](#mdp1)
   * [Features](#features)
+  * [Install](#install)
   * [Usage](#usage)
   * [Configuration](#configuration)
   * [Defaults](#defaults)
@@ -19,10 +20,6 @@ mdp(1)
 ======
 
 Markdown partial processor.
-
-```
-npm i -g mdp
-```
 
 Designed to generate markdown documents from a series of partials. 
 
@@ -50,6 +47,12 @@ If you care for excellent documentation and write command line interfaces you sh
 * Synchronize your `README` with your code.
 * Generate `markdown`, `html` and `txt` documents from partials.
 * Flexible middlware design, see [middleware](#middleware)
+
+## Install
+
+```
+npm i -g mdp
+```
 
 ## Usage
 
@@ -107,7 +110,8 @@ This document was generated with the following configuration (see [package.json]
     {
       "inc": [
         "introduction.md",
-        "features.md"
+        "features.md",
+        "install.md"
       ]
     },
     {

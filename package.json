@@ -65,7 +65,7 @@
         "ref": "description"
       },
       {
-        "inc": ["introduction.md", "features.md"]
+        "inc": ["introduction.md", "features.md", "install.md"]
       },
       {
         "title": "Usage",
