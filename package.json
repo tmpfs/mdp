@@ -125,7 +125,7 @@
         "language": "bash"
       },
       {
-        "inc": ["license.md"]
+        "inc": ["license.md", "footer.md"]
       }
     ]
   }

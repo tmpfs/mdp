@@ -12,9 +12,3 @@ Use this program to:
 6. Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 7. Convert markdown document(s) to plain text.
 8. Create arbitrary processing rules with custom middleware, see [middleware](#middleware).
-
-This program was built using the [command][command] module:
-
-> Command execution for command line interfaces, a component of the toolkit.
-
-If you care for excellent documentation and write command line interfaces you should check it out.

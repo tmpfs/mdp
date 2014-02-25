@@ -29,13 +29,6 @@ Convert markdown document(s) to plain text.
 .IP "\[ci]" 4
 Create arbitrary processing rules with custom middleware, see \fBMIDDLEWARE\fR.
 .EL
-.PP
-This program was built using the command[5] module:
-.TP
-.PP
-Command execution for command line interfaces, a component of the toolkit.
-.PP
-If you care for excellent documentation and write command line interfaces you should check it out.
 .SH "FEATURES"
 .BL
 .IP "\[ci]" 4
@@ -171,7 +164,8 @@ This document was generated with the following configuration (see package.json[6
     },
     {
       "inc": [
-        "license.md"
+        "license.md",
+        "footer.md"
       ]
     }
   ]
@@ -297,6 +291,8 @@ mdp \-\-force && git add README.md
 .SH "LICENSE"
 .PP
 Everything is MIT[7]. Read the license[8] if you feel inclined.
+.PP
+This program was built using the command[5] module, if you care for excellent documentation and write command line interfaces you should check it out.
 .SH "LINKS"
 .BL
 .IP "\[ci]" 4
