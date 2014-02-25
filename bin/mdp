@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-var interface = require('../lib/rdm');
+var interface = require('../lib/mdp');
 var program = interface(require('../package.json'));
 program.parse();

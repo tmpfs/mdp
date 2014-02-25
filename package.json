@@ -1,19 +1,19 @@
 {
-  "name": "rdm",
+  "name": "mdp",
   "version": "0.0.7",
   "description": "Markdown partial processor",
   "author": "muji <noop@xpm.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/freeformsystems/rdm"
+    "url": "https://github.com/freeformsystems/mdp"
   },
   "bugs": {
-    "url": "https://github.com/freeformsystems/rdm/issues",
+    "url": "https://github.com/freeformsystems/mdp/issues",
     "email": "muji <noop@xpm.io>"
   },
   "licenses": [{
     "type": "MIT",
-    "url": "https://github.com/freeformsystems/rdm/blob/master/LICENSE"
+    "url": "https://github.com/freeformsystems/mdp/blob/master/LICENSE"
   }],
   "keywords": [
     "cli",
@@ -38,14 +38,14 @@
   },
   "engine": [ "node >= 0.10.21" ],
   "scripts": {
-    "prepublish": "./bin/rdm --force",
-    "build": "./bin/rdm --force --debug",
+    "prepublish": "./bin/mdp--force",
+    "build": "./bin/mdp --force --debug",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "directories": {
     "bin": "./bin"
   },
-  "rdm" : {
+  "mdp" : {
     "pedantic": true,
     "include": "doc/readme",
     "require": "lib",
@@ -54,7 +54,7 @@
     "links": "links.md",
     "toc": "Table of Contents",
     "order": false,
-    "base": "https://github.com/freeformsystems/rdm",
+    "base": "https://github.com/freeformsystems/mdp",
     "partial": [
       {
         "ref": "name",
@@ -71,7 +71,7 @@
         "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
       },
       {
-        "ref": "rdm",
+        "ref": "mdp",
         "stringify": true,
         "format": "```json\n%s\n```"
       },
@@ -101,7 +101,7 @@
       },
       "## Usage",
       {
-        "bin": "rdm --help",
+        "bin": "mdp --help",
         "type": "code"
       },
       "## Manual",
@@ -111,7 +111,7 @@
           "cli_toolkit_help_markdown_title": true,
           "cli_toolkit_help_markdown_header": "###"
         },
-        "bin": "rdm --help",
+        "bin": "mdp --help",
         "pedantic": false
       },
       {

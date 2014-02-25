@@ -31,4 +31,4 @@ All keys are available using a three character abbreviation, specifiying `bin` i
 
 ### Generator
 
-By default `rdm(1)` will append a *generator* message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the `generator` property to `false`.
+By default `mdp(1)` will append a *generator* message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the `generator` property to `false`.

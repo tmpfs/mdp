@@ -11,7 +11,7 @@
  *
  *  You may test this in the context for the repository with:
  *
- *  ./bin/rdm -p readme/readme.js
+ *  ./bin/mdp -p readme/readme.js
  */
 module.exports = function() {
   return require('../package.json');

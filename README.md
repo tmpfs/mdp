@@ -1,35 +1,35 @@
 Table of Contents
 =================
 
-* [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
-  * [Features](https://github.com/freeformsystems/rdm#features)
-  * [Configuration](https://github.com/freeformsystems/rdm#configuration)
-  * [Defaults](https://github.com/freeformsystems/rdm#defaults)
-  * [Meta](https://github.com/freeformsystems/rdm#meta)
-    * [Options](https://github.com/freeformsystems/rdm#options)
-    * [Partial](https://github.com/freeformsystems/rdm#partial)
-    * [Generator](https://github.com/freeformsystems/rdm#generator)
-  * [Middleware](https://github.com/freeformsystems/rdm#middleware)
-  * [Usage](https://github.com/freeformsystems/rdm#usage)
-  * [Manual](https://github.com/freeformsystems/rdm#manual)
-    * [Usage](https://github.com/freeformsystems/rdm#usage)
-    * [Options](https://github.com/freeformsystems/rdm#options)
-    * [Bugs](https://github.com/freeformsystems/rdm#bugs)
-  * [Library](https://github.com/freeformsystems/rdm#library)
-  * [License](https://github.com/freeformsystems/rdm#license)
+* [mdp(1)](https://github.com/freeformsystems/mdp#mdp1)
+  * [Features](https://github.com/freeformsystems/mdp#features)
+  * [Configuration](https://github.com/freeformsystems/mdp#configuration)
+  * [Defaults](https://github.com/freeformsystems/mdp#defaults)
+  * [Meta](https://github.com/freeformsystems/mdp#meta)
+    * [Options](https://github.com/freeformsystems/mdp#options)
+    * [Partial](https://github.com/freeformsystems/mdp#partial)
+    * [Generator](https://github.com/freeformsystems/mdp#generator)
+  * [Middleware](https://github.com/freeformsystems/mdp#middleware)
+  * [Usage](https://github.com/freeformsystems/mdp#usage)
+  * [Manual](https://github.com/freeformsystems/mdp#manual)
+    * [Usage](https://github.com/freeformsystems/mdp#usage)
+    * [Options](https://github.com/freeformsystems/mdp#options)
+    * [Bugs](https://github.com/freeformsystems/mdp#bugs)
+  * [Library](https://github.com/freeformsystems/mdp#library)
+  * [License](https://github.com/freeformsystems/mdp#license)
 
-rdm(1)
+mdp(1)
 ======
 
 Markdown partial processor.
 
 ```
-npm i -g rdm
+npm i -g mdp
 ```
 
 Designed to generate markdown documents from a series of partials. 
 
-Read [partial](https://github.com/freeformsystems/rdm#partial) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/rdm#configuration) that created this document, see [usage](https://github.com/freeformsystems/rdm#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section is the result of generating program help for `rdm(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
+Read [partial](https://github.com/freeformsystems/mdp#partial) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/mdp#configuration) that created this document, see [usage](https://github.com/freeformsystems/mdp#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/mdp#manual) section is the result of generating program help for `mdp(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
 
 Use this program to:
 
@@ -40,7 +40,7 @@ Use this program to:
 5. Convert relative links to absolute links so your readme documents work when displayed on the [npm](http://npmjs.org) website.
 6. Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 7. Convert markdown document(s) to plain text.
-8. Create arbitrary processing rules with custom middleware, see [middleware](https://github.com/freeformsystems/rdm#middleware).
+8. Create arbitrary processing rules with custom middleware, see [middleware](https://github.com/freeformsystems/mdp#middleware).
 
 This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
 
@@ -52,11 +52,11 @@ If you care for excellent documentation and write command line interfaces you sh
 
 * Synchronize your `README` with your code.
 * Generate `markdown`, `html` and `txt` documents from partials.
-* Flexible middlware design, see [middleware](https://github.com/freeformsystems/rdm#middleware).
+* Flexible middlware design, see [middleware](https://github.com/freeformsystems/mdp#middleware).
 
 ## Configuration
 
-This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
+This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/mdp/blob/master/package.json)):
 
 ```json
 {
@@ -68,7 +68,7 @@ This document was generated with the following configuration (see [package.json]
   "links": "links.md",
   "toc": "Table of Contents",
   "order": false,
-  "base": "https://github.com/freeformsystems/rdm",
+  "base": "https://github.com/freeformsystems/mdp",
   "partial": [
     {
       "ref": "name",
@@ -88,7 +88,7 @@ This document was generated with the following configuration (see [package.json]
       "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
     },
     {
-      "ref": "rdm",
+      "ref": "mdp",
       "stringify": true,
       "format": "```json\n%s\n```"
     },
@@ -122,7 +122,7 @@ This document was generated with the following configuration (see [package.json]
     },
     "## Usage",
     {
-      "bin": "rdm --help",
+      "bin": "mdp --help",
       "type": "code"
     },
     "## Manual",
@@ -132,7 +132,7 @@ This document was generated with the following configuration (see [package.json]
         "cli_toolkit_help_markdown_title": true,
         "cli_toolkit_help_markdown_header": "###"
       },
-      "bin": "rdm --help",
+      "bin": "mdp --help",
       "pedantic": false
     },
     {
@@ -154,7 +154,7 @@ This document was generated with the following configuration (see [package.json]
 
 ```javascript
 {
-  "generator": "Generated by [rdm(1)](https://github.com/freeformsystems/rdm).",
+  "generator": "Generated by [mdp(1)](https://github.com/freeformsystems/mdp).",
   "title": null,
   "gfm": true,
   "period": ".",
@@ -179,15 +179,15 @@ Meta data describes processing options and how you want to collate the partials.
 * `generator`: A boolean that disables inclusion of the generator text.
 * `title`: A string that sets the document title.
 * `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
-* `period`: The character used by the [pedantic middleware](https://github.com/freeformsystems/rdm#pedantic-middleware).
-* `include`: A directory that is the base path for [include partials](https://github.com/freeformsystems/rdm#include-partial).
-* `require`: A directory that is the base path for [require partials](https://github.com/freeformsystems/rdm#require-partial).
+* `period`: The character used by the [pedantic middleware](https://github.com/freeformsystems/mdp#pedantic-middleware).
+* `include`: A directory that is the base path for [include partials](https://github.com/freeformsystems/mdp#include-partial).
+* `require`: A directory that is the base path for [require partials](https://github.com/freeformsystems/mdp#require-partial).
 * `branch`: A branch name to use when resolving links that begin with `/` for [github](http://github.com), only applicable if `gfm` is set.
 * `links`: The name of a links include file, resolved relative to `include`.
 * `toc`: Enable the table of contents middleware with `true` or set to a string to include a title above the table of contents.
 * `order`: A boolean that indicates the `toc` middleware should use ordered lists.
 * `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
-* `partial`: Array of partial definitions, see [partial](https://github.com/freeformsystems/rdm#partial).
+* `partial`: Array of partial definitions, see [partial](https://github.com/freeformsystems/mdp#partial).
 
 ### Partial
 
@@ -203,7 +203,7 @@ All keys are available using a three character abbreviation, specifiying `bin` i
 
 ### Generator
 
-By default `rdm(1)` will append a *generator* message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the `generator` property to `false`.
+By default `mdp(1)` will append a *generator* message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the `generator` property to `false`.
 
 ## Middleware
 
@@ -235,7 +235,7 @@ Markdown partial processor.
 
 Designed for readme documents but may be used for any markdown document.
 
-Usage: rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
+Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
  -t, --title=[title]  Document title.
@@ -265,7 +265,7 @@ Designed for readme documents but may be used for any markdown document.
 ### Usage
 
 ```
-rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
+mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 ```
 
 ### Options
@@ -286,7 +286,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#109;&#46;&#105;&#111;](&#x6d;&#97;&#105;&#108;&#x74;&#111;&#58;&#x6e;&#111;&#x6f;&#112;&#x40;&#120;&#112;&#109;&#46;&#105;&#111;).
+Report bugs to muji [&#110;&#111;&#x6f;&#x70;&#x40;&#120;&#x70;&#109;&#x2e;&#x69;&#x6f;](&#x6d;&#97;&#x69;&#x6c;&#x74;&#x6f;&#58;&#110;&#111;&#x6f;&#x70;&#x40;&#120;&#x70;&#109;&#x2e;&#x69;&#x6f;).
 
 ## Library
 
@@ -296,7 +296,7 @@ These are exposed via the `MarkdownParser` and `MarkdownRenderer` properties of 
 
 ## License
 
-Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](https://github.com/freeformsystems/rdm/blob/master/LICENSE) if you feel inclined.
+Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](https://github.com/freeformsystems/mdp/blob/master/LICENSE) if you feel inclined.
 
 The MIT License (MIT).
 
@@ -319,11 +319,11 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Generated by [rdm(1)](https://github.com/freeformsystems/rdm).
+Generated by [mdp(1)](https://github.com/freeformsystems/mdp).
 
 [github]: http://github.com
 [node]: http://nodejs.org
 [npm]: http://npmjs.org
 [marked]: https://github.com/chjj/marked
 [command]: https://github.com/freeformsystems/cli-command
-[usage]: https://github.com/freeformsystems/rdm#usage
+[usage]: https://github.com/freeformsystems/mdp#usage
