@@ -64,7 +64,7 @@
         "ref": "description"
       },
       {
-        "inc": ["introduction.md", "features.md", "partial.md", {"inc": "features.md"}]
+        "inc": ["introduction.md", "features.md", "partial.md"]
       },
       "## Configuration",
       {
