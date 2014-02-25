@@ -1,48 +1,44 @@
-Table of Contents
-=================
+# Table of Contents
 
-* [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
-  * [Features](https://github.com/freeformsystems/rdm#features)
-  * [Configuration](https://github.com/freeformsystems/rdm#configuration)
-  * [Defaults](https://github.com/freeformsystems/rdm#defaults)
-  * [Meta](https://github.com/freeformsystems/rdm#meta)
-    * [Options](https://github.com/freeformsystems/rdm#options)
-    * [Partial](https://github.com/freeformsystems/rdm#partial)
-    * [Generator](https://github.com/freeformsystems/rdm#generator)
-  * [Middleware](https://github.com/freeformsystems/rdm#middleware)
-  * [Usage](https://github.com/freeformsystems/rdm#usage)
-  * [Manual](https://github.com/freeformsystems/rdm#manual)
-    * [Usage](https://github.com/freeformsystems/rdm#usage)
-    * [Options](https://github.com/freeformsystems/rdm#options)
-    * [Bugs](https://github.com/freeformsystems/rdm#bugs)
-  * [Library](https://github.com/freeformsystems/rdm#library)
-  * [License](https://github.com/freeformsystems/rdm#license)
+* https://github.com/freeformsystems/rdm#rdm1
+  * https://github.com/freeformsystems/rdm#features
+  * https://github.com/freeformsystems/rdm#configuration
+  * https://github.com/freeformsystems/rdm#defaults
+  * https://github.com/freeformsystems/rdm#meta
+    * https://github.com/freeformsystems/rdm#options
+    * https://github.com/freeformsystems/rdm#partial
+    * https://github.com/freeformsystems/rdm#generator
+  * https://github.com/freeformsystems/rdm#middleware
+  * https://github.com/freeformsystems/rdm#usage
+  * https://github.com/freeformsystems/rdm#manual
+    * https://github.com/freeformsystems/rdm#usage
+    * https://github.com/freeformsystems/rdm#options
+    * https://github.com/freeformsystems/rdm#bugs
+  * https://github.com/freeformsystems/rdm#library
+  * https://github.com/freeformsystems/rdm#license
 
-rdm(1)
-======
+# rdm(1)
 
 Markdown partial processor.
 
-```
 npm i -g rdm
-```
 
 Designed to generate markdown documents from a series of partials. 
 
-Read [partial](https://github.com/freeformsystems/rdm#partial) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/rdm#configuration) that created this document, see [usage](https://github.com/freeformsystems/rdm#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section is the result of generating program help for `rdm(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
+Read https://github.com/freeformsystems/rdm#partial to learn how to define partials or get a quick feel by checking the https://github.com/freeformsystems/rdm#configuration that created this document, see https://github.com/freeformsystems/rdm#usage for an abbreviated look at the command line options, the https://github.com/freeformsystems/rdm#manual section is the result of generating program help for rdm(1) as markdown it illustrates the result of running an executable with a specific environment configuration.
 
 Use this program to:
 
-1. Concatenate multiple markdown documents into a single file.
-2. Generate a table of contents for markdown document(s).
-3. Include the output of a shell program, great for examples or program usage.
-4. Keep your readme in sync with your code and prevent redundant effort with code samples.
-5. Convert relative links to absolute links so your readme documents work when displayed on the [npm](http://npmjs.org) website.
-6. Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
+* Concatenate multiple markdown documents into a single file.
+* Generate a table of contents for markdown document(s).
+* Include the output of a shell program, great for examples or program usage.
+* Keep your readme in sync with your code and prevent redundant effort with code samples.
+* Convert relative links to absolute links so your readme documents work when displayed on the http://npmjs.org website.
+* Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminated with a period and start out title case.
 
-This program was built using the [command](https://github.com/freeformsystems/cli-command) module:
+This program was built using the https://github.com/freeformsystems/cli-command module:
 
-> Command execution for command line interfaces, a component of the toolkit.
+Command execution for command line interfaces, a component of the toolkit.
 
 If you care for excellent documentation and write command line interfaces you should check it out.
 
@@ -52,9 +48,8 @@ If you care for excellent documentation and write command line interfaces you sh
 
 ## Configuration
 
-This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
+This document was generated with the following configuration (see https://github.com/freeformsystems/rdm/blob/master/package.json):
 
-```json
 {
   "pedantic": true,
   "include": "doc/readme",
@@ -144,11 +139,9 @@ This document was generated with the following configuration (see [package.json]
     }
   ]
 }
-```
 
 ## Defaults
 
-```javascript
 {
   "generator": "Generated by [rdm(1)](https://github.com/freeformsystems/rdm).",
   "title": null,
@@ -164,7 +157,6 @@ This document was generated with the following configuration (see [package.json]
   "base": null,
   "partial": null
 }
-```
 
 ## Meta
 
@@ -172,61 +164,56 @@ Meta data describes processing options and how you want to collate the partials.
 
 ### Options
 
-* `generator`: A boolean that disables inclusion of the generator text.
-* `title`: A string that sets the document title.
-* `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
-* `period`: The character used by the [pedantic middleware](https://github.com/freeformsystems/rdm#pedantic-middleware).
-* `include`: A directory that is the base path for [include partials](https://github.com/freeformsystems/rdm#include-partial).
-* `require`: A directory that is the base path for [require partials](https://github.com/freeformsystems/rdm#require-partial).
-* `branch`: A branch name to use when resolving links that begin with `/` for [github](http://github.com), only applicable if `gfm` is set.
-* `links`: The name of a links include file, resolved relative to `include`.
-* `toc`: Enable the table of contents middleware with `true` or set to a string to include a title above the table of contents.
-* `order`: A boolean that indicates the `toc` middleware should use ordered lists.
-* `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
-* `partial`: Array of partial definitions, see [partial](https://github.com/freeformsystems/rdm#partial).
+* generator: A boolean that disables inclusion of the generator text.
+* title: A string that sets the document title.
+* gfm: A boolean that indicates that http://github.com flavoured markdown is in use.
+* period: The character used by the https://github.com/freeformsystems/rdm#pedantic-middleware.
+* include: A directory that is the base path for https://github.com/freeformsystems/rdm#include-partial.
+* require: A directory that is the base path for https://github.com/freeformsystems/rdm#require-partial.
+* branch: A branch name to use when resolving links that begin with / for http://github.com, only applicable if gfm is set.
+* links: The name of a links include file, resolved relative to include.
+* toc: Enable the table of contents middleware with true or set to a string to include a title above the table of contents.
+* order: A boolean that indicates the toc middleware should use ordered lists.
+* base: Enable the absolute link middleware, specifies the base URL for absolute links.
+* partial: Array of partial definitions, see https://github.com/freeformsystems/rdm#partial.
 
 ### Partial
 
 A partial may be one of:
 
-* `literal`: A string literal.
-* `reference`: A property reference.
-* `include`: Include a file, normally a markdown document but not necessarily.
-* `binary`: Execute a command and use `stdout` as the content.
-* `require`: Require a `.js` module or a `.json` file.
+* literal: A string literal.
+* reference: A property reference.
+* include: Include a file, normally a markdown document but not necessarily.
+* binary: Execute a command and use stdout as the content.
+* require: Require a .js module or a .json file.
 
-All keys are available using a three character abbreviation, specifiying `bin` is equivalent to `binary`.
+All keys are available using a three character abbreviation, specifiying bin is equivalent to binary.
 
 ### Generator
 
-By default `rdm(1)` will append a *generator* message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the `generator` property to `false`.
+By default rdm(1) will append a generator message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the generator property to false.
 
 ## Middleware
 
 Middleware functions are executed asynchronously once for each token encountered in the markdown document.
 
-The `inspect` middleware is shown below:
+The inspect middleware is shown below:
 
-```javascript
 function inspect(meta) {
   return function(token, tokens, meta, next) {
     console.dir(token);
     next();
   }
 }
-```
 
-```json
 {
   "middleware": [
     "inspect"
   ]
 }
-```
 
 ## Usage
 
-```
 Markdown partial processor.
 
 Designed for readme documents but may be used for any markdown document.
@@ -250,7 +237,6 @@ Options:
      --version        Output version information and exit.
 
 Report bugs to muji <noop@xpm.io>.
-```
 
 ## Manual
 
@@ -260,38 +246,36 @@ Designed for readme documents but may be used for any markdown document.
 
 ### Usage
 
-```
 rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
-```
 
 ### Options
 
-* `-o, --output=[file]`: Markdown output file, default is README.md in the working directory.
-* `--color`: Control terminal color.
-* `-f, --force`: Force file overwrite.
-* `-m, --md`: Print markdown to stdout.
-* `--text`: Use a plain text renderer.
-* `-t, --title=[title]`: Document title.
-* `--debug`: Enable debugging.
-* `-h, --html=[file]`: Write html to file.
-* `-v, --verbose`: Print more information.
-* `-w, --middleware=[file ...]`: Require custom middleware.
-* `--help`: Display this help and exit.
-* `--version`: Output version information and exit.
+* -o, --output=[file]: Markdown output file, default is README.md in the working directory.
+* --color: Control terminal color.
+* -f, --force: Force file overwrite.
+* -m, --md: Print markdown to stdout.
+* --text: Use a plain text renderer.
+* -t, --title=[title]: Document title.
+* --debug: Enable debugging.
+* -h, --html=[file]: Write html to file.
+* -v, --verbose: Print more information.
+* -w, --middleware=[file ...]: Require custom middleware.
+* --help: Display this help and exit.
+* --version: Output version information and exit.
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#105;&#x6f;](&#109;&#x61;&#105;&#108;&#x74;&#111;&#58;&#x6e;&#111;&#111;&#x70;&#x40;&#120;&#x70;&#x6d;&#x2e;&#105;&#x6f;).
+Report bugs to muji &#109;&#x61;&#105;&#x6c;&#116;&#111;&#58;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#x6d;&#46;&#x69;&#x6f;.
 
 ## Library
 
-Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the [marked](https://github.com/chjj/marked) tokens back to markdown it was necessary to extend the `Parser` and `Renderer` classes.
+Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the https://github.com/chjj/marked tokens back to markdown it was necessary to extend the Parser and Renderer classes.
 
-These are exposed via the `MarkdownParser` and `MarkdownRenderer` properties of the module.
+These are exposed via the MarkdownParser and MarkdownRenderer properties of the module.
 
 ## License
 
-Everything is [MIT](http://en.wikipedia.org/wiki/MIT_License). Read the [license](https://github.com/freeformsystems/rdm/blob/master/LICENSE) if you feel inclined.
+Everything is http://en.wikipedia.org/wiki/MIT_License. Read the https://github.com/freeformsystems/rdm/blob/master/LICENSE if you feel inclined.
 
 The MIT License (MIT).
 
@@ -314,7 +298,7 @@ COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
 IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-Generated by [rdm(1)](https://github.com/freeformsystems/rdm).
+Generated by https://github.com/freeformsystems/rdm.
 
 [github]: http://github.com
 [node]: http://nodejs.org
