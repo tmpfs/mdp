@@ -64,9 +64,12 @@
         "ref": "description"
       },
       {
-        "inc": ["introduction.md", "features.md", "partial.md"]
+        "inc": ["introduction.md", "features.md", "partial.md", {"inc": "features.md"}]
       },
-      "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
+      "## Configuration",
+      {
+        "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
+      },
       {
         "ref": "rdm",
         "stringify": true,

@@ -4,6 +4,7 @@ Table of Contents
 * [rdm(1)](https://github.com/freeformsystems/rdm#rdm1)
   * [Features](https://github.com/freeformsystems/rdm#features)
   * [Partial](https://github.com/freeformsystems/rdm#partial)
+  * [Features](https://github.com/freeformsystems/rdm#features)
   * [Configuration](https://github.com/freeformsystems/rdm#configuration)
   * [Defaults](https://github.com/freeformsystems/rdm#defaults)
   * [Meta](https://github.com/freeformsystems/rdm#meta)
@@ -58,9 +59,11 @@ A partial may be one of:
 * `script`: Execute a command and use `stdout` as the content.
 * `require`: Require a `.js` module or a `.json` file.
 
-## Configuration
+## Features
 
-This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
+* Synchronize your readme with your code.
+
+## Configuration
 
 ```json
 {
@@ -85,10 +88,16 @@ This document was generated with the following configuration (see [package.json]
       "inc": [
         "introduction.md",
         "features.md",
-        "partial.md"
+        "partial.md",
+        {
+          "inc": "features.md"
+        }
       ]
     },
-    "## Configuration\n\nThis document was generated with the following configuration (see [package.json](/package.json)):",
+    "## Configuration",
+    {
+      "lit": "This document was generated with the following configuration (see [package.json](/package.json)):"
+    },
     {
       "ref": "rdm",
       "stringify": true,
@@ -251,7 +260,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#111;&#111;&#112;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#111;](&#109;&#97;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x6e;&#111;&#111;&#112;&#64;&#x78;&#112;&#x6d;&#x2e;&#105;&#111;).
+Report bugs to muji [&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;](&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;).
 
 ## License
 
