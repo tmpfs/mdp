@@ -6,7 +6,6 @@ Table of Contents
   * [Install](#install)
   * [Usage](#usage)
   * [Configuration](#configuration)
-  * [Defaults](#defaults)
   * [Meta](#meta)
     * [Options](#options)
     * [Partial](#partial)
@@ -126,13 +125,18 @@ This document was generated with the following configuration (see [package.json]
       "footer": "***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***"
     },
     {
-      "title": "Defaults",
+      "inc": "meta.md"
+    },
+    {
       "req": "defaults.js",
       "type": "code",
       "language": "javascript"
     },
     {
-      "inc": "meta.md"
+      "inc": [
+        "partial.md",
+        "generator.md"
+      ]
     },
     {
       "title": "Middleware",
@@ -183,7 +187,26 @@ This document was generated with the following configuration (see [package.json]
 
 ***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***
 
-## Defaults
+## Meta
+
+Meta data describes processing options and how you want to collate the partials.
+
+### Options
+
+* `generator`: A boolean that disables inclusion of the generator text.
+* `title`: A string that sets the document title or a partial definition.
+* `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
+* `period`: The character used by the [pedantic middleware](#pedantic-middleware).
+* `include`: A directory that is the base path for [include partials](#include-partial).
+* `require`: A directory that is the base path for [require partials](#require-partial).
+* `branch`: A branch name to use when resolving links that begin with `/` for [github](http://github.com), only applicable if `gfm` is set.
+* `links`: The name of a links include file, resolved relative to `include`.
+* `toc`: Enable the table of contents middleware with `true` or set to a string to include a title above the table of contents.
+* `order`: A boolean that indicates the `toc` middleware should use ordered lists.
+* `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
+* `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
+* `level`: An integer indicating the header level for `title` properties in partial definitions.
+* `partial`: Array of partial definitions, see [partial](#partial).
 
 ```javascript
 {
@@ -205,39 +228,16 @@ This document was generated with the following configuration (see [package.json]
 }
 ```
 
-## Meta
-
-Meta data describes processing options and how you want to collate the partials.
-
-### Options
-
-* `generator`: A boolean that disables inclusion of the generator text.
-* `title`: A string that sets the document title or a partial definition.
-* `gfm`: A boolean that indicates that [github](http://github.com) flavoured markdown is in use.
-* `period`: The character used by the [pedantic middleware](#pedantic-middleware).
-* `include`: A directory that is the base path for [include partials](#include-partial).
-* `require`: A directory that is the base path for [require partials](#require-partial).
-* `branch`: A branch name to use when resolving links that begin with `/` for [github](http://github.com), only applicable if `gfm` is set.
-* `links`: The name of a links include file, resolved relative to `include`.
-* `toc`: Enable the table of contents middleware with `true` or set to a string to include a title above the table of contents.
-* `order`: A boolean that indicates the `toc` middleware should use ordered lists.
-* `base`: Enable the absolute link middleware, specifies the base URL for absolute links.
-* `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
-* `level`: An integer indicating the header level for `title` properties in partial definitions, default is `2`.
-* `partial`: Array of partial definitions, see [partial](#partial).
-
 ### Partial
 
 A partial may be one of:
 
-* `literal`: A string literal.
-* `reference`: A property reference.
-* `object`: A json or javascript object reference.
-* `include`: Include a file, normally a markdown document but not necessarily.
-* `binary`: Execute a command and use `stdout` as the content.
-* `require`: Require a `.js` module or a `.json` file.
-
-All keys are available using a three character abbreviation, specifiying `bin` is equivalent to `binary`.
+* `literal|lit`: A string literal.
+* `reference|ref`: A property reference.
+* `object|obj`: A json or javascript object reference.
+* `include|inc`: Include a file, normally a markdown document but not necessarily.
+* `binary|bin`: Execute a command and use `stdout` as the content.
+* `require|req`: Require a `.js` module or a `.json` file.
 
 ### Generator
 

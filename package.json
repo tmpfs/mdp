@@ -82,13 +82,15 @@
         "footer": "***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***"
       },
       {
-        "title": "Defaults",
+        "inc": "meta.md"
+      },
+      {
         "req": "defaults.js",
         "type": "code",
         "language": "javascript"
       },
       {
-        "inc": "meta.md"
+        "inc": ["partial.md", "generator.md"]
       },
       {
         "title": "Middleware",
