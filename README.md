@@ -259,15 +259,16 @@ Markdown partial processor.
 Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
-     --man            Use a man renderer, default output is README.1.
+ -t, --title=[title]  Document title.
      --color          Control terminal color.
  -f, --force          Force file overwrite.
      --pandoc         Include pandoc meta data.
      --inspect        Enable inspect middleware.
  -m, --md             Print markdown to stdout.
      --text           Use a text renderer, default output is README.txt.
+     --man            Use a man renderer, default output is README.1.
      --debug          Enable debugging.
- -t, --title=[title]  Document title.
+     --meta=[file...] Meta definition file(s).
  -o, --output=[file]  Output file, default is README.md.
  -h, --html=[file]    Write html to file.
  -v, --verbose        Print more information.
@@ -291,15 +292,16 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Options
 
-* `--man`: Use a man renderer, default output is README.1.
+* `-t, --title=[title]`: Document title.
 * `--color`: Control terminal color.
 * `-f, --force`: Force file overwrite.
 * `--pandoc`: Include pandoc meta data.
 * `--inspect`: Enable inspect middleware.
 * `-m, --md`: Print markdown to stdout.
 * `--text`: Use a text renderer, default output is README.txt.
+* `--man`: Use a man renderer, default output is README.1.
 * `--debug`: Enable debugging.
-* `-t, --title=[title]`: Document title.
+* `--meta=[file...]`: Meta definition file(s).
 * `-o, --output=[file]`: Output file, default is README.md.
 * `-h, --html=[file]`: Write html to file.
 * `-v, --verbose`: Print more information.
@@ -309,7 +311,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;](&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#x3a;&#110;&#111;&#x6f;&#112;&#x40;&#120;&#x70;&#x6d;&#46;&#105;&#x6f;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#x6f;](&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#x6f;).
 
 ## Library
 
