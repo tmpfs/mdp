@@ -30,7 +30,7 @@ npm i -g mdp
 
 Designed to generate markdown documents from a series of partials. 
 
-Read [partial](#partial) to learn how to define partials or get a quick feel by checking the [configuration](#configuration) that created this document, see [usage](#usage) for an abbreviated look at the command line options, the [manual](#manual) section is the result of generating program help for `mdp(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
+Read [partial](#partial) to learn how to define partials or get a quick feel by checking the [configuration](#configuration) that created this document, see [usage](#usage) for an abbreviated look at the command line options.
 
 Use this program to:
 
@@ -268,7 +268,8 @@ Options:
      --text           Use a text renderer, default output is README.txt.
      --man            Use a man renderer, default output is README.1.
      --debug          Enable debugging.
-     --meta=[file...] Meta definition file(s).
+ -d, --metadata=[file...]
+                      Meta definition file(s).
  -o, --output=[file]  Output file, default is README.md.
  -h, --html=[file]    Write html to file.
  -v, --verbose        Print more information.
@@ -301,7 +302,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 * `--text`: Use a text renderer, default output is README.txt.
 * `--man`: Use a man renderer, default output is README.1.
 * `--debug`: Enable debugging.
-* `--meta=[file...]`: Meta definition file(s).
+* `-d, --metadata=[file...]`: Meta definition file(s).
 * `-o, --output=[file]`: Output file, default is README.md.
 * `-h, --html=[file]`: Write html to file.
 * `-v, --verbose`: Print more information.
@@ -311,7 +312,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#x6f;](&#109;&#97;&#105;&#108;&#116;&#x6f;&#58;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#x6f;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#112;&#109;&#46;&#105;&#x6f;](&#x6d;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#112;&#109;&#46;&#105;&#x6f;).
 
 ## Library
 
