@@ -1,6 +1,6 @@
 {
   "name": "rdm",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Markdown partial processor",
   "author": "muji <noop@xpm.io>",
   "repository": {
