@@ -211,6 +211,7 @@ A partial may be one of:
 
 * `literal`: A string literal.
 * `reference`: A property reference.
+* `object`: A json or javascript object reference.
 * `include`: Include a file, normally a markdown document but not necessarily.
 * `binary`: Execute a command and use `stdout` as the content.
 * `require`: Require a `.js` module or a `.json` file.
@@ -304,7 +305,7 @@ mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;](&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#x6f;&#111;&#x70;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;).
+Report bugs to muji [&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;](&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#x3a;&#x6e;&#111;&#x6f;&#x70;&#64;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;).
 
 ## Library
 

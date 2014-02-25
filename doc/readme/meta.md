@@ -24,6 +24,7 @@ A partial may be one of:
 
 * `literal`: A string literal.
 * `reference`: A property reference.
+* `object`: A json or javascript object reference.
 * `include`: Include a file, normally a markdown document but not necessarily.
 * `binary`: Execute a command and use `stdout` as the content.
 * `require`: Require a `.js` module or a `.json` file.
