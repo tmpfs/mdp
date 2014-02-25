@@ -236,13 +236,14 @@ Designed for readme documents but may be used for any markdown document.
 Usage: rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -o, --output=[file]  Output file, default is README.md.
+ -t, --title=[title]  Document title.
      --color          Control terminal color.
  -f, --force          Force file overwrite.
+     --inspect        Enable inspect middleware.
  -m, --md             Print markdown to stdout.
      --text           Use a plain text renderer, default output is README.txt.
- -t, --title=[title]  Document title.
      --debug          Enable debugging.
+ -o, --output=[file]  Output file, default is README.md.
  -h, --html=[file]    Write html to file.
  -v, --verbose        Print more information.
  -w, --middleware=[file ...]
@@ -267,13 +268,14 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Options
 
-* `-o, --output=[file]`: Output file, default is README.md.
+* `-t, --title=[title]`: Document title.
 * `--color`: Control terminal color.
 * `-f, --force`: Force file overwrite.
+* `--inspect`: Enable inspect middleware.
 * `-m, --md`: Print markdown to stdout.
 * `--text`: Use a plain text renderer, default output is README.txt.
-* `-t, --title=[title]`: Document title.
 * `--debug`: Enable debugging.
+* `-o, --output=[file]`: Output file, default is README.md.
 * `-h, --html=[file]`: Write html to file.
 * `-v, --verbose`: Print more information.
 * `-w, --middleware=[file ...]`: Require custom middleware.
@@ -282,7 +284,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#111;](&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#x3a;&#x6e;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#x6d;&#46;&#x69;&#111;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#x6f;](&#109;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#110;&#x6f;&#x6f;&#x70;&#x40;&#120;&#112;&#109;&#46;&#x69;&#x6f;).
 
 ## Library
 
