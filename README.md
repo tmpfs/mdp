@@ -65,6 +65,8 @@ A partial may be one of:
 
 ## Configuration
 
+This document was generated with the following configuration (see [package.json](https://github.com/freeformsystems/rdm/blob/master/package.json)):
+
 ```json
 {
   "pedantic": true,
@@ -260,7 +262,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;](&#x6d;&#x61;&#x69;&#x6c;&#116;&#111;&#58;&#110;&#x6f;&#111;&#112;&#x40;&#x78;&#x70;&#x6d;&#x2e;&#105;&#111;).
+Report bugs to muji [&#110;&#x6f;&#x6f;&#112;&#x40;&#x78;&#112;&#109;&#46;&#x69;&#111;](&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#110;&#x6f;&#x6f;&#112;&#x40;&#x78;&#112;&#109;&#46;&#x69;&#111;).
 
 ## License
 
