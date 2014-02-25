@@ -28,7 +28,7 @@ npm i -g rdm
 
 Designed to generate markdown documents from a series of partials. 
 
-Read [partials](https://github.com/freeformsystems/rdm#partials) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/rdm#configuration) that created this document, see [usage](https://github.com/freeformsystems/rdm#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section is the result of generating program help for `rdm(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
+Read [partial](https://github.com/freeformsystems/rdm#partial) to learn how to define partials or get a quick feel by checking the [configuration](https://github.com/freeformsystems/rdm#configuration) that created this document, see [usage](https://github.com/freeformsystems/rdm#usage) for an abbreviated look at the command line options, the [manual](https://github.com/freeformsystems/rdm#manual) section is the result of generating program help for `rdm(1)` as markdown it illustrates the result of running an executable with a specific environment configuration.
 
 Use this program to:
 
@@ -273,7 +273,7 @@ rdm [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 ### Bugs
 
-Report bugs to muji [&#x6e;&#x6f;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;](&#x6d;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#x6e;&#x6f;&#x6f;&#x70;&#64;&#x78;&#x70;&#109;&#46;&#105;&#x6f;).
+Report bugs to muji [&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;](&#109;&#97;&#x69;&#108;&#116;&#111;&#x3a;&#x6e;&#x6f;&#x6f;&#112;&#x40;&#x78;&#x70;&#109;&#46;&#x69;&#111;).
 
 ## License
 
