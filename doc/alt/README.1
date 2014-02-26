@@ -39,15 +39,17 @@ Markdown partial processor.
 Usage: mdp [\-fp] [\-\-force] [\-\-print] [\-o=file] [\-h=file] file ...
 
 Options:
- \-p, \-\-print=[format]       Print document to stdout.
+     \-\-=[no]\-pedantic       Enable or disable pedantic middleware.
      \-\-color                Control terminal color.
      \-\-log\-file=[file]      Redirect to log file.
      \-\-debug                Enable debugging.
  \-f, \-\-force                Force file overwrite.
      \-\-pandoc               Include pandoc meta data.
      \-\-inspect              Enable inspect middleware.
-     \-\-=[no]\-pedantic       Enable or disable pedantic middleware.
+     \-\-section=[1\-8]        Set the man page section.
+ \-n, \-\-filename=[name]      Set the output file name.
      \-\-log\-level=[level]    Set the log level.
+ \-p, \-\-print=[format]       Print document to stdout.
  \-t, \-\-title=[title]        Document title.
  \-i, \-\-input=[file...]      Meta definition file(s).
  \-o, \-\-output=[file...]     Output file(s), may be specified once for each
@@ -55,6 +57,9 @@ Options:
                             extension, md, txt, html or [1\-8]. If no output
                             files are specified then README.md is generated in
                             the current directory.
+
+                            If the output path is a directory then a file is
+                            created for each supported format.
  \-v, \-\-verbose              Print more information.
  \-w, \-\-middleware=[file ...]
                             Require custom middleware.
@@ -62,9 +67,11 @@ Options:
      \-\-version              Output version information and exit.
 
 Report bugs to muji <noop@xpm.io>.
+.PP
+The program help output is also available as markdown see MANUAL[6].
 .SH "CONFIGURATION"
 .PP
-This document was generated with the following configuration (see package.json[6]):
+This document was generated with the following configuration (see package.json[7]):
 
 .LT
 {
@@ -95,7 +102,8 @@ This document was generated with the following configuration (see package.json[6
     {
       "title": "Usage",
       "bin": "mdp \-\-help",
-      "type": "code"
+      "type": "code",
+      "footer": "The program help output is also available as markdown see [MANUAL](/MANUAL.md)"
     },
     {
       "title": "Configuration",
@@ -277,7 +285,7 @@ Keep your README up to date with a git hook, this is the hook from this reposito
 path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
 path=$(dirname $(dirname ${path}));
 cd ${path} && npm run build \
-  && git add README.md doc/README.html doc/README.txt doc/README.1
+  && git add README.md doc/alt
 .PP
 If you have \fBmdp\fR in your path you could use:
 
@@ -286,7 +294,7 @@ If you have \fBmdp\fR in your path you could use:
 mdp \-\-force && git add README.md
 .SH "LICENSE"
 .PP
-Everything is MIT[7]. Read the license[8] if you feel inclined.
+Everything is MIT[8]. Read the license[9] if you feel inclined.
 .PP
 This program was built using the command[5] module, if you care for excellent documentation and write command line interfaces you should check it out.
 .SH "LINKS"
@@ -302,9 +310,11 @@ This program was built using the command[5] module, if you care for excellent do
 .IP "\[ci]" 4
 [5] https://github.com/freeformsystems/cli\-command
 .IP "\[ci]" 4
-[6] https://github.com/freeformsystems/mdp/blob/master/package.json
+[6] https://github.com/freeformsystems/mdp/blob/master/MANUAL.md
 .IP "\[ci]" 4
-[7] http://en.wikipedia.org/wiki/MIT_License
+[7] https://github.com/freeformsystems/mdp/blob/master/package.json
 .IP "\[ci]" 4
-[8] https://github.com/freeformsystems/mdp/blob/master/LICENSE
+[8] http://en.wikipedia.org/wiki/MIT_License
+.IP "\[ci]" 4
+[9] https://github.com/freeformsystems/mdp/blob/master/LICENSE
 .EL

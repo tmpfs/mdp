@@ -46,7 +46,8 @@
   "scripts": {
     "prepublish": "npm run build",
     "md": "./bin/mdp --force --debug",
-    "build": "./bin/mdp --force -o README.md -o doc/README.html -o doc/README.txt -o doc/README.1 -v",
+    "build": "rm -f README.md && ./bin/mdp --force -o doc/alt -v && mv doc/alt/README.md .",
+    "manual": "rm -f MANUAL.md && ./bin/mdp --force -i doc/manual.json -o MANUAL.md",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "directories": {
@@ -80,7 +81,8 @@
       {
         "title": "Usage",
         "bin": "mdp --help",
-        "type": "code"
+        "type": "code",
+        "footer": "The program help output is also available as markdown see [MANUAL](/MANUAL.md)"
       },
       {
         "title": "Configuration",

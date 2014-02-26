@@ -43,15 +43,17 @@
 Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -p, --print=[format]       Print document to stdout.
+     --=[no]-pedantic       Enable or disable pedantic middleware.
      --color                Control terminal color.
      --log-file=[file]      Redirect to log file.
      --debug                Enable debugging.
  -f, --force                Force file overwrite.
      --pandoc               Include pandoc meta data.
      --inspect              Enable inspect middleware.
-     --=[no]-pedantic       Enable or disable pedantic middleware.
+     --section=[1-8]        Set the man page section.
+ -n, --filename=[name]      Set the output file name.
      --log-level=[level]    Set the log level.
+ -p, --print=[format]       Print document to stdout.
  -t, --title=[title]        Document title.
  -i, --input=[file...]      Meta definition file(s).
  -o, --output=[file...]     Output file(s), may be specified once for each
@@ -59,6 +61,9 @@ Options:
                             extension, md, txt, html or [1-8]. If no output
                             files are specified then README.md is generated in
                             the current directory.
+
+                            If the output path is a directory then a file is
+                            created for each supported format.
  -v, --verbose              Print more information.
  -w, --middleware=[file ...]
                             Require custom middleware.
@@ -66,7 +71,8 @@ Options:
      --version              Output version information and exit.
 
 Report bugs to muji &lt;noop@xpm.io&gt;.
-</code></pre><h2 id="configuration">Configuration</h2>
+</code></pre><p>The program help output is also available as markdown see <a href="https://github.com/freeformsystems/mdp/blob/master/MANUAL.md">MANUAL</a>.</p>
+<h2 id="configuration">Configuration</h2>
 <p>This document was generated with the following configuration (see <a href="https://github.com/freeformsystems/mdp/blob/master/package.json">package.json</a>):</p>
 <pre><code class="lang-json">{
   &quot;title&quot;: {
@@ -96,7 +102,8 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
     {
       &quot;title&quot;: &quot;Usage&quot;,
       &quot;bin&quot;: &quot;mdp --help&quot;,
-      &quot;type&quot;: &quot;code&quot;
+      &quot;type&quot;: &quot;code&quot;,
+      &quot;footer&quot;: &quot;The program help output is also available as markdown see [MANUAL](/MANUAL.md)&quot;
     },
     {
       &quot;title&quot;: &quot;Configuration&quot;,
@@ -244,7 +251,7 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 path=$(cd ${BASH_SOURCE[0]%/*} &amp;&amp; echo $PWD);
 path=$(dirname $(dirname ${path}));
 cd ${path} &amp;&amp; npm run build \
-  &amp;&amp; git add README.md doc/README.html doc/README.txt doc/README.1
+  &amp;&amp; git add README.md doc/alt
 </code></pre>
 <p>If you have <code>mdp</code> in your path you could use:</p>
 <pre><code class="lang-bash">#/bin/sh

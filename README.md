@@ -49,15 +49,17 @@ Markdown partial processor.
 Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -p, --print=[format]       Print document to stdout.
+     --=[no]-pedantic       Enable or disable pedantic middleware.
      --color                Control terminal color.
      --log-file=[file]      Redirect to log file.
      --debug                Enable debugging.
  -f, --force                Force file overwrite.
      --pandoc               Include pandoc meta data.
      --inspect              Enable inspect middleware.
-     --=[no]-pedantic       Enable or disable pedantic middleware.
+     --section=[1-8]        Set the man page section.
+ -n, --filename=[name]      Set the output file name.
      --log-level=[level]    Set the log level.
+ -p, --print=[format]       Print document to stdout.
  -t, --title=[title]        Document title.
  -i, --input=[file...]      Meta definition file(s).
  -o, --output=[file...]     Output file(s), may be specified once for each
@@ -65,6 +67,9 @@ Options:
                             extension, md, txt, html or [1-8]. If no output
                             files are specified then README.md is generated in
                             the current directory.
+
+                            If the output path is a directory then a file is
+                            created for each supported format.
  -v, --verbose              Print more information.
  -w, --middleware=[file ...]
                             Require custom middleware.
@@ -73,6 +78,8 @@ Options:
 
 Report bugs to muji <noop@xpm.io>.
 ```
+
+The program help output is also available as markdown see [MANUAL](https://github.com/freeformsystems/mdp/blob/master/MANUAL.md).
 
 ## Configuration
 
@@ -107,7 +114,8 @@ This document was generated with the following configuration (see [package.json]
     {
       "title": "Usage",
       "bin": "mdp --help",
-      "type": "code"
+      "type": "code",
+      "footer": "The program help output is also available as markdown see [MANUAL](/MANUAL.md)"
     },
     {
       "title": "Configuration",
@@ -278,7 +286,7 @@ Keep your README up to date with a git hook, this is the hook from this reposito
 path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
 path=$(dirname $(dirname ${path}));
 cd ${path} && npm run build \
-  && git add README.md doc/README.html doc/README.txt doc/README.1
+  && git add README.md doc/alt
 ```
 
 If you have `mdp` in your path you could use:
