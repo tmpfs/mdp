@@ -43,13 +43,15 @@
 Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -t, --title=[title]        Document title.
+ -p, --print=[format]       Print document to stdout.
      --color                Control terminal color.
+     --log-file=[file]      Redirect to log file.
+     --debug                Enable debugging.
  -f, --force                Force file overwrite.
      --pandoc               Include pandoc meta data.
      --inspect              Enable inspect middleware.
- -p, --print=[format]       Print document to stdout.
-     --debug                Enable debugging.
+     --log-level=[level]    Set the log level.
+ -t, --title=[title]        Document title.
  -i, --input=[file...]      Meta definition file(s).
  -o, --output=[file...]     Output file(s), may be specified once for each
                             format. The output format is determined by the file
