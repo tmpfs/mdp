@@ -246,9 +246,9 @@ Middleware functions are executed asynchronously once for each token encountered
 The \fBinspect\fR middleware is shown below:
 
 .LT
-function inspect(meta) {
-  if(!arguments.length) return;
-  return function(token, tokens, meta, next) {
+function middleware(meta) {
+  return function inspect(token, tokens, meta, next) {
+    if(!arguments.length) return;
     console.dir(token);
     next();
   }

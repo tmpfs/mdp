@@ -243,9 +243,9 @@ Middleware functions are executed asynchronously once for each token encountered
 The `inspect` middleware is shown below:
 
 ```javascript
-function inspect(meta) {
-  if(!arguments.length) return;
-  return function(token, tokens, meta, next) {
+function middleware(meta) {
+  return function inspect(token, tokens, meta, next) {
+    if(!arguments.length) return;
     console.dir(token);
     next();
   }
