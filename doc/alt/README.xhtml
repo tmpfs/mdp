@@ -228,7 +228,7 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <p>Middleware functions are executed asynchronously once for each token encountered in the markdown document.</p>
 <p>The <code>inspect</code> middleware is shown below:</p>
 <pre><code class="lang-javascript">function middleware(meta) {
-  return function inspect(token, tokens, meta, next) {
+  return function inspect(token, tokens, next) {
     if(!arguments.length) return;
     console.dir(token);
     next();

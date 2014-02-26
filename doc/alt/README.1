@@ -256,7 +256,7 @@ The \fBinspect\fR middleware is shown below:
 
 .LT
 function middleware(meta) {
-  return function inspect(token, tokens, meta, next) {
+  return function inspect(token, tokens, next) {
     if(!arguments.length) return;
     console.dir(token);
     next();
