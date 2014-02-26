@@ -42,7 +42,7 @@
   "scripts": {
     "prepublish": "npm run build",
     "md": "./bin/mdp --force --debug",
-    "build": "./bin/mdp --force -o README.md -o doc/README.html -o doc/README.txt -o doc/README.1",
+    "build": "./bin/mdp --force -o README.md -o doc/README.html -o doc/README.txt -o doc/README.1 -v",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
   "directories": {
