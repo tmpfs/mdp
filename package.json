@@ -47,6 +47,7 @@
     "prepublish": "npm run build",
     "md": "./bin/mdp --force --debug",
     "build": "rm -f README.md && ./bin/mdp --force -o doc/alt -v && mv doc/alt/README.md .",
+    "build-debug": "rm -f README.md && ./bin/mdp --force --debug -o doc/alt -v && mv doc/alt/README.md .",
     "manual": "rm -f MANUAL.md && ./bin/mdp --force -i doc/manual.json -o MANUAL.md",
     "test": "istanbul cover _mocha -- -u bdd --recursive --bail --reporter list -A test/unit/"
   },
