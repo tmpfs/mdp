@@ -44,7 +44,7 @@ Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
-     --color                Control terminal color.
+     --[no]-color           Enable or disable terminal colors.
      --log-file=[file]      Redirect to log file.
      --debug                Enable debugging.
  -f, --force                Force file overwrite.
@@ -56,8 +56,8 @@ Options:
  -p, --print=[format]       Print document to stdout.
      --timeout=[ms]         Timeout milliseconds for middleware.
  -t, --title=[title]        Document title.
- -i, --input=[file...]      Meta definition file(s).
- -o, --output=[file...]     Output file(s), may be specified once for each
+ -i, --input=[file ...]     Meta definition file(s).
+ -o, --output=[file ...]    Output file(s), may be specified once for each
                             format. The output format is determined by the file
                             extension, md, txt, html, xhtml or [1-8]. If no
                             output files are specified then README.md is

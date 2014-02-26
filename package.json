@@ -25,13 +25,13 @@
     "partial"
   ],
   "dependencies": {
-    "async": "~0.2.10",
-    "ttycolor": "~0.8.5",
-    "circular": "~1.0.2",
+    "cli-command": "~0.8.25",
     "cli-interface": "~1.0.5",
-    "cli-command": "~0.8.20",
     "cli-logger": "~0.5.10",
     "cli-util": "~1.1.11",
+    "ttycolor": "~0.8.8",
+    "circular": "~1.0.2",
+    "async": "~0.2.10",
     "marked": "~0.3.1",
     "moment": "~2.5.1"
   },
