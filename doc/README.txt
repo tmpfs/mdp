@@ -51,6 +51,7 @@ Options:
  -f, --force                Force file overwrite.
      --pandoc               Include pandoc meta data.
      --inspect              Enable inspect middleware.
+     --=[no]-pedantic       Enable or disable pedantic middleware.
      --log-level=[level]    Set the log level.
  -t, --title=[title]        Document title.
  -i, --input=[file...]      Meta definition file(s).
