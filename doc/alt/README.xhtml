@@ -54,6 +54,7 @@ Options:
  -n, --filename=[name]      Set the output file name.
      --log-level=[level]    Set the log level.
  -p, --print=[format]       Print document to stdout.
+     --timeout=[ms]         Timeout milliseconds for middleware.
  -t, --title=[title]        Document title.
  -i, --input=[file...]      Meta definition file(s).
  -o, --output=[file...]     Output file(s), may be specified once for each
@@ -226,6 +227,14 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <p>By default <code>mdp(1)</code> will append a <em>generator</em> message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the <code>generator</code> property to <code>false</code>.</p>
 <h2 id="middleware">Middleware</h2>
 <p>Middleware functions are executed asynchronously once for each token encountered in the markdown document.</p>
+<p>Implementations are passed a <code>meta</code> object which is the merged result of processing all the input configuration files (<code>--input</code>) and should return a closure that will be invoked once for each token in the document.</p>
+<p>The closure function <em>must</em> be a named function and should return when zero arguments are passed so that function names may be used within error messages. It is passed the arguments:</p>
+<ul>
+<li><code>token</code>: The current token being processed.</li>
+<li><code>tokens</code>: The list of all tokens in the document, you may use <code>tokens.peek()</code> to look ahead but you should not modify the array.</li>
+<li><code>next</code>: A callback to invoke when the token has been processed, signature is: <code>next(err)</code>.</li>
+</ul>
+<p>If you pass an error to next the program will terminate immediately, failure to invoke <code>next()</code> will result in an error after a timeout (<code>--timeout</code>) has been exceeded.</p>
 <p>The <code>inspect</code> middleware is shown below:</p>
 <pre><code class="lang-javascript">function middleware(meta) {
   return function inspect(token, tokens, next) {
@@ -251,7 +260,7 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 path=$(cd ${BASH_SOURCE[0]%/*} &amp;&amp; echo $PWD);
 path=$(dirname $(dirname ${path}));
 cd ${path} &amp;&amp; npm run build \
-  &amp;&amp; git add README.md doc/alt
+  &amp;&amp; git add -f README.md doc/alt/README.*
 </code></pre>
 <p>If you have <code>mdp</code> in your path you could use:</p>
 <pre><code class="lang-bash">#/bin/sh

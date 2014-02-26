@@ -50,6 +50,7 @@ Options:
  \-n, \-\-filename=[name]      Set the output file name.
      \-\-log\-level=[level]    Set the log level.
  \-p, \-\-print=[format]       Print document to stdout.
+     \-\-timeout=[ms]         Timeout milliseconds for middleware.
  \-t, \-\-title=[title]        Document title.
  \-i, \-\-input=[file...]      Meta definition file(s).
  \-o, \-\-output=[file...]     Output file(s), may be specified once for each
@@ -252,6 +253,20 @@ By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the 
 .PP
 Middleware functions are executed asynchronously once for each token encountered in the markdown document.
 .PP
+Implementations are passed a \fBmeta\fR object which is the merged result of processing all the input configuration files (\fB\-\-input\fR) and should return a closure that will be invoked once for each token in the document.
+.PP
+The closure function \fImust\fR be a named function and should return when zero arguments are passed so that function names may be used within error messages. It is passed the arguments:
+.BL
+.IP "\[ci]" 4
+\fBtoken\fR: The current token being processed.
+.IP "\[ci]" 4
+\fBtokens\fR: The list of all tokens in the document, you may use \fBtokens.peek()\fR to look ahead but you should not modify the array.
+.IP "\[ci]" 4
+\fBnext\fR: A callback to invoke when the token has been processed, signature is: \fBnext(err)\fR.
+.EL
+.PP
+If you pass an error to next the program will terminate immediately, failure to invoke \fBnext()\fR will result in an error after a timeout (\fB\-\-timeout\fR) has been exceeded.
+.PP
 The \fBinspect\fR middleware is shown below:
 
 .LT
@@ -285,7 +300,7 @@ Keep your README up to date with a git hook, this is the hook from this reposito
 path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
 path=$(dirname $(dirname ${path}));
 cd ${path} && npm run build \
-  && git add README.md doc/alt
+  && git add \-f README.md doc/alt/README.*
 .PP
 If you have \fBmdp\fR in your path you could use:
 
