@@ -49,22 +49,24 @@ Markdown partial processor.
 Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
 
 Options:
- -t, --title=[title]  Document title.
-     --color          Control terminal color.
- -f, --force          Force file overwrite.
-     --pandoc         Include pandoc meta data.
-     --inspect        Enable inspect middleware.
- -p, --print=[format] Print document to stdout.
-     --debug          Enable debugging.
- -i, --input=[file...]
-                      Meta definition file(s).
- -o, --output=[file...]
-                      Output file(s), default is README.md.
- -v, --verbose        Print more information.
+ -t, --title=[title]        Document title.
+     --color                Control terminal color.
+ -f, --force                Force file overwrite.
+     --pandoc               Include pandoc meta data.
+     --inspect              Enable inspect middleware.
+ -p, --print=[format]       Print document to stdout.
+     --debug                Enable debugging.
+ -i, --input=[file...]      Meta definition file(s).
+ -o, --output=[file...]     Output file(s), may be specified once for each
+                            format. The output format is determined by the file
+                            extension, md, txt, html or [1-8]. If no output
+                            files are specified then README.md is generated in
+                            the current directory.
+ -v, --verbose              Print more information.
  -w, --middleware=[file ...]
-                      Require custom middleware.
-     --help           Display this help and exit.
-     --version        Output version information and exit.
+                            Require custom middleware.
+     --help                 Display this help and exit.
+     --version              Output version information and exit.
 
 Report bugs to muji <noop@xpm.io>.
 ```
