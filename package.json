@@ -24,7 +24,7 @@
   ],
   "dependencies": {
     "async": "~0.2.10",
-    "ttycolor": "~0.8.4",
+    "ttycolor": "~0.8.5",
     "circular": "~1.0.2",
     "cli-interface": "~1.0.5",
     "cli-command": "~0.8.12",
