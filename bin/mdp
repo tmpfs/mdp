@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+process.stdin.resume();
 var interface = require('../lib/mdp');
 var program = interface(require('../package.json'));
 program.parse();
