@@ -39,7 +39,15 @@
 </code></pre><h2 id="usage">Usage</h2>
 <pre><code>Markdown partial processor.
 
-Usage: mdp [-fp] [--force] [--print] [-o=file] [-h=file] file ...
+Usage: mdp [-fvh] [--color|--no-color] [--debug] [-f|--force]
+           [--pandoc] [--inspect] [--pedantic|--no-pedantic]
+           [-v|--verbose] [-h|--help] [--version]
+           [--log-level=&lt;level&gt;] [--log-file=&lt;file&gt;]
+           [--section=&lt;1-8&gt;] [-n|--filename=&lt;name&gt;]
+           [-p|--print=&lt;format&gt;] [--timeout=&lt;ms&gt;]
+           [-t|--title=&lt;title&gt;] [-i|--input=&lt;file ...&gt;]
+           [-o|--output=&lt;file ...&gt;] [-w|--middleware=&lt;file ...&gt;]
+           &lt;args&gt;
 
 Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
