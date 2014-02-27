@@ -297,9 +297,7 @@ Keep your README up to date with a git hook, this is the \fBpre\-commit\fR hook 
 
 .LT
 #!/usr/bin/env bash
-path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
-path=$(dirname $(dirname ${path}));
-cd ${path} && npm run build \
+cd ${GIT_DIR}/.. && npm run build \
   && git add \-f README.md doc/alt/README.*
 .PP
 If you have \fBmdp\fR in your path you could use:

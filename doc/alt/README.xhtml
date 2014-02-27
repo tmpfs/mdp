@@ -257,9 +257,7 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <h2 id="hook">Hook</h2>
 <p>Keep your README up to date with a git hook, this is the <code>pre-commit</code> hook from this repository:</p>
 <pre><code class="lang-bash">#!/usr/bin/env bash
-path=$(cd ${BASH_SOURCE[0]%/*} &amp;&amp; echo $PWD);
-path=$(dirname $(dirname ${path}));
-cd ${path} &amp;&amp; npm run build \
+cd ${GIT_DIR}/.. &amp;&amp; npm run build \
   &amp;&amp; git add -f README.md doc/alt/README.*
 </code></pre>
 <p>If you have <code>mdp</code> in your path you could use:</p>

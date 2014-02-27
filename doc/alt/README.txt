@@ -279,9 +279,7 @@ These are exposed via the MarkdownParser and MarkdownRenderer properties of the 
 Keep your README up to date with a git hook, this is the pre-commit hook from this repository:
 
 #!/usr/bin/env bash
-path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
-path=$(dirname $(dirname ${path}));
-cd ${path} && npm run build \
+cd ${GIT_DIR}/.. && npm run build \
   && git add -f README.md doc/alt/README.*
 
 If you have mdp in your path you could use:

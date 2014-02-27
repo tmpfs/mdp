@@ -294,9 +294,7 @@ Keep your README up to date with a git hook, this is the `pre-commit` hook from 
 
 ```bash
 #!/usr/bin/env bash
-path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
-path=$(dirname $(dirname ${path}));
-cd ${path} && npm run build \
+cd ${GIT_DIR}/.. && npm run build \
   && git add -f README.md doc/alt/README.*
 ```
 
