@@ -31,6 +31,7 @@
     "cli-util": "~1.1.11",
     "ttycolor": "~0.8.8",
     "circular": "~1.0.2",
+    "manual": "~0.0.2",
     "async": "~0.2.10",
     "marked": "~0.3.1",
     "moment": "~2.5.1"
