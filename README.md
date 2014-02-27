@@ -67,7 +67,7 @@ Options:
  -n, --filename=[name]      Set the output file name.
      --log-level=[level]    Set the log level.
  -p, --print=[format]       Print document to stdout.
-     --timeout=[ms]         Timeout milliseconds for middleware.
+     --timeout=[ms]         Millisecond timeout for middleware.
  -t, --title=[title]        Document title.
  -i, --input=[file ...]     Meta definition file(s).
  -o, --output=[file ...]    Output file(s), may be specified once for each
@@ -75,14 +75,14 @@ Options:
                             extension, md, txt, html, xhtml or [1-8]. If no
                             output files are specified then README.md is
                             generated in the current directory.
-
-                            If the output path is a directory then a file is
-                            created for each supported format.
  -v, --verbose              Print more information.
  -w, --middleware=[file ...]
                             Require custom middleware.
  -h, --help                 Display this help and exit.
      --version              Output version information and exit.
+
+Examples:
+ mdp --force                Generate `README.md` from `package.json`:.
 
 Report bugs to muji <noop@xpm.io>.
 ```
