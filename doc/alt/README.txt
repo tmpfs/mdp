@@ -70,6 +70,9 @@ Options:
                             extension, md, txt, html, xhtml or [1-8]. If no
                             output files are specified then README.md is
                             generated in the current directory.
+
+                            If the output path is a directory then a file is
+                            created for each supported format.
  -v, --verbose              Print more information.
  -w, --middleware=[file ...]
                             Require custom middleware.
@@ -77,7 +80,7 @@ Options:
      --version              Output version information and exit.
 
 Examples:
- mdp --force                Generate `README.md` from `package.json`:.
+ mdp --force                Generate `README.md` from `package.json`.
 
 Report bugs to muji <noop@xpm.io>.
 
