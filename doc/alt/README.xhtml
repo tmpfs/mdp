@@ -16,7 +16,6 @@
 </ul>
 <ul>
 <li><a href="#middleware">Middleware</a></li>
-<li><a href="#library">Library</a></li>
 <li><a href="#hook">Hook</a></li>
 <li><a href="#license">License</a></li>
 </ul>
@@ -149,11 +148,6 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
       &quot;language&quot;: &quot;json&quot;
     },
     {
-      &quot;inc&quot;: [
-        &quot;library.md&quot;
-      ]
-    },
-    {
       &quot;title&quot;: &quot;Hook&quot;,
       &quot;text&quot;: &quot;Keep your README up to date with a git hook, this is the `pre-commit` hook from this repository:&quot;,
       &quot;inc&quot;: &quot;../../.git/hooks/pre-commit&quot;,
@@ -251,9 +245,6 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
   ]
 }
 </code></pre>
-<h2 id="library">Library</h2>
-<p>Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the <a href="https://github.com/chjj/marked">marked</a> tokens back to markdown it was necessary to extend the <code>Parser</code> and <code>Renderer</code> classes.</p>
-<p>These are exposed via the <code>MarkdownParser</code> and <code>MarkdownRenderer</code> properties of the module.</p>
 <h2 id="hook">Hook</h2>
 <p>Keep your README up to date with a git hook, this is the <code>pre-commit</code> hook from this repository:</p>
 <pre><code class="lang-bash">#!/bin/sh

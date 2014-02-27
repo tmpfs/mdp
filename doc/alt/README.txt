@@ -10,7 +10,6 @@
     * Partial
     * Generator
   * Middleware
-  * Library
   * Hook
   * License
 
@@ -154,11 +153,6 @@ This document was generated with the following configuration (see package.json[7
       "language": "json"
     },
     {
-      "inc": [
-        "library.md"
-      ]
-    },
-    {
       "title": "Hook",
       "text": "Keep your README up to date with a git hook, this is the `pre-commit` hook from this repository:",
       "inc": "../../.git/hooks/pre-commit",
@@ -267,12 +261,6 @@ You can enable it by declaring it in the meta data (or by using --inspect):
     "inspect"
   ]
 }
-
-## Library
-
-Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the marked[4] tokens back to markdown it was necessary to extend the Parser and Renderer classes.
-
-These are exposed via the MarkdownParser and MarkdownRenderer properties of the module.
 
 ## Hook
 

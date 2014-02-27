@@ -149,11 +149,6 @@ This document was generated with the following configuration (see package.json[7
       "language": "json"
     },
     {
-      "inc": [
-        "library.md"
-      ]
-    },
-    {
       "title": "Hook",
       "text": "Keep your README up to date with a git hook, this is the `pre\-commit` hook from this repository:",
       "inc": "../../.git/hooks/pre\-commit",
@@ -286,11 +281,6 @@ You can enable it by declaring it in the meta data (or by using \fB\-\-inspect\f
     "inspect"
   ]
 }
-.SH "LIBRARY"
-.PP
-Whilst designed to be used as a command line interface, in order to support ordered lists when round tripping the marked[4] tokens back to markdown it was necessary to extend the \fBParser\fR and \fBRenderer\fR classes.
-.PP
-These are exposed via the \fBMarkdownParser\fR and \fBMarkdownRenderer\fR properties of the module.
 .SH "HOOK"
 .PP
 Keep your README up to date with a git hook, this is the \fBpre\-commit\fR hook from this repository:
