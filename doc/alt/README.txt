@@ -160,7 +160,7 @@ This document was generated with the following configuration (see package.json[7
     },
     {
       "title": "Hook",
-      "text": "Keep your README up to date with a git hook, this is the hook from this repository:",
+      "text": "Keep your README up to date with a git hook, this is the `pre-commit` hook from this repository:",
       "inc": "../../.git/hooks/pre-commit",
       "type": "code",
       "language": "bash"
@@ -276,7 +276,7 @@ These are exposed via the MarkdownParser and MarkdownRenderer properties of the 
 
 ## Hook
 
-Keep your README up to date with a git hook, this is the hook from this repository:
+Keep your README up to date with a git hook, this is the pre-commit hook from this repository:
 
 #!/usr/bin/env bash
 path=$(cd ${BASH_SOURCE[0]%/*} && echo $PWD);
