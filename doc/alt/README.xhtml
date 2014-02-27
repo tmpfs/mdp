@@ -256,7 +256,7 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <p>These are exposed via the <code>MarkdownParser</code> and <code>MarkdownRenderer</code> properties of the module.</p>
 <h2 id="hook">Hook</h2>
 <p>Keep your README up to date with a git hook, this is the <code>pre-commit</code> hook from this repository:</p>
-<pre><code class="lang-bash">#!/usr/bin/env bash
+<pre><code class="lang-bash">#!/bin/sh
 cd ${GIT_DIR}/.. &amp;&amp; npm run build \
   &amp;&amp; git add -f README.md doc/alt/README.*
 </code></pre>

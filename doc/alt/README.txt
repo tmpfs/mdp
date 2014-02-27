@@ -278,7 +278,7 @@ These are exposed via the MarkdownParser and MarkdownRenderer properties of the 
 
 Keep your README up to date with a git hook, this is the pre-commit hook from this repository:
 
-#!/usr/bin/env bash
+#!/bin/sh
 cd ${GIT_DIR}/.. && npm run build \
   && git add -f README.md doc/alt/README.*
 

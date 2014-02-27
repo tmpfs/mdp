@@ -296,7 +296,7 @@ These are exposed via the \fBMarkdownParser\fR and \fBMarkdownRenderer\fR proper
 Keep your README up to date with a git hook, this is the \fBpre\-commit\fR hook from this repository:
 
 .LT
-#!/usr/bin/env bash
+#!/bin/sh
 cd ${GIT_DIR}/.. && npm run build \
   && git add \-f README.md doc/alt/README.*
 .PP
