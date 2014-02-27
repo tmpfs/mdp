@@ -2,4 +2,4 @@
 
 process.stdin.resume();
 var program = require('../lib/mdp');
-program(require('../package.json')).parse();
+program(require('../package.json'));
