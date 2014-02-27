@@ -285,7 +285,7 @@ cd ${GIT_DIR}/.. && npm run build \
 If you have mdp in your path you could use:
 
 #/bin/sh
-mdp --force && git add README.md
+cd ${GIT_DIR}/.. mdp --force && git add README.md
 
 ## License
 

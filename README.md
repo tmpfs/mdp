@@ -302,7 +302,7 @@ If you have `mdp` in your path you could use:
 
 ```bash
 #/bin/sh
-mdp --force && git add README.md
+cd ${GIT_DIR}/.. mdp --force && git add README.md
 ```
 
 ## License
