@@ -1,6 +1,6 @@
 {
   "name": "mdp",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Markdown partial processor",
   "author": "muji <noop@xpm.io>",
   "repository": {
