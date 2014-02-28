@@ -57,7 +57,7 @@ Usage: mdp [-fvh] [--color|--no-color] [--debug] [-f|--force]
 
 Options:
      --[no]-toc             Enable or disable the table of contents middleware,
-                            this overrides a toc value in the meta data.
+                            this overrides a `toc` value in the meta data.
      --[no]-color           Enable or disable terminal colors.
      --log-file=[file]      Redirect to log file.
      --debug                Enable debugging.
@@ -69,8 +69,8 @@ Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
      --log-level=[level]    Set the log level.
      --toc-title=[title]    Set the title for the table of contents, this
-                            overrides the --[no]-toc flag and the toc meta data
-                            property.
+                            overrides the `--[no]-toc` flag and the `toc` meta
+                            data property.
  -p, --print=[format]       Print document to stdout.
      --timeout=[ms]         Millisecond timeout for middleware.
  -t, --title=[title]        Document title.

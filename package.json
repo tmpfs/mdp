@@ -45,7 +45,7 @@
     "node >= 0.10.21"
   ],
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "npm run build && npm install -g && mdp --version",
     "md": "./bin/mdp --force --debug",
     "build": "rm -f README.md && ./bin/mdp --force -o doc/alt -v && mv doc/alt/README.md .",
     "build-debug": "rm -f README.md && ./bin/mdp --force --debug -o doc/alt -v && mv doc/alt/README.md .",
