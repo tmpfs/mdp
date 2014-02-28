@@ -1,6 +1,6 @@
 {
   "name": "mdp",
-  "version": "0.1.14",
+  "version": "0.1.13",
   "description": "Markdown partial processor",
   "author": "muji <noop@xpm.io>",
   "repository": {
@@ -25,7 +25,7 @@
     "partial"
   ],
   "dependencies": {
-    "cli-command": "~0.8.42",
+    "cli-command": "~0.8.44",
     "cli-interface": "~1.0.8",
     "cli-logger": "~0.5.10",
     "cli-util": "~1.1.13",
