@@ -25,7 +25,7 @@
     "partial"
   ],
   "dependencies": {
-    "cli-command": "~0.8.47",
+    "cli-command": "~0.8.51",
     "cli-interface": "~1.0.8",
     "cli-logger": "~0.5.10",
     "cli-util": "~1.1.13",

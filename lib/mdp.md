@@ -1,5 +1,5 @@
-mdp
-===
+$0
+==
 
 ## Options
 
@@ -26,29 +26,29 @@ If the output path is a directory then a file is created for each supported form
 Generate `README.md` from `package.json`, overwriting the file if it already exists:
 
 ```
-mdp --force
+$0 ${opt_force_long}
 ```
 
 Include a table of contents:
 
 ```
-mdp --toc
+$0 ${opt_toc_yes}
 ```
 
 Disable table of contents (overrides meta data):
 
 ```
-mdp --no-toc
+$0 ${opt_toc_no}
 ```
 
 Enables the toc middleware and sets the title for the table of contents:
 
 ```
-mdp --toc-title Navigation
+$0 ${opt_toc_title_long} Navigation
 ```
 
 Generate `README.md` with pandoc meta data prepended:
 
 ```
-mdp --force
+$0 ${opt_force_long} ${opt_pandoc_long}
 ```
