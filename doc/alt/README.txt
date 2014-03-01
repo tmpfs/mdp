@@ -90,7 +90,7 @@ Examples:
  mdp --no-toc               Disable table of contents (overrides meta data).
  mdp --toc-title Navigation Enables the toc middleware and sets the title for
                             the table of contents.
- mdp --force                Generate README.md with pandoc meta data prepended.
+ mdp --force --pandoc       Generate README.md with pandoc meta data prepended.
 
 Report bugs to muji <noop@xpm.io>.
 
