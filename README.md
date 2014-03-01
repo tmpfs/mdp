@@ -303,7 +303,8 @@ Keep your README up to date with a git hook, this is the `pre-commit` hook from 
 
 ```bash
 #!/bin/sh
-cd ${GIT_DIR}/.. && npm run build && npm install -g \
+cd ${GIT_DIR}/.. && npm run manual && git add MANUAL.md \
+  && npm run build && npm install -g \
   && git add -f README.md doc/alt/README.*
 ```
 

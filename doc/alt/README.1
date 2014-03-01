@@ -308,7 +308,8 @@ Keep your README up to date with a git hook, this is the \fBpre\-commit\fR hook 
 
 .LT
 #!/bin/sh
-cd ${GIT_DIR}/.. && npm run build && npm install \-g \
+cd ${GIT_DIR}/.. && npm run manual && git add MANUAL.md \
+  && npm run build && npm install \-g \
   && git add \-f README.md doc/alt/README.*
 .PP
 If you have \fBmdp\fR in your path you could use:
