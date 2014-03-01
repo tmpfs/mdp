@@ -63,8 +63,7 @@ Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
      --log-level=[level]    Set the log level.
      --toc-title=[title]    Set the title for the table of contents, this
-                            overrides the --[no]-toc flag and the toc meta data
-                            property.
+                            overrides --no-toc and the toc meta data property.
  -p, --print=[format]       Print document to stdout.
      --timeout=[ms]         Millisecond timeout for middleware.
  -t, --title=[title]        Document title.
@@ -73,10 +72,9 @@ Options:
                             format. The output format is determined by the file
                             extension, md, txt, html, xhtml or [1-8]. If no
                             output files are specified then README.md is
-                            generated in the current directory.
-
-                            If the output path is a directory then a file is
-                            created for each supported format.
+                            generated in the current directory. If the output
+                            path is a directory then a file is created for each
+                            supported format.
  -v, --verbose              Print more information.
  -w, --middleware=[file...] Require custom middleware.
  -h, --help                 Display this help and exit.
@@ -269,13 +267,13 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <h2 id="hook">Hook</h2>
 <p>Keep your README up to date with a git hook, this is the <code>pre-commit</code> hook from this repository:</p>
 <pre><code class="lang-bash">#!/bin/sh
-cd ${GIT_DIR}/.. &amp;&amp; npm run manual &amp;&amp; git add MANUAL.md \
+cd ${GIT_DIR}/.. &amp;&amp; npm run manual &amp;&amp; git add -f MANUAL.md \
   &amp;&amp; npm run build &amp;&amp; npm install -g \
   &amp;&amp; git add -f README.md doc/alt/README.*
 </code></pre>
 <p>If you have <code>mdp</code> in your path you could use:</p>
 <pre><code class="lang-bash">#/bin/sh
-cd ${GIT_DIR}/.. mdp --force &amp;&amp; git add README.md
+cd ${GIT_DIR}/.. mdp --force &amp;&amp; git add -f README.md
 </code></pre>
 <h2 id="license">License</h2>
 <p>Everything is <a href="http://en.wikipedia.org/wiki/MIT_License">MIT</a>. Read the <a href="https://github.com/freeformsystems/mdp/blob/master/LICENSE">license</a> if you feel inclined.</p>

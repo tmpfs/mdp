@@ -1,2 +1,2 @@
 #/bin/sh
-cd ${GIT_DIR}/.. mdp --force && git add README.md
+cd ${GIT_DIR}/.. mdp --force && git add -f README.md

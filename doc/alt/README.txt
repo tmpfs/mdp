@@ -64,8 +64,7 @@ Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
      --log-level=[level]    Set the log level.
      --toc-title=[title]    Set the title for the table of contents, this
-                            overrides the --[no]-toc flag and the toc meta data
-                            property.
+                            overrides --no-toc and the toc meta data property.
  -p, --print=[format]       Print document to stdout.
      --timeout=[ms]         Millisecond timeout for middleware.
  -t, --title=[title]        Document title.
@@ -74,10 +73,9 @@ Options:
                             format. The output format is determined by the file
                             extension, md, txt, html, xhtml or [1-8]. If no
                             output files are specified then README.md is
-                            generated in the current directory.
-
-                            If the output path is a directory then a file is
-                            created for each supported format.
+                            generated in the current directory. If the output
+                            path is a directory then a file is created for each
+                            supported format.
  -v, --verbose              Print more information.
  -w, --middleware=[file...] Require custom middleware.
  -h, --help                 Display this help and exit.
@@ -288,14 +286,14 @@ You can enable it by declaring it in the meta data (or by using --inspect):
 Keep your README up to date with a git hook, this is the pre-commit hook from this repository:
 
 #!/bin/sh
-cd ${GIT_DIR}/.. && npm run manual && git add MANUAL.md \
+cd ${GIT_DIR}/.. && npm run manual && git add -f MANUAL.md \
   && npm run build && npm install -g \
   && git add -f README.md doc/alt/README.*
 
 If you have mdp in your path you could use:
 
 #/bin/sh
-cd ${GIT_DIR}/.. mdp --force && git add README.md
+cd ${GIT_DIR}/.. mdp --force && git add -f README.md
 
 ## License
 
