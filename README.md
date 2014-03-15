@@ -45,10 +45,10 @@ npm i -g mdp
 ```
 Markdown partial processor.
 
-Usage: mdp [-fvh] [--color|--no-color] [--debug] [-f|--force]
-           [--pandoc] [--inspect] [--pedantic|--no-pedantic]
-           [--toc|--no-toc] [-v|--verbose] [-h|--help] [--version]
-           [--log-level=<level>] [--log-file=<file>]
+Usage: mdp [-vfh] [--color|--no-color] [--debug] [-v|--verbose]
+           [-f|--force] [--pandoc] [--inspect]
+           [--pedantic|--no-pedantic] [--toc|--no-toc] [-h|--help]
+           [--version] [--log-level=<level>] [--log-file=<file>]
            [--section=<1-8>] [-n|--filename=<name>]
            [--toc-title=<title>] [-p|--print=<format>]
            [--timeout=<ms>] [-t|--title=<title>]
@@ -56,18 +56,19 @@ Usage: mdp [-fvh] [--color|--no-color] [--debug] [-f|--force]
            [-w|--middleware=<file...>] <args>
 
 Options:
-     --[no]-toc             Enable or disable the table of contents middleware,
-                            this overrides a toc value in the meta data.
+     --[no]-pedantic        Enable or disable pedantic middleware.
      --[no]-color           Enable or disable terminal colors.
      --log-file=[file]      Redirect to log file.
      --debug                Enable debugging.
+ -v, --verbose              Print more information.
  -f, --force                Force file overwrite.
      --pandoc               Include pandoc meta data.
      --inspect              Enable inspect middleware.
      --section=[1-8]        Set the man page section.
  -n, --filename=[name]      Set the output file name.
-     --[no]-pedantic        Enable or disable pedantic middleware.
      --log-level=[level]    Set the log level.
+     --[no]-toc             Enable or disable the table of contents middleware,
+                            this overrides a toc value in the meta data.
      --toc-title=[title]    Set the title for the table of contents, this
                             overrides --no-toc and the toc meta data property.
  -p, --print=[format]       Print document to stdout.
@@ -81,7 +82,6 @@ Options:
                             generated in the current directory. If the output
                             path is a directory then a file is created for each
                             supported format.
- -v, --verbose              Print more information.
  -w, --middleware=[file...] Require custom middleware.
  -h, --help                 Display this help and exit.
      --version              Output version information and exit.
