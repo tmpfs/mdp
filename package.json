@@ -29,7 +29,7 @@
     "cli-interface": "~1.0.8",
     "cli-logger": "~0.5.10",
     "cli-util": "~1.1.13",
-    "markzero": "~0.1.0",
+    "markzero": "~0.1.6",
     "ttycolor": "~0.8.8",
     "circular": "~1.0.2",
     "manual": "~0.0.2",
