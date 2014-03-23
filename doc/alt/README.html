@@ -14,12 +14,12 @@
 <li><a href="#partial">Partial</a></li>
 </ul>
 <ul>
-<li><a href="#partial-literal">Partial Literal</a></li>
-<li><a href="#partial-reference">Partial Reference</a></li>
-<li><a href="#partial-object">Partial Object</a></li>
-<li><a href="#partial-include">Partial Include</a></li>
-<li><a href="#partial-binary">Partial Binary</a></li>
-<li><a href="#partial-require">Partial Require</a></li>
+<li><a href="#literal">Literal</a></li>
+<li><a href="#reference">Reference</a></li>
+<li><a href="#object">Object</a></li>
+<li><a href="#include">Include</a></li>
+<li><a href="#binary">Binary</a></li>
+<li><a href="#require">Require</a></li>
 </ul>
 <ul>
 <li><a href="#generator">Generator</a></li>
@@ -206,9 +206,9 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <li><code>generator</code>: A boolean that disables inclusion of the generator text.</li>
 <li><code>title</code>: A string that sets the document title or a partial definition.</li>
 <li><code>gfm</code>: A boolean that indicates that <a href="http://github.com">github</a> flavoured markdown is in use.</li>
-<li><code>period</code>: The character used by the <a href="#pedantic-middleware">pedantic middleware</a>.</li>
-<li><code>include</code>: A directory that is the base path for <a href="#include-partial">include partials</a>.</li>
-<li><code>require</code>: A directory that is the base path for <a href="#require-partial">require partials</a>.</li>
+<li><code>period</code>: The character used by the <a href="#pedantic">pedantic middleware</a>.</li>
+<li><code>include</code>: A directory that is the base path for <a href="#include">include partials</a>.</li>
+<li><code>require</code>: A directory that is the base path for <a href="#require">require partials</a>.</li>
 <li><code>branch</code>: A branch name to use when resolving links that begin with <code>/</code> for <a href="http://github.com">github</a>, only applicable if <code>gfm</code> is set.</li>
 <li><code>links</code>: The name of a links include file, resolved relative to <code>include</code>.</li>
 <li><code>toc</code>: Enable the table of contents middleware with <code>true</code> or set to a string to include a title above the table of contents.</li>
@@ -246,17 +246,17 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <li><code>binary|bin</code>: Execute a command and use <code>stdout</code> as the content.</li>
 <li><code>require|req</code>: Require a <code>.js</code> module or a <code>.json</code> file.</li>
 </ul>
-<h4 id="partial-literal">Partial Literal</h4>
+<h4 id="literal">Literal</h4>
 <p>At it&#39;s simplest a partial may be a string that contains markdown text.</p>
-<h4 id="partial-reference">Partial Reference</h4>
+<h4 id="reference">Reference</h4>
 <p>A reference to a property in the meta definition file. This is useful when you are embedding the partial definition in <code>package.json</code> and wish to reference the existing meta data such as <code>name</code> or <code>description</code>.</p>
-<h4 id="partial-object">Partial Object</h4>
+<h4 id="object">Object</h4>
 <p>A reference to an object or a json object definition.</p>
-<h4 id="partial-include">Partial Include</h4>
+<h4 id="include">Include</h4>
 <p>Include a file as a partial. Files are resolved relative to the <code>include</code> configuration directory, if the <code>include</code> configuration property is not set they are resolved relative to the current working directory. Typically this is a markdown document to include literally, but can also be used to wrap other files in markdown code blocks, useful for examples.</p>
-<h4 id="partial-binary">Partial Binary</h4>
+<h4 id="binary">Binary</h4>
 <p>Execute a command and include the command&#39;s <code>stdout</code> in the resulting document. If the command prints markdown then you can use that output, otherwise you can wrap the command&#39;s output as a markdown element of just include is literally. This is particularly useful when you want to include a program&#39;s help (<code>--help</code>) output as a usage section within a README.</p>
-<h4 id="partial-require">Partial Require</h4>
+<h4 id="require">Require</h4>
 <p>Require a <code>js</code> module or a <code>json</code> file. Files are resolved relative to the <code>require</code> configuration directory, if the <code>require</code> configuration property is not set they are resolved relative to the current working directory.</p>
 <h3 id="generator">Generator</h3>
 <p>By default <code>mdp(1)</code> will append a <em>generator</em> message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the <code>generator</code> property to <code>false</code>.</p>
