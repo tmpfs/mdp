@@ -108,6 +108,7 @@ This document was generated with the following configuration (see package.json[7
   "toc": "Table of Contents",
   "order": false,
   "base": "https://github.com/freeformsystems/mdp",
+  "env": true,
   "partial": [
     {
       "ref": "description"
@@ -144,6 +145,7 @@ This document was generated with the following configuration (see package.json[7
     {
       "inc": [
         "partial.md",
+        "environment.md",
         "generator.md"
       ]
     },
@@ -223,6 +225,8 @@ Meta data describes processing options and how you want to collate the partials.
 \fBlevel\fR: An integer indicating the header level for \fBtitle\fR properties in partial definitions.
 .IP "\[ci]" 4
 \fBpartial\fR: Array of partial definitions, see \fBPARTIAL\fR.
+.IP "\[ci]" 4
+\fBenv\fR: A boolean that indicates environment variables are substituted in partial contents. You may override this on a partial level by specifying \fBenv\fR on a partial object, see \fBENVIRONMENT\fR.
 .EL
 
 .LT
@@ -241,7 +245,8 @@ Meta data describes processing options and how you want to collate the partials.
   "base": null,
   "hash": false,
   "level": 2,
-  "partial": null
+  "partial": null,
+  "env": false
 }
 .SS "Partial"
 .PP
@@ -280,6 +285,8 @@ These are the common fields that apply to all partial types:
 \fBindent\fR: An integer indicating the number of spaces to indent when converting to a \fBJSON\fR string.
 .IP "\[ci]" 4
 \fBformat\fR: A custom format string to use to wrap the partial result, should have a single \fB%s\fR that will be replaced with the partial content.
+.IP "\[ci]" 4
+\fBenv\fR: If environment variable replacement has been enabled in the configuration then you may set this to \fBfalse\fR on a partial to disable environment variable replacement for the partial.
 .EL
 .SS "Literal"
 .PP
@@ -315,6 +322,29 @@ Binaries inherit the environment of the parent process (\fBmdp\fR) and the curre
 .SS "Require"
 .PP
 Require a \fBjs\fR module or a \fBjson\fR file. Files are resolved relative to the \fBrequire\fR configuration directory, if the \fBrequire\fR configuration property is not set they are resolved relative to the current working directory.
+.SH "ENVIRONMENT"
+.PP
+You may enable environment variable replacement by setting the \fBenv\fR configuration property to \fBtrue\fR. If you wish to disable environment variable replacement for a partial set \fBenv\fR to \fBfalse\fR for the partial.
+.PP
+Environment variables are replaced using the forms:
+
+.LT
+$variable
+${variable}
+.PP
+If the referenced variable is not set then the variable reference is not replaced and will be visible in the result.
+.PP
+You may disable environment variable replacement by preceeding the dollar with a single backslash:
+
+.LT
+\$variable
+\${variable}
+.PP
+When replacement is performed the backslash will be removed, resulting in literal variable references:
+
+.LT
+$variable
+${variable}
 .SS "Generator"
 .PP
 By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the \fBgenerator\fR property to \fBfalse\fR.
@@ -361,7 +391,7 @@ Keep your README up to date with a git hook, this is the \fBpre\-commit\fR hook 
 
 .LT
 #!/bin/sh
-cd ${GIT_DIR}/.. && npm run manual && git add \-f MANUAL.md \
+cd .git/.. && npm run manual && git add \-f MANUAL.md \
   && npm run build && npm install \-g \
   && git add \-f README.md doc/alt/README.*
 .PP
@@ -369,7 +399,7 @@ If you have \fBmdp\fR in your path you could use:
 
 .LT
 #/bin/sh
-cd ${GIT_DIR}/.. mdp \-\-force && git add \-f README.md
+cd .git/.. mdp \-\-force && git add \-f README.md
 .SH "LICENSE"
 .PP
 Everything is MIT[8]. Read the license[9] if you feel inclined.

@@ -34,7 +34,8 @@
     "circular": "~1.0.2",
     "manual": "~0.0.2",
     "async": "~0.2.10",
-    "moment": "~2.5.1"
+    "moment": "~2.5.1",
+    "cli-env": "~1.0.5"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
@@ -69,6 +70,7 @@
     "toc": "Table of Contents",
     "order": false,
     "base": "https://github.com/freeformsystems/mdp",
+    "env": true,
     "partial": [
       {
         "ref": "description"
@@ -105,6 +107,7 @@
       {
         "inc": [
           "partial.md",
+          "environment.md",
           "generator.md"
         ]
       },

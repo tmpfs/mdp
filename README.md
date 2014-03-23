@@ -16,6 +16,7 @@ Table of Contents
       * [Include](#include)
       * [Binary](#binary)
       * [Require](#require)
+  * [Environment](#environment)
     * [Generator](#generator)
   * [Middleware](#middleware)
   * [Hook](#hook)
@@ -126,6 +127,7 @@ This document was generated with the following configuration (see [package.json]
   "toc": "Table of Contents",
   "order": false,
   "base": "https://github.com/freeformsystems/mdp",
+  "env": true,
   "partial": [
     {
       "ref": "description"
@@ -162,6 +164,7 @@ This document was generated with the following configuration (see [package.json]
     {
       "inc": [
         "partial.md",
+        "environment.md",
         "generator.md"
       ]
     },
@@ -230,6 +233,7 @@ Meta data describes processing options and how you want to collate the partials.
 * `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`.
 * `level`: An integer indicating the header level for `title` properties in partial definitions.
 * `partial`: Array of partial definitions, see [partial](#partial).
+* `env`: A boolean that indicates environment variables are substituted in partial contents. You may override this on a partial level by specifying `env` on a partial object, see [environment](#environment).
 
 ```javascript
 {
@@ -247,7 +251,8 @@ Meta data describes processing options and how you want to collate the partials.
   "base": null,
   "hash": false,
   "level": 2,
-  "partial": null
+  "partial": null,
+  "env": false
 }
 ```
 
@@ -274,6 +279,7 @@ These are the common fields that apply to all partial types:
 * `stringify`: When referencing javascript objects (via `ref`, `req` etc.) this indicates that the result should be converted to `JSON` using `JSON.stringify`. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the `indent` property.
 * `indent`: An integer indicating the number of spaces to indent when converting to a `JSON` string.
 * `format`: A custom format string to use to wrap the partial result, should have a single `%s` that will be replaced with the partial content.
+* `env`: If environment variable replacement has been enabled in the configuration then you may set this to `false` on a partial to disable environment variable replacement for the partial.
 
 #### Literal
 
@@ -308,6 +314,33 @@ Binaries inherit the environment of the parent process (`mdp`) and the current w
 #### Require
 
 Require a `js` module or a `json` file. Files are resolved relative to the `require` configuration directory, if the `require` configuration property is not set they are resolved relative to the current working directory.
+
+## Environment
+
+You may enable environment variable replacement by setting the `env` configuration property to `true`. If you wish to disable environment variable replacement for a partial set `env` to `false` for the partial.
+
+Environment variables are replaced using the forms:
+
+```
+$variable
+${variable}
+```
+
+If the referenced variable is not set then the variable reference is not replaced and will be visible in the result.
+
+You may disable environment variable replacement by preceeding the dollar with a single backslash:
+
+```
+\$variable
+\${variable}
+```
+
+When replacement is performed the backslash will be removed, resulting in literal variable references:
+
+```
+$variable
+${variable}
+```
 
 ### Generator
 
@@ -355,7 +388,7 @@ Keep your README up to date with a git hook, this is the `pre-commit` hook from 
 
 ```bash
 #!/bin/sh
-cd ${GIT_DIR}/.. && npm run manual && git add -f MANUAL.md \
+cd .git/.. && npm run manual && git add -f MANUAL.md \
   && npm run build && npm install -g \
   && git add -f README.md doc/alt/README.*
 ```
@@ -364,7 +397,7 @@ If you have `mdp` in your path you could use:
 
 ```bash
 #/bin/sh
-cd ${GIT_DIR}/.. mdp --force && git add -f README.md
+cd .git/.. mdp --force && git add -f README.md
 ```
 
 ## License

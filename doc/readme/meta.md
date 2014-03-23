@@ -18,3 +18,4 @@ Meta data describes processing options and how you want to collate the partials.
 * `hash`: A boolean that controls whether the absolute middleware operates on URLs that begin with `#`
 * `level`: An integer indicating the header level for `title` properties in partial definitions
 * `partial`: Array of partial definitions, see [partial](#partial)
+* `env`: A boolean that indicates environment variables are substituted in partial contents. You may override this on a partial level by specifying `env` on a partial object, see [environment](#environment)

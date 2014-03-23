@@ -21,6 +21,7 @@ These are the common fields that apply to all partial types:
 * `stringify`: When referencing javascript objects (via `ref`, `req` etc.) this indicates that the result should be converted to `JSON` using `JSON.stringify`. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the `indent` property.
 * `indent`: An integer indicating the number of spaces to indent when converting to a `JSON` string.
 * `format`: A custom format string to use to wrap the partial result, should have a single `%s` that will be replaced with the partial content.
+* `env`: If environment variable replacement has been enabled in the configuration then you may set this to `false` on a partial to disable environment variable replacement for the partial.
 
 #### Literal
 
