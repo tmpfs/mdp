@@ -20,6 +20,7 @@
 <li><a href="#include">Include</a></li>
 <li><a href="#binary">Binary</a></li>
 <li><a href="#require">Require</a></li>
+<li><a href="#fields">Fields</a></li>
 </ul>
 <ul>
 <li><a href="#generator">Generator</a></li>
@@ -254,10 +255,32 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <p>A reference to an object or a json object definition.</p>
 <h4 id="include">Include</h4>
 <p>Include a file as a partial. Files are resolved relative to the <code>include</code> configuration directory, if the <code>include</code> configuration property is not set they are resolved relative to the current working directory. Typically this is a markdown document to include literally, but can also be used to wrap other files in markdown code blocks, useful for examples.</p>
+<p>Note that when including files trailing whitespace is removed from the file contents before inclusion in the resulting document.</p>
+<ul>
+<li><code>trim</code>: A boolean that when set to <code>false</code> disables the default behaviour of removing trailing whitespace from the file contents.</li>
+</ul>
 <h4 id="binary">Binary</h4>
 <p>Execute a command and include the command&#39;s <code>stdout</code> in the resulting document. If the command prints markdown then you can use that output, otherwise you can wrap the command&#39;s output as a markdown element of just include is literally. This is particularly useful when you want to include a program&#39;s help (<code>--help</code>) output as a section within a document.</p>
+<p>Binaries inherit the environment of the parent process (<code>mdp</code>) and the current working directory. The following fields are specific to the <code>binary</code> partial type:</p>
+<ul>
+<li><code>stderr</code>: A boolean that indicates that the command <code>stderr</code> stream should be used instead of the <code>stdout</code> stream.</li>
+<li><code>cmd</code>: A directory that becomes the working directory for the child process.</li>
+<li><code>env</code>: An object containing properties to <em>append</em> to the environment for the child process.</li>
+</ul>
 <h4 id="require">Require</h4>
 <p>Require a <code>js</code> module or a <code>json</code> file. Files are resolved relative to the <code>require</code> configuration directory, if the <code>require</code> configuration property is not set they are resolved relative to the current working directory.</p>
+<h4 id="fields">Fields</h4>
+<p>These are the common fields that apply to all partial types:</p>
+<ul>
+<li><code>title</code>: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the <code>level</code> configuration property.</li>
+<li><code>text</code>: Markdown text to inject after the title but before the partial content.</li>
+<li><code>type</code>: A type that indicates how the partial content should be wrapped, eg: <code>code</code>.</li>
+<li><code>language</code>: A language to assign when wrapping as a <code>code</code> block.</li>
+<li><code>footer</code>: Markdown text to inject after the partial content.</li>
+<li><code>stringify</code>: When referencing javascript objects (via <code>ref</code>, <code>req</code> etc.) this indicates that the result should be converted to <code>JSON</code> using <code>JSON.stringify</code>. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the <code>indent</code> property.</li>
+<li><code>indent</code>: An integer indicating the number of spaces to indent when converting to a <code>JSON</code> string.</li>
+<li><code>format</code>: A custom format string to use to wrap the partial result, should have a single <code>%s</code> that will be replaced with the partial content.</li>
+</ul>
 <h3 id="generator">Generator</h3>
 <p>By default <code>mdp(1)</code> will append a <em>generator</em> message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the <code>generator</code> property to <code>false</code>.</p>
 <h2 id="middleware">Middleware</h2>

@@ -272,12 +272,49 @@ A reference to an object or a json object definition.
 .SS "Include"
 .PP
 Include a file as a partial. Files are resolved relative to the \fBinclude\fR configuration directory, if the \fBinclude\fR configuration property is not set they are resolved relative to the current working directory. Typically this is a markdown document to include literally, but can also be used to wrap other files in markdown code blocks, useful for examples.
+.PP
+Note that when including files trailing whitespace is removed from the file contents before inclusion in the resulting document.
+.BL
+.IP "\[ci]" 4
+\fBtrim\fR: A boolean that when set to \fBfalse\fR disables the default behaviour of removing trailing whitespace from the file contents.
+.EL
 .SS "Binary"
 .PP
 Execute a command and include the command's \fBstdout\fR in the resulting document. If the command prints markdown then you can use that output, otherwise you can wrap the command's output as a markdown element of just include is literally. This is particularly useful when you want to include a program's help (\fB\-\-help\fR) output as a section within a document.
+.PP
+Binaries inherit the environment of the parent process (\fBmdp\fR) and the current working directory. The following fields are specific to the \fBbinary\fR partial type:
+.BL
+.IP "\[ci]" 4
+\fBstderr\fR: A boolean that indicates that the command \fBstderr\fR stream should be used instead of the \fBstdout\fR stream.
+.IP "\[ci]" 4
+\fBcmd\fR: A directory that becomes the working directory for the child process.
+.IP "\[ci]" 4
+\fBenv\fR: An object containing properties to \fIappend\fR to the environment for the child process.
+.EL
 .SS "Require"
 .PP
 Require a \fBjs\fR module or a \fBjson\fR file. Files are resolved relative to the \fBrequire\fR configuration directory, if the \fBrequire\fR configuration property is not set they are resolved relative to the current working directory.
+.SS "Fields"
+.PP
+These are the common fields that apply to all partial types:
+.BL
+.IP "\[ci]" 4
+\fBtitle\fR: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the \fBlevel\fR configuration property.
+.IP "\[ci]" 4
+\fBtext\fR: Markdown text to inject after the title but before the partial content.
+.IP "\[ci]" 4
+\fBtype\fR: A type that indicates how the partial content should be wrapped, eg: \fBcode\fR.
+.IP "\[ci]" 4
+\fBlanguage\fR: A language to assign when wrapping as a \fBcode\fR block.
+.IP "\[ci]" 4
+\fBfooter\fR: Markdown text to inject after the partial content.
+.IP "\[ci]" 4
+\fBstringify\fR: When referencing javascript objects (via \fBref\fR, \fBreq\fR etc.) this indicates that the result should be converted to \fBJSON\fR using \fBJSON.stringify\fR. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the \fBindent\fR property.
+.IP "\[ci]" 4
+\fBindent\fR: An integer indicating the number of spaces to indent when converting to a \fBJSON\fR string.
+.IP "\[ci]" 4
+\fBformat\fR: A custom format string to use to wrap the partial result, should have a single \fB%s\fR that will be replaced with the partial content.
+.EL
 .SS "Generator"
 .PP
 By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the \fBgenerator\fR property to \fBfalse\fR.
