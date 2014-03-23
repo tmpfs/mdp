@@ -269,7 +269,7 @@ Include a file as a partial. Files are resolved relative to the include configur
 
 #### Binary
 
-Execute a command and include the command's stdout in the resulting document. If the command prints markdown then you can use that output, otherwise you can wrap the command's output as a markdown element of just include is literally. This is particularly useful when you want to include a program's help (--help) output as a usage section within a README.
+Execute a command and include the command's stdout in the resulting document. If the command prints markdown then you can use that output, otherwise you can wrap the command's output as a markdown element of just include is literally. This is particularly useful when you want to include a program's help (--help) output as a section within a document.
 
 #### Require
 
