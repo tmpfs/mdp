@@ -9,13 +9,13 @@ Table of Contents
   * [Meta](#meta)
     * [Options](#options)
     * [Partial](#partial)
+      * [Fields](#fields)
       * [Literal](#literal)
       * [Reference](#reference)
       * [Object](#object)
       * [Include](#include)
       * [Binary](#binary)
       * [Require](#require)
-      * [Fields](#fields)
     * [Generator](#generator)
   * [Middleware](#middleware)
   * [Hook](#hook)
@@ -262,6 +262,19 @@ A partial may be one of:
 * `binary|bin`: Execute a command and use `stdout` as the content.
 * `require|req`: Require a `.js` module or a `.json` file.
 
+#### Fields
+
+These are the common fields that apply to all partial types:
+
+* `title`: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the `level` configuration property.
+* `text`: Markdown text to inject after the title but before the partial content.
+* `type`: A type that indicates how the partial content should be wrapped, eg: `code`.
+* `language`: A language to assign when wrapping as a `code` block.
+* `footer`: Markdown text to inject after the partial content.
+* `stringify`: When referencing javascript objects (via `ref`, `req` etc.) this indicates that the result should be converted to `JSON` using `JSON.stringify`. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the `indent` property.
+* `indent`: An integer indicating the number of spaces to indent when converting to a `JSON` string.
+* `format`: A custom format string to use to wrap the partial result, should have a single `%s` that will be replaced with the partial content.
+
 #### Literal
 
 At it's simplest a partial may be a string that contains markdown text.
@@ -295,19 +308,6 @@ Binaries inherit the environment of the parent process (`mdp`) and the current w
 #### Require
 
 Require a `js` module or a `json` file. Files are resolved relative to the `require` configuration directory, if the `require` configuration property is not set they are resolved relative to the current working directory.
-
-#### Fields
-
-These are the common fields that apply to all partial types:
-
-* `title`: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the `level` configuration property.
-* `text`: Markdown text to inject after the title but before the partial content.
-* `type`: A type that indicates how the partial content should be wrapped, eg: `code`.
-* `language`: A language to assign when wrapping as a `code` block.
-* `footer`: Markdown text to inject after the partial content.
-* `stringify`: When referencing javascript objects (via `ref`, `req` etc.) this indicates that the result should be converted to `JSON` using `JSON.stringify`. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the `indent` property.
-* `indent`: An integer indicating the number of spaces to indent when converting to a `JSON` string.
-* `format`: A custom format string to use to wrap the partial result, should have a single `%s` that will be replaced with the partial content.
 
 ### Generator
 

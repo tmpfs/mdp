@@ -260,6 +260,27 @@ A partial may be one of:
 .IP "\[ci]" 4
 \fBrequire|req\fR: Require a \fB.js\fR module or a \fB.json\fR file.
 .EL
+.SS "Fields"
+.PP
+These are the common fields that apply to all partial types:
+.BL
+.IP "\[ci]" 4
+\fBtitle\fR: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the \fBlevel\fR configuration property.
+.IP "\[ci]" 4
+\fBtext\fR: Markdown text to inject after the title but before the partial content.
+.IP "\[ci]" 4
+\fBtype\fR: A type that indicates how the partial content should be wrapped, eg: \fBcode\fR.
+.IP "\[ci]" 4
+\fBlanguage\fR: A language to assign when wrapping as a \fBcode\fR block.
+.IP "\[ci]" 4
+\fBfooter\fR: Markdown text to inject after the partial content.
+.IP "\[ci]" 4
+\fBstringify\fR: When referencing javascript objects (via \fBref\fR, \fBreq\fR etc.) this indicates that the result should be converted to \fBJSON\fR using \fBJSON.stringify\fR. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the \fBindent\fR property.
+.IP "\[ci]" 4
+\fBindent\fR: An integer indicating the number of spaces to indent when converting to a \fBJSON\fR string.
+.IP "\[ci]" 4
+\fBformat\fR: A custom format string to use to wrap the partial result, should have a single \fB%s\fR that will be replaced with the partial content.
+.EL
 .SS "Literal"
 .PP
 At it's simplest a partial may be a string that contains markdown text.
@@ -294,27 +315,6 @@ Binaries inherit the environment of the parent process (\fBmdp\fR) and the curre
 .SS "Require"
 .PP
 Require a \fBjs\fR module or a \fBjson\fR file. Files are resolved relative to the \fBrequire\fR configuration directory, if the \fBrequire\fR configuration property is not set they are resolved relative to the current working directory.
-.SS "Fields"
-.PP
-These are the common fields that apply to all partial types:
-.BL
-.IP "\[ci]" 4
-\fBtitle\fR: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the \fBlevel\fR configuration property.
-.IP "\[ci]" 4
-\fBtext\fR: Markdown text to inject after the title but before the partial content.
-.IP "\[ci]" 4
-\fBtype\fR: A type that indicates how the partial content should be wrapped, eg: \fBcode\fR.
-.IP "\[ci]" 4
-\fBlanguage\fR: A language to assign when wrapping as a \fBcode\fR block.
-.IP "\[ci]" 4
-\fBfooter\fR: Markdown text to inject after the partial content.
-.IP "\[ci]" 4
-\fBstringify\fR: When referencing javascript objects (via \fBref\fR, \fBreq\fR etc.) this indicates that the result should be converted to \fBJSON\fR using \fBJSON.stringify\fR. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the \fBindent\fR property.
-.IP "\[ci]" 4
-\fBindent\fR: An integer indicating the number of spaces to indent when converting to a \fBJSON\fR string.
-.IP "\[ci]" 4
-\fBformat\fR: A custom format string to use to wrap the partial result, should have a single \fB%s\fR that will be replaced with the partial content.
-.EL
 .SS "Generator"
 .PP
 By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the \fBgenerator\fR property to \fBfalse\fR.

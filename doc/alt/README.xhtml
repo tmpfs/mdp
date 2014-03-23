@@ -14,13 +14,13 @@
 <li><a href="#partial">Partial</a></li>
 </ul>
 <ul>
+<li><a href="#fields">Fields</a></li>
 <li><a href="#literal">Literal</a></li>
 <li><a href="#reference">Reference</a></li>
 <li><a href="#object">Object</a></li>
 <li><a href="#include">Include</a></li>
 <li><a href="#binary">Binary</a></li>
 <li><a href="#require">Require</a></li>
-<li><a href="#fields">Fields</a></li>
 </ul>
 <ul>
 <li><a href="#generator">Generator</a></li>
@@ -247,6 +247,18 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 <li><code>binary|bin</code>: Execute a command and use <code>stdout</code> as the content.</li>
 <li><code>require|req</code>: Require a <code>.js</code> module or a <code>.json</code> file.</li>
 </ul>
+<h4 id="fields">Fields</h4>
+<p>These are the common fields that apply to all partial types:</p>
+<ul>
+<li><code>title</code>: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the <code>level</code> configuration property.</li>
+<li><code>text</code>: Markdown text to inject after the title but before the partial content.</li>
+<li><code>type</code>: A type that indicates how the partial content should be wrapped, eg: <code>code</code>.</li>
+<li><code>language</code>: A language to assign when wrapping as a <code>code</code> block.</li>
+<li><code>footer</code>: Markdown text to inject after the partial content.</li>
+<li><code>stringify</code>: When referencing javascript objects (via <code>ref</code>, <code>req</code> etc.) this indicates that the result should be converted to <code>JSON</code> using <code>JSON.stringify</code>. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the <code>indent</code> property.</li>
+<li><code>indent</code>: An integer indicating the number of spaces to indent when converting to a <code>JSON</code> string.</li>
+<li><code>format</code>: A custom format string to use to wrap the partial result, should have a single <code>%s</code> that will be replaced with the partial content.</li>
+</ul>
 <h4 id="literal">Literal</h4>
 <p>At it&#39;s simplest a partial may be a string that contains markdown text.</p>
 <h4 id="reference">Reference</h4>
@@ -269,18 +281,6 @@ Report bugs to muji &lt;noop@xpm.io&gt;.
 </ul>
 <h4 id="require">Require</h4>
 <p>Require a <code>js</code> module or a <code>json</code> file. Files are resolved relative to the <code>require</code> configuration directory, if the <code>require</code> configuration property is not set they are resolved relative to the current working directory.</p>
-<h4 id="fields">Fields</h4>
-<p>These are the common fields that apply to all partial types:</p>
-<ul>
-<li><code>title</code>: Injects a markdown heading for the partial, by default this is a level 2 heading although you may adjust this with the <code>level</code> configuration property.</li>
-<li><code>text</code>: Markdown text to inject after the title but before the partial content.</li>
-<li><code>type</code>: A type that indicates how the partial content should be wrapped, eg: <code>code</code>.</li>
-<li><code>language</code>: A language to assign when wrapping as a <code>code</code> block.</li>
-<li><code>footer</code>: Markdown text to inject after the partial content.</li>
-<li><code>stringify</code>: When referencing javascript objects (via <code>ref</code>, <code>req</code> etc.) this indicates that the result should be converted to <code>JSON</code> using <code>JSON.stringify</code>. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the <code>indent</code> property.</li>
-<li><code>indent</code>: An integer indicating the number of spaces to indent when converting to a <code>JSON</code> string.</li>
-<li><code>format</code>: A custom format string to use to wrap the partial result, should have a single <code>%s</code> that will be replaced with the partial content.</li>
-</ul>
 <h3 id="generator">Generator</h3>
 <p>By default <code>mdp(1)</code> will append a <em>generator</em> message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the <code>generator</code> property to <code>false</code>.</p>
 <h2 id="middleware">Middleware</h2>
