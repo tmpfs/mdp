@@ -388,9 +388,10 @@ Keep your README up to date with a git hook, this is the `pre-push` hook from th
 
 ```bash
 #!/bin/sh
-cd ${GIT_DIR}/.. && npm run manual && git add -f MANUAL.md \
+pwd && npm run manual && git add -f MANUAL.md \
   && npm run build && npm install -g \
-  && git add -f README.md doc/alt/README.*
+  && git add -f README.md doc/alt/README.* \
+  && git commit -m "Update docs"
 ```
 
 If you have `mdp` in your path you could use:

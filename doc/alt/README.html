@@ -154,7 +154,7 @@
 </code></pre>
 <h2 id="hook">Hook</h2>
 <p>Keep your README up to date with a git hook, this is the <code>pre-push</code> hook from this repository:</p>
-<pre><code class="lang-bash">%23%21/bin/sh%0Acd%20%24%7BGIT_DIR%7D/..%20%26%26%20npm%20run%20manual%20%26%26%20git%20add%20-f%20MANUAL.md%20%5C%0A%20%20%26%26%20npm%20run%20build%20%26%26%20npm%20install%20-g%20%5C%0A%20%20%26%26%20git%20add%20-f%20README.md%20doc/alt/README.*
+<pre><code class="lang-bash">%23%21/bin/sh%0Apwd%20%26%26%20npm%20run%20manual%20%26%26%20git%20add%20-f%20MANUAL.md%20%5C%0A%20%20%26%26%20npm%20run%20build%20%26%26%20npm%20install%20-g%20%5C%0A%20%20%26%26%20git%20add%20-f%20README.md%20doc/alt/README.*%20%5C%0A%20%20%26%26%20git%20commit%20-m%20%22Update%20docs%22
 </code></pre>
 <p>If you have <code>mdp</code> in your path you could use:</p>
 <pre><code class="lang-bash">%23/bin/sh%0Acd%20%24%7BGIT_DIR%7D/..%20mdp%20--force%20%26%26%20git%20add%20-f%20README.md
