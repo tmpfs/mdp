@@ -25,17 +25,17 @@
     "partial"
   ],
   "dependencies": {
+    "async": "~0.2.10",
+    "circular": "~1.0.2",
     "cli-command": "~0.8.80",
+    "cli-env": "~1.0.5",
     "cli-interface": "~1.0.8",
     "cli-logger": "~0.5.10",
     "cli-util": "~1.1.13",
-    "markzero": "~0.1.6",
-    "ttycolor": "~0.8.8",
-    "circular": "~1.0.2",
     "manual": "~0.0.2",
-    "async": "~0.2.10",
+    "markzero": "^0.1.14",
     "moment": "~2.5.1",
-    "cli-env": "~1.0.5"
+    "ttycolor": "~0.8.8"
   },
   "devDependencies": {
     "mocha": "~1.17.0",
