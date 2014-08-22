@@ -1,6 +1,6 @@
 # Table of Contents
 
-* mdp(1))
+* mdp(1)
   * Features
   * Install
   * Usage
