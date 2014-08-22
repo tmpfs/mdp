@@ -133,8 +133,8 @@
       },
       {
         "title": "Hook",
-        "text": "Keep your README up to date with a git hook, this is the `pre-commit` hook from this repository:",
-        "inc": "../../.git/hooks/pre-commit",
+        "text": "Keep your README up to date with a git hook, this is the `pre-push` hook from this repository:",
+        "inc": "../../.git/hooks/pre-push",
         "type": "code",
         "language": "bash"
       },

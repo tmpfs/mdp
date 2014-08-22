@@ -190,8 +190,8 @@ This document was generated with the following configuration (see [package.json]
     },
     {
       "title": "Hook",
-      "text": "Keep your README up to date with a git hook, this is the `pre-commit` hook from this repository:",
-      "inc": "../../.git/hooks/pre-commit",
+      "text": "Keep your README up to date with a git hook, this is the `pre-push` hook from this repository:",
+      "inc": "../../.git/hooks/pre-push",
       "type": "code",
       "language": "bash"
     },
@@ -384,11 +384,11 @@ You can enable it by declaring it in the meta data (or by using `--inspect`):
 
 ## Hook
 
-Keep your README up to date with a git hook, this is the `pre-commit` hook from this repository:
+Keep your README up to date with a git hook, this is the `pre-push` hook from this repository:
 
 ```bash
 #!/bin/sh
-cd .git/.. && npm run manual && git add -f MANUAL.md \
+cd ${GIT_DIR}/.. && npm run manual && git add -f MANUAL.md \
   && npm run build && npm install -g \
   && git add -f README.md doc/alt/README.*
 ```
@@ -397,7 +397,7 @@ If you have `mdp` in your path you could use:
 
 ```bash
 #/bin/sh
-cd .git/.. mdp --force && git add -f README.md
+cd ${GIT_DIR}/.. mdp --force && git add -f README.md
 ```
 
 ## License
