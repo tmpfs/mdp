@@ -33,7 +33,7 @@
     "cli-logger": "~0.5.10",
     "cli-util": "~1.1.13",
     "manual": "~0.0.2",
-    "markzero": "^0.1.18",
+    "markzero": "^0.1.19",
     "moment": "~2.5.1",
     "ttycolor": "~0.8.8"
   },
