@@ -1,7 +1,7 @@
 Table of Contents
 =================
 
-* [mdp(1)](#mdp1)
+* [mdp(1)](#mdp(1))
   * [Features](#features)
   * [Install](#install)
   * [Usage](#usage)
