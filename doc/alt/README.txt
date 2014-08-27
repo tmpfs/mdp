@@ -46,8 +46,6 @@ npm i -g mdp
 
 ## Usage
 
-Markdown partial processor.
-
 Usage: mdp [-vfh] [--color|--no-color] [--debug] [-v|--verbose]
            [-f|--force] [--pandoc] [--inspect]
            [--pedantic|--no-pedantic] [--toc|--no-toc] [-h|--help]
@@ -57,6 +55,8 @@ Usage: mdp [-vfh] [--color|--no-color] [--debug] [-v|--verbose]
            [--timeout=<ms>] [-t|--title=<title>]
            [-i|--input=<file...>] [-o|--output=<file...>]
            [-w|--middleware=<file...>] <args>
+
+Markdown partial processor.
 
 Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
