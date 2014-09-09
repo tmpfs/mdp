@@ -19,7 +19,6 @@ Table of Contents
   * [Environment](#environment)
     * [Generator](#generator)
   * [Middleware](#middleware)
-  * [Hook](#hook)
   * [License](#license)
 
 mdp(1)
@@ -82,15 +81,16 @@ Options:
  -p, --print=[format]       Print document to stdout.
      --timeout=[ms]         Millisecond timeout for middleware.
  -t, --title=[title]        Document title.
- -i, --input=[file...]      Meta definition file(s).
- -o, --output=[file...]     Output file(s), may be specified once for each
+ -i, --input=[file ...]     Meta definition file(s).
+ -o, --output=[file ...]    Output file(s), may be specified once for each
                             format. The output format is determined by the file
                             extension, md, txt, html, xhtml or [1-8]. If no
                             output files are specified then README.md is
                             generated in the current directory. If the output
                             path is a directory then a file is created for each
                             supported format.
- -w, --middleware=[file...] Require custom middleware.
+ -w, --middleware=[file ...]
+                            Require custom middleware.
  -h, --help                 Display this help and exit.
      --version              Output version information and exit.
 
@@ -189,13 +189,6 @@ This document was generated with the following configuration (see [package.json]
       "language": "json"
     },
     {
-      "title": "Hook",
-      "text": "Keep your README up to date with a git hook, this is the `pre-push` hook from this repository:",
-      "inc": "../../.git/hooks/pre-push",
-      "type": "code",
-      "language": "bash"
-    },
-    {
       "text": "If you have `mdp` in your path you could use:",
       "inc": "git-hook.sh",
       "type": "code",
@@ -276,6 +269,7 @@ These are the common fields that apply to all partial types:
 * `type`: A type that indicates how the partial content should be wrapped, eg: `code`.
 * `language`: A language to assign when wrapping as a `code` block.
 * `footer`: Markdown text to inject after the partial content.
+* `trim`: Remove leading and trailing whitespace from the transformed result.
 * `stringify`: When referencing javascript objects (via `ref`, `req` etc.) this indicates that the result should be converted to `JSON` using `JSON.stringify`. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the `indent` property.
 * `indent`: An integer indicating the number of spaces to indent when converting to a `JSON` string.
 * `format`: A custom format string to use to wrap the partial result, should have a single `%s` that will be replaced with the partial content.
@@ -380,18 +374,6 @@ You can enable it by declaring it in the meta data (or by using `--inspect`):
     "inspect"
   ]
 }
-```
-
-## Hook
-
-Keep your README up to date with a git hook, this is the `pre-push` hook from this repository:
-
-```bash
-#!/bin/sh
-pwd && npm run manual && git add -f MANUAL.md \
-  && npm run build && npm install -g \
-  && git add -f README.md doc/alt/README.* \
-  && git commit -m "Update docs"
 ```
 
 If you have `mdp` in your path you could use:

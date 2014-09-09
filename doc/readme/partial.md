@@ -18,6 +18,7 @@ These are the common fields that apply to all partial types:
 * `type`: A type that indicates how the partial content should be wrapped, eg: `code`.
 * `language`: A language to assign when wrapping as a `code` block.
 * `footer`: Markdown text to inject after the partial content.
+* `trim`: Remove leading and trailing whitespace from the transformed result.
 * `stringify`: When referencing javascript objects (via `ref`, `req` etc.) this indicates that the result should be converted to `JSON` using `JSON.stringify`. The stringify implementation is circular reference safe and uses two spaces as the indentation but you may modify this with the `indent` property.
 * `indent`: An integer indicating the number of spaces to indent when converting to a `JSON` string.
 * `format`: A custom format string to use to wrap the partial result, should have a single `%s` that will be replaced with the partial content.

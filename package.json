@@ -132,13 +132,6 @@
         "language": "json"
       },
       {
-        "title": "Hook",
-        "text": "Keep your README up to date with a git hook, this is the `pre-push` hook from this repository:",
-        "inc": "../../.git/hooks/pre-push",
-        "type": "code",
-        "language": "bash"
-      },
-      {
         "text": "If you have `mdp` in your path you could use:",
         "inc": "git-hook.sh",
         "type": "code",
