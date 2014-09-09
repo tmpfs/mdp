@@ -182,12 +182,6 @@ This document was generated with the following configuration (see package.json[7
       "language": "json"
     },
     {
-      "text": "If you have `mdp` in your path you could use:",
-      "inc": "git-hook.sh",
-      "type": "code",
-      "language": "bash"
-    },
-    {
       "inc": [
         "license.md",
         "footer.md"
@@ -355,11 +349,6 @@ You can enable it by declaring it in the meta data (or by using --inspect):
     "inspect"
   ]
 }
-
-If you have mdp in your path you could use:
-
-#/bin/sh
-cd ${GIT_DIR}/.. mdp --force && git add -f README.md
 
 ## License
 

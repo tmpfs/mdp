@@ -132,12 +132,6 @@
         "language": "json"
       },
       {
-        "text": "If you have `mdp` in your path you could use:",
-        "inc": "git-hook.sh",
-        "type": "code",
-        "language": "bash"
-      },
-      {
         "inc": [
           "license.md",
           "footer.md"
