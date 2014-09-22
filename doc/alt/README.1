@@ -30,154 +30,289 @@ Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminate
 .EL
 .SH "INSTALL"
 
-\fBnpm i \-g mdp\fR
+  npm i \-g mdp
 .SH "USAGE"
 
-.LT
-Usage: mdp [\-vfh] [\-\-color|\-\-no\-color] [\-\-debug] [\-v|\-\-verbose]
-           [\-f|\-\-force] [\-\-pandoc] [\-\-inspect]
-           [\-\-pedantic|\-\-no\-pedantic] [\-\-toc|\-\-no\-toc] [\-h|\-\-help]
-           [\-\-version] [\-\-log\-level=<level>] [\-\-log\-file=<file>]
-           [\-\-section=<1\-8>] [\-n|\-\-filename=<name>]
-           [\-\-toc\-title=<title>] [\-p|\-\-print=<format>]
-           [\-\-timeout=<ms>] [\-t|\-\-title=<title>]
-           [\-i|\-\-input=<file...>] [\-o|\-\-output=<file...>]
-           [\-w|\-\-middleware=<file...>] <args>
-
-Markdown partial processor.
-
-Options:
-     \-\-[no]\-pedantic        Enable or disable pedantic middleware.
-     \-\-[no]\-color           Enable or disable terminal colors.
-     \-\-log\-file=[file]      Redirect to log file.
-     \-\-debug                Enable debugging.
- \-v, \-\-verbose              Print more information.
- \-f, \-\-force                Force file overwrite.
-     \-\-pandoc               Include pandoc meta data.
-     \-\-inspect              Enable inspect middleware.
-     \-\-section=[1\-8]        Set the man page section.
- \-n, \-\-filename=[name]      Set the output file name.
-     \-\-log\-level=[level]    Set the log level.
-     \-\-[no]\-toc             Enable or disable the table of contents middleware,
-                            this overrides a toc value in the meta data.
-     \-\-toc\-title=[title]    Set the title for the table of contents, this
-                            overrides \-\-no\-toc and the toc meta data property.
- \-p, \-\-print=[format]       Print document to stdout.
-     \-\-timeout=[ms]         Millisecond timeout for middleware.
- \-t, \-\-title=[title]        Document title.
- \-i, \-\-input=[file ...]     Meta definition file(s).
- \-o, \-\-output=[file ...]    Output file(s), may be specified once for each
-                            format. The output format is determined by the file
-                            extension, md, txt, html, xhtml or [1\-8]. If no
-                            output files are specified then README.md is
-                            generated in the current directory. If the output
-                            path is a directory then a file is created for each
-                            supported format.
- \-w, \-\-middleware=[file ...]
-                            Require custom middleware.
- \-h, \-\-help                 Display this help and exit.
-     \-\-version              Output version information and exit.
-
-Examples:
- mdp \-\-force                Generate README.md from package.json, overwriting
-                            the file if it already exists.
- mdp \-\-toc                  Include a table of contents.
- mdp \-\-no\-toc               Disable table of contents (overrides meta data).
- mdp \-\-toc\-title Navigation Enables the toc middleware and sets the title for
-                            the table of contents.
- mdp \-\-force \-\-pandoc       Generate README.md with pandoc meta data prepended.
-
-Report bugs to muji <noop@xpm.io>.
+.SP
+  Usage: mdp [\-vfh] [\-\-color|\-\-no\-color] [\-\-debug] [\-v|\-\-verbose]
+.br
+             [\-f|\-\-force] [\-\-pandoc] [\-\-inspect]
+.br
+             [\-\-pedantic|\-\-no\-pedantic] [\-\-toc|\-\-no\-toc] [\-h|\-\-help]
+.br
+             [\-\-version] [\-\-log\-level=<level>] [\-\-log\-file=<file>]
+.br
+             [\-\-section=<1\-8>] [\-n|\-\-filename=<name>]
+.br
+             [\-\-toc\-title=<title>] [\-p|\-\-print=<format>]
+.br
+             [\-\-timeout=<ms>] [\-t|\-\-title=<title>]
+.br
+             [\-i|\-\-input=<file...>] [\-o|\-\-output=<file...>]
+.br
+             [\-w|\-\-middleware=<file...>] <args>
+.br
+  
+.br
+  Markdown partial processor.
+.br
+  
+.br
+  Options:
+.br
+       \-\-[no]\-pedantic        Enable or disable pedantic middleware.
+.br
+       \-\-[no]\-color           Enable or disable terminal colors.
+.br
+       \-\-log\-file=[file]      Redirect to log file.
+.br
+       \-\-debug                Enable debugging.
+.br
+   \-v, \-\-verbose              Print more information.
+.br
+   \-f, \-\-force                Force file overwrite.
+.br
+       \-\-pandoc               Include pandoc meta data.
+.br
+       \-\-inspect              Enable inspect middleware.
+.br
+       \-\-section=[1\-8]        Set the man page section.
+.br
+   \-n, \-\-filename=[name]      Set the output file name.
+.br
+       \-\-log\-level=[level]    Set the log level.
+.br
+       \-\-[no]\-toc             Enable or disable the table of contents middleware,
+.br
+                              this overrides a toc value in the meta data.
+.br
+       \-\-toc\-title=[title]    Set the title for the table of contents, this
+.br
+                              overrides \-\-no\-toc and the toc meta data property.
+.br
+   \-p, \-\-print=[format]       Print document to stdout.
+.br
+       \-\-timeout=[ms]         Millisecond timeout for middleware.
+.br
+   \-t, \-\-title=[title]        Document title.
+.br
+   \-i, \-\-input=[file ...]     Meta definition file(s).
+.br
+   \-o, \-\-output=[file ...]    Output file(s), may be specified once for each
+.br
+                              format. The output format is determined by the file
+.br
+                              extension, md, txt, html, xhtml or [1\-8]. If no
+.br
+                              output files are specified then README.md is
+.br
+                              generated in the current directory. If the output
+.br
+                              path is a directory then a file is created for each
+.br
+                              supported format.
+.br
+   \-w, \-\-middleware=[file ...]
+.br
+                              Require custom middleware.
+.br
+   \-h, \-\-help                 Display this help and exit.
+.br
+       \-\-version              Output version information and exit.
+.br
+  
+.br
+  Examples:
+.br
+   mdp \-\-force                Generate README.md from package.json, overwriting
+.br
+                              the file if it already exists.
+.br
+   mdp \-\-toc                  Include a table of contents.
+.br
+   mdp \-\-no\-toc               Disable table of contents (overrides meta data).
+.br
+   mdp \-\-toc\-title Navigation Enables the toc middleware and sets the title for
+.br
+                              the table of contents.
+.br
+   mdp \-\-force \-\-pandoc       Generate README.md with pandoc meta data prepended.
+.br
+  
+.br
+  Report bugs to muji <noop@xpm.io>.
 .PP
 The program help output is also available as markdown see MANUAL[6].
 .SH "CONFIGURATION"
 .PP
 This document was generated with the following configuration (see package.json[7]):
 
-.LT
-{
-  "title": {
-    "ref": "name",
-    "format": "%s(1)"
-  },
-  "pedantic": true,
-  "include": "doc/readme",
-  "require": "lib",
-  "gfm": true,
-  "branch": "master",
-  "links": "links.md",
-  "toc": "Table of Contents",
-  "order": false,
-  "base": "https://github.com/freeformsystems/mdp",
-  "env": true,
-  "partial": [
-    {
-      "ref": "description"
+.SP
+  {
+.br
+    "title": {
+.br
+      "ref": "name",
+.br
+      "format": "%s(1)"
+.br
     },
-    {
-      "inc": [
-        "introduction.md",
-        "features.md",
-        "install.md"
-      ]
-    },
-    {
-      "title": "Usage",
-      "bin": "mdp \-\-help",
-      "type": "code",
-      "footer": "The program help output is also available as markdown see [MANUAL](/MANUAL.md)"
-    },
-    {
-      "title": "Configuration",
-      "text": "This document was generated with the following configuration (see [package.json](/package.json)):",
-      "ref": "mdp",
-      "stringify": true,
-      "format": "```json\n%s\n```",
-      "footer": "***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***"
-    },
-    {
-      "inc": "meta.md"
-    },
-    {
-      "req": "defaults.js",
-      "type": "code",
-      "language": "javascript"
-    },
-    {
-      "inc": [
-        "partial.md",
-        "environment.md",
-        "generator.md"
-      ]
-    },
-    {
-      "title": "Middleware",
-      "inc": "middleware.md"
-    },
-    {
-      "text": "The `inspect` middleware is shown below:",
-      "req": "middleware/inspect.js",
-      "type": "code",
-      "language": "javascript"
-    },
-    {
-      "text": "You can enable it by declaring it in the meta data (or by using `\-\-inspect`):",
-      "obj": {
-        "middleware": [
-          "inspect"
-        ]
+.br
+    "pedantic": true,
+.br
+    "include": "doc/readme",
+.br
+    "require": "lib",
+.br
+    "gfm": true,
+.br
+    "branch": "master",
+.br
+    "links": "links.md",
+.br
+    "toc": "Table of Contents",
+.br
+    "order": false,
+.br
+    "base": "https://github.com/freeformsystems/mdp",
+.br
+    "env": true,
+.br
+    "partial": [
+.br
+      {
+.br
+        "ref": "description"
+.br
       },
-      "type": "code",
-      "language": "json"
-    },
-    {
-      "inc": [
-        "license.md",
-        "footer.md"
-      ]
-    }
-  ]
-}
+.br
+      {
+.br
+        "inc": [
+.br
+          "introduction.md",
+.br
+          "features.md",
+.br
+          "install.md"
+.br
+        ]
+.br
+      },
+.br
+      {
+.br
+        "title": "Usage",
+.br
+        "bin": "mdp \-\-help",
+.br
+        "type": "code",
+.br
+        "footer": "The program help output is also available as markdown see [MANUAL](/MANUAL.md)"
+.br
+      },
+.br
+      {
+.br
+        "title": "Configuration",
+.br
+        "text": "This document was generated with the following configuration (see [package.json](/package.json)):",
+.br
+        "ref": "mdp",
+.br
+        "stringify": true,
+.br
+        "format": "```json\n%s\n```",
+.br
+        "footer": "***Note this is not necessarily the optimal configuration it is designed to showcase the partial functionality.***"
+.br
+      },
+.br
+      {
+.br
+        "inc": "meta.md"
+.br
+      },
+.br
+      {
+.br
+        "req": "defaults.js",
+.br
+        "type": "code",
+.br
+        "language": "javascript"
+.br
+      },
+.br
+      {
+.br
+        "inc": [
+.br
+          "partial.md",
+.br
+          "environment.md",
+.br
+          "generator.md"
+.br
+        ]
+.br
+      },
+.br
+      {
+.br
+        "title": "Middleware",
+.br
+        "inc": "middleware.md"
+.br
+      },
+.br
+      {
+.br
+        "text": "The `inspect` middleware is shown below:",
+.br
+        "req": "middleware/inspect.js",
+.br
+        "type": "code",
+.br
+        "language": "javascript"
+.br
+      },
+.br
+      {
+.br
+        "text": "You can enable it by declaring it in the meta data (or by using `\-\-inspect`):",
+.br
+        "obj": {
+.br
+          "middleware": [
+.br
+            "inspect"
+.br
+          ]
+.br
+        },
+.br
+        "type": "code",
+.br
+        "language": "json"
+.br
+      },
+.br
+      {
+.br
+        "inc": [
+.br
+          "license.md",
+.br
+          "footer.md"
+.br
+        ]
+.br
+      }
+.br
+    ]
+.br
+  }
 .PP
 \fBNote this is not necessarily the optimal configuration it is designed to showcase the partial functionality.\fR
 .SH "META"
@@ -217,25 +352,42 @@ Meta data describes processing options and how you want to collate the partials.
 \fBenv\fR: A boolean that indicates environment variables are substituted in partial contents. You may override this on a partial level by specifying \fBenv\fR on a partial object, see \fBENVIRONMENT\fR.
 .EL
 
-.LT
-{
-  "generator": "Generated by [mdp(1)](https://github.com/freeformsystems/mdp).",
-  "title": null,
-  "gfm": true,
-  "period": ".",
-  "pedantic": false,
-  "include": null,
-  "require": null,
-  "branch": "master",
-  "links": null,
-  "toc": false,
-  "order": false,
-  "base": null,
-  "hash": false,
-  "level": 2,
-  "partial": null,
-  "env": false
-}
+.SP
+  {
+.br
+    "generator": "Generated by [mdp(1)](https://github.com/freeformsystems/mdp).",
+.br
+    "title": null,
+.br
+    "gfm": true,
+.br
+    "period": ".",
+.br
+    "pedantic": false,
+.br
+    "include": null,
+.br
+    "require": null,
+.br
+    "branch": "master",
+.br
+    "links": null,
+.br
+    "toc": false,
+.br
+    "order": false,
+.br
+    "base": null,
+.br
+    "hash": false,
+.br
+    "level": 2,
+.br
+    "partial": null,
+.br
+    "env": false
+.br
+  }
 .SS "Partial"
 .PP
 A partial may be one of:
@@ -318,23 +470,26 @@ You may enable environment variable replacement by setting the \fBenv\fR configu
 .PP
 Environment variables are replaced using the forms:
 
-.LT
-$variable
-${variable}
+.SP
+  $variable
+.br
+  ${variable}
 .PP
 If the referenced variable is not set then the variable reference is not replaced and will be visible in the result.
 .PP
 You may disable environment variable replacement by preceeding the dollar with a single backslash:
 
-.LT
-\$variable
-\${variable}
+.SP
+  $variable
+.br
+  ${variable}
 .PP
 When replacement is performed the backslash will be removed, resulting in literal variable references:
 
-.LT
-$variable
-${variable}
+.SP
+  $variable
+.br
+  ${variable}
 .SS "Generator"
 .PP
 By default \fBmdp(1)\fR will append a \fIgenerator\fR message to the end of the document, it is nice if you wish to leave it in to help spread the word, however you may disable this message by setting the \fBgenerator\fR property to \fBfalse\fR.
@@ -358,23 +513,33 @@ If you pass an error to next the program will terminate immediately, failure to 
 .PP
 The \fBinspect\fR middleware is shown below:
 
-.LT
-function middleware(meta) {
-  return function inspect(token, tokens, next) {
-    if(!arguments.length) return;
-    console.dir(token);
-    next();
+.SP
+  function middleware(meta) {
+.br
+    return function inspect(token, tokens, next) {
+.br
+      if(!arguments.length) return;
+.br
+      console.dir(token);
+.br
+      next();
+.br
+    }
+.br
   }
-}
 .PP
 You can enable it by declaring it in the meta data (or by using \fB\-\-inspect\fR):
 
-.LT
-{
-  "middleware": [
-    "inspect"
-  ]
-}
+.SP
+  {
+.br
+    "middleware": [
+.br
+      "inspect"
+.br
+    ]
+.br
+  }
 .SH "LICENSE"
 .PP
 Everything is MIT[8]. Read the license[9] if you feel inclined.

@@ -306,8 +306,8 @@ If the referenced variable is not set then the variable reference is not replace
 
 You may disable environment variable replacement by preceeding the dollar with a single backslash:
 
-\$variable
-\${variable}
+$variable
+${variable}
 
 When replacement is performed the backslash will be removed, resulting in literal variable references:
 
