@@ -61,7 +61,7 @@ Options:
      --[no]-pedantic        Enable or disable pedantic middleware.
      --[no]-color           Enable or disable terminal colors.
      --log-file=[file]      Redirect to log file.
-     --debug                Enable debugging.
+     --debug                Enable stack traces.
  -v, --verbose              Print more information.
  -f, --force                Force file overwrite.
      --pandoc               Include pandoc meta data.
@@ -88,15 +88,6 @@ Options:
                             Require custom middleware.
  -h, --help                 Display this help and exit.
      --version              Output version information and exit.
-
-Examples:
- mdp --force                Generate README.md from package.json, overwriting
-                            the file if it already exists.
- mdp --toc                  Include a table of contents.
- mdp --no-toc               Disable table of contents (overrides meta data).
- mdp --toc-title Navigation Enables the toc middleware and sets the title for
-                            the table of contents.
- mdp --force --pandoc       Generate README.md with pandoc meta data prepended.
 
 Report bugs to muji <noop@xpm.io>.
 
