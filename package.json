@@ -27,7 +27,7 @@
   "dependencies": {
     "async": "^0.2.10",
     "circular": "^1.0.5",
-    "cli-command": "^0.8.280",
+    "cli-command": "^0.8.283",
     "cli-env": "^1.0.9",
     "cli-interface": "^1.0.16",
     "cli-logger": "^0.5.31",
