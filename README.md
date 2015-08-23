@@ -94,7 +94,7 @@ Options:
  -h, --help                 Display this help and exit.
      --version              Output version information and exit.
 
-Report bugs to muji <noop@xpm.io>.
+Report bugs to https://github.com/freeformsystems/mdp/issues.
 ```
 
 The program help output is also available as markdown see [MANUAL](https://github.com/freeformsystems/mdp/blob/master/MANUAL.md).
