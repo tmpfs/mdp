@@ -5,15 +5,15 @@
   "author": "muji <noop@xpm.io>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/freeformsystems/mdp"
+    "url": "https://github.com/tmpfs/mdp"
   },
   "bugs": {
-    "url": "https://github.com/freeformsystems/mdp/issues"
+    "url": "https://github.com/tmpfs/mdp/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/freeformsystems/mdp/blob/master/LICENSE"
+      "url": "https://github.com/tmpfs/mdp/blob/master/LICENSE"
     }
   ],
   "keywords": [
@@ -74,7 +74,7 @@
     "links": "links.md",
     "toc": "Table of Contents",
     "order": false,
-    "base": "https://github.com/freeformsystems/mdp",
+    "base": "https://github.com/tmpfs/mdp",
     "env": true,
     "partial": [
       {

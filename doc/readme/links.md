@@ -2,4 +2,4 @@
 [node]: http://nodejs.org
 [npm]: http://npmjs.org
 [marked]: https://github.com/chjj/marked
-[command]: https://github.com/freeformsystems/cli-command 
+[command]: https://github.com/cli-kit/cli-command 

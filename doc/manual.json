@@ -2,7 +2,7 @@
   "title": "mdp(1)",
   "pedantic": true,
   "toc": "Table of Contents",
-  "base": "https://github.com/freeformsystems/mdp",
+  "base": "https://github.com/tmpfs/mdp",
   "partial": [
     {
       "env": {
