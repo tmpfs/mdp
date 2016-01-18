@@ -31,103 +31,9 @@ Be pedantic in presentation, but lazy authoring. Ensure paragraphs are terminate
 .SH "INSTALL"
 
   npm i \-g mdp
-.SH "USAGE"
-
-.SP
-  Usage: mdp [\-vfh] [\-\-color|\-\-no\-color] [\-\-debug] [\-v|\-\-verbose]
-.br
-             [\-f|\-\-force] [\-\-pandoc] [\-\-inspect]
-.br
-             [\-\-pedantic|\-\-no\-pedantic] [\-\-toc|\-\-no\-toc] [\-h|\-\-help]
-.br
-             [\-\-version] [\-\-log\-level=<level>] [\-\-log\-file=<file>]
-.br
-             [\-\-section=<1\-8>] [\-n|\-\-filename=<name>]
-.br
-             [\-\-toc\-title=<title>] [\-p|\-\-print=<format>]
-.br
-             [\-\-timeout=<ms>] [\-t|\-\-title=<title>]
-.br
-             [\-i|\-\-input=<file...>] [\-o|\-\-output=<file...>]
-.br
-             [\-w|\-\-middleware=<file...>] <args>
-.br
-  
-.br
-  Markdown partial processor.
-.br
-  
-.br
-  Options:
-.br
-       \-\-[no]\-pedantic        Enable or disable pedantic middleware.
-.br
-       \-\-[no]\-color           Enable or disable terminal colors.
-.br
-       \-\-log\-file=[file]      Redirect to log file.
-.br
-       \-\-debug                Enable stack traces.
-.br
-   \-v, \-\-verbose              Print more information.
-.br
-   \-f, \-\-force                Force file overwrite.
-.br
-       \-\-pandoc               Include pandoc meta data.
-.br
-       \-\-inspect              Enable inspect middleware.
-.br
-       \-\-section=[1\-8]        Set the man page section.
-.br
-   \-n, \-\-filename=[name]      Set the output file name.
-.br
-       \-\-log\-level=[level]    Set the log level.
-.br
-       \-\-[no]\-toc             Enable or disable the table of contents middleware,
-.br
-                              this overrides a toc value in the meta data.
-.br
-       \-\-toc\-title=[title]    Set the title for the table of contents, this
-.br
-                              overrides \-\-no\-toc and the toc meta data property.
-.br
-   \-p, \-\-print=[format]       Print document to stdout.
-.br
-       \-\-timeout=[ms]         Millisecond timeout for middleware.
-.br
-   \-t, \-\-title=[title]        Document title.
-.br
-   \-i, \-\-input=[file ...]     Meta definition file(s).
-.br
-   \-o, \-\-output=[file ...]    Output file(s), may be specified once for each
-.br
-                              format. The output format is determined by the file
-.br
-                              extension, md, txt, html, xhtml or [1\-8]. If no
-.br
-                              output files are specified then README.md is
-.br
-                              generated in the current directory. If the output
-.br
-                              path is a directory then a file is created for each
-.br
-                              supported format.
-.br
-   \-w, \-\-middleware=[file ...]
-.br
-                              Require custom middleware.
-.br
-   \-h, \-\-help                 Display this help and exit.
-.br
-       \-\-version              Output version information and exit.
-.br
-  
-.br
-  Report bugs to https://github.com/tmpfs/mdp/issues.
-.PP
-The program help output is also available as markdown see MANUAL[6].
 .SH "CONFIGURATION"
 .PP
-This document was generated with the following configuration (see package.json[7]):
+This document was generated with the following configuration (see package.json[6]):
 
 .SP
   {
@@ -524,7 +430,7 @@ You can enable it by declaring it in the meta data (or by using \fB\-\-inspect\f
   }
 .SH "LICENSE"
 .PP
-Everything is MIT[8]. Read the license[9] if you feel inclined.
+Everything is MIT[7]. Read the license[8] if you feel inclined.
 .PP
 This program was built using the command[5] module, if you care for excellent documentation and write command line interfaces you should check it out.
 .SH "LINKS"
@@ -540,11 +446,9 @@ This program was built using the command[5] module, if you care for excellent do
 .IP "\[ci]" 4
 [5] https://github.com/cli\-kit/cli\-command
 .IP "\[ci]" 4
-[6] https://github.com/tmpfs/mdp/blob/master/MANUAL.md
+[6] https://github.com/tmpfs/mdp/blob/master/package.json
 .IP "\[ci]" 4
-[7] https://github.com/tmpfs/mdp/blob/master/package.json
+[7] http://en.wikipedia.org/wiki/MIT_License
 .IP "\[ci]" 4
-[8] http://en.wikipedia.org/wiki/MIT_License
-.IP "\[ci]" 4
-[9] https://github.com/tmpfs/mdp/blob/master/LICENSE
+[8] https://github.com/tmpfs/mdp/blob/master/LICENSE
 .EL

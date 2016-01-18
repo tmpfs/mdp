@@ -4,7 +4,6 @@ Table of Contents
 * [mdp(1)](#mdp1)
   * [Features](#features)
   * [Install](#install)
-  * [Usage](#usage)
   * [Configuration](#configuration)
   * [Meta](#meta)
     * [Options](#options)
@@ -46,58 +45,6 @@ Read [partial](#partial) to learn how to define partials or get a quick feel by 
 ```
 npm i -g mdp
 ```
-
-## Usage
-
-```
-Usage: mdp [-vfh] [--color|--no-color] [--debug] [-v|--verbose]
-           [-f|--force] [--pandoc] [--inspect]
-           [--pedantic|--no-pedantic] [--toc|--no-toc] [-h|--help]
-           [--version] [--log-level=<level>] [--log-file=<file>]
-           [--section=<1-8>] [-n|--filename=<name>]
-           [--toc-title=<title>] [-p|--print=<format>]
-           [--timeout=<ms>] [-t|--title=<title>]
-           [-i|--input=<file...>] [-o|--output=<file...>]
-           [-w|--middleware=<file...>] <args>
-
-Markdown partial processor.
-
-Options:
-     --[no]-pedantic        Enable or disable pedantic middleware.
-     --[no]-color           Enable or disable terminal colors.
-     --log-file=[file]      Redirect to log file.
-     --debug                Enable stack traces.
- -v, --verbose              Print more information.
- -f, --force                Force file overwrite.
-     --pandoc               Include pandoc meta data.
-     --inspect              Enable inspect middleware.
-     --section=[1-8]        Set the man page section.
- -n, --filename=[name]      Set the output file name.
-     --log-level=[level]    Set the log level.
-     --[no]-toc             Enable or disable the table of contents middleware,
-                            this overrides a toc value in the meta data.
-     --toc-title=[title]    Set the title for the table of contents, this
-                            overrides --no-toc and the toc meta data property.
- -p, --print=[format]       Print document to stdout.
-     --timeout=[ms]         Millisecond timeout for middleware.
- -t, --title=[title]        Document title.
- -i, --input=[file ...]     Meta definition file(s).
- -o, --output=[file ...]    Output file(s), may be specified once for each
-                            format. The output format is determined by the file
-                            extension, md, txt, html, xhtml or [1-8]. If no
-                            output files are specified then README.md is
-                            generated in the current directory. If the output
-                            path is a directory then a file is created for each
-                            supported format.
- -w, --middleware=[file ...]
-                            Require custom middleware.
- -h, --help                 Display this help and exit.
-     --version              Output version information and exit.
-
-Report bugs to https://github.com/tmpfs/mdp/issues.
-```
-
-The program help output is also available as markdown see [MANUAL](https://github.com/tmpfs/mdp/blob/master/MANUAL.md).
 
 ## Configuration
 

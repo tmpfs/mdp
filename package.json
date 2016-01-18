@@ -19,22 +19,22 @@
     "partial"
   ],
   "dependencies": {
-    "async": "^0.2.10",
+    "async": "~1.5.2",
     "circular": "^1.0.5",
-    "cli-command": "^0.8.283",
-    "cli-env": "^1.0.9",
-    "cli-interface": "^1.0.16",
-    "cli-logger": "~0.5.36",
-    "cli-mid-color": "^1.0.7",
+    "cli-command": "~0.8.300",
+    "cli-env": "~1.0.10",
+    "cli-interface": "~1.0.19",
+    "cli-logger": "~0.5.40",
+    "cli-mid-color": "~1.0.10",
     "cli-mid-debug": "^1.0.3",
-    "cli-mid-logger": "~1.0.6",
+    "cli-mid-logger": "~1.0.10",
     "cli-mid-verbose": "^1.0.1",
-    "cli-types": "0.0.8",
+    "cli-types": "~0.1.2",
     "cli-util": "^1.1.26",
-    "manual": "0.0.8",
+    "manual": "~1.0.0",
     "markzero": "~0.1.31",
-    "moment": "^2.8.3",
-    "ttycolor": "^0.8.13"
+    "moment": "~2.11.1",
+    "ttycolor": "~0.9.0"
   },
   "devDependencies": {
     "chai": "~3.4.1",
