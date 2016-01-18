@@ -46,11 +46,11 @@
     "node >= 0.10.21"
   ],
   "scripts": {
-    "docs": "npm run build && npm run manual",
-    "prepublish": "npm run build",
+    "docs": "npm run readme && npm run manual",
+    "prepublish": "npm run readme",
     "md": "./bin/mdp --force --debug",
-    "build": "rm -f README.md && ./bin/mdp --force -o doc/alt -v && mv doc/alt/README.md .",
-    "build-debug": "rm -f README.md && ./bin/mdp --force --debug -o doc/alt -v && mv doc/alt/README.md .",
+    "readme": "rm -f README.md && ./bin/mdp --force -o doc/alt -v && mv doc/alt/README.md .",
+    "readme-debug": "rm -f README.md && ./bin/mdp --force --debug -o doc/alt -v && mv doc/alt/README.md .",
     "manual": "rm -f MANUAL.md && ./bin/mdp --force -i doc/manual.json -o MANUAL.md",
     "test": "mocha ${SPEC:-test/spec}",
     "cover": "istanbul cover _mocha -- ${SPEC:-test/spec}"
