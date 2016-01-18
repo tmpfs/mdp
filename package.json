@@ -46,6 +46,7 @@
     "node >= 0.10.21"
   ],
   "scripts": {
+    "lint": "jshint . && jscs .",
     "docs": "npm run readme && npm run manual",
     "prepublish": "npm run readme",
     "md": "./bin/mdp --force --debug",
