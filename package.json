@@ -3,6 +3,7 @@
   "version": "0.1.38",
   "description": "Markdown partial processor",
   "author": "muji <noop@xpm.io>",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/tmpfs/mdp"
@@ -10,12 +11,6 @@
   "bugs": {
     "url": "https://github.com/tmpfs/mdp/issues"
   },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/tmpfs/mdp/blob/master/LICENSE"
-    }
-  ],
   "keywords": [
     "cli",
     "readme",
@@ -42,9 +37,10 @@
     "ttycolor": "^0.8.13"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "istanbul": "^0.3.2",
-    "mocha": "^1.21.4"
+    "chai": "~3.4.1",
+    "coveralls": "~2.11.6",
+    "istanbul": "~0.4.2",
+    "mocha": "~2.3.4"
   },
   "engine": [
     "node >= 0.10.21"
