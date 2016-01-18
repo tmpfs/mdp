@@ -402,11 +402,15 @@ If you pass an error to next the program will terminate immediately, failure to 
 The \fBinspect\fR middleware is shown below:
 
 .SP
-  function middleware(meta) {
+  function middleware(/*meta*/) {
 .br
     return function inspect(token, tokens, next) {
 .br
-      if(!arguments.length) return;
+      if(!arguments.length) {
+.br
+        return;
+.br
+      }
 .br
       console.dir(token);
 .br

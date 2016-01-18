@@ -143,7 +143,7 @@
 </ul>
 <p>If you pass an error to next the program will terminate immediately, failure to invoke <code>next()</code> will result in an error after a timeout (<code>--timeout</code>) has been exceeded.</p>
 <p>The <code>inspect</code> middleware is shown below:</p>
-<pre><code class="lang-javascript">function%20middleware%28meta%29%20%7B%0A%20%20return%20function%20inspect%28token%2C%20tokens%2C%20next%29%20%7B%0A%20%20%20%20if%28%21arguments.length%29%20return%3B%0A%20%20%20%20console.dir%28token%29%3B%0A%20%20%20%20next%28%29%3B%0A%20%20%7D%0A%7D
+<pre><code class="lang-javascript">function%20middleware%28/*meta*/%29%20%7B%0A%20%20return%20function%20inspect%28token%2C%20tokens%2C%20next%29%20%7B%0A%20%20%20%20if%28%21arguments.length%29%20%7B%0A%20%20%20%20%20%20return%3B%0A%20%20%20%20%7D%0A%20%20%20%20console.dir%28token%29%3B%0A%20%20%20%20next%28%29%3B%0A%20%20%7D%0A%7D
 </code></pre>
 <p>You can enable it by declaring it in the meta data (or by using <code>--inspect</code>):</p>
 <pre><code class="lang-json">%7B%0A%20%20%22middleware%22%3A%20%5B%0A%20%20%20%20%22inspect%22%0A%20%20%5D%0A%7D

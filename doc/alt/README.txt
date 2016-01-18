@@ -274,9 +274,11 @@ If you pass an error to next the program will terminate immediately, failure to 
 
 The inspect middleware is shown below:
 
-function middleware(meta) {
+function middleware(/*meta*/) {
   return function inspect(token, tokens, next) {
-    if(!arguments.length) return;
+    if(!arguments.length) {
+      return;
+    }
     console.dir(token);
     next();
   }
